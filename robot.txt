@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://bmthimplants.co.uk/sitemap.xml
+Sitemap: https://bournemouthimplants.com/sitemap.xml
 
 # Crawl delay (optional, helps avoid overloading server)
 Crawl-delay: 1
