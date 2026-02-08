@@ -1,3 +1,6 @@
+bash
+
+cat > /tmp/styles.css << 'EOF'
 /* ==========================================
    GLOBAL STYLES & VARIABLES
    ========================================== */
@@ -10,7 +13,8 @@
     --secondary-color: #05BFDB;    /* Vibrant cyan - modern, clean */
     --accent-color: #00DFA2;       /* Fresh mint - innovation, health */
     --accent-warm: #FF6B35;        /* Warm coral - attention, energy */
-    --bg-cream: #fef8f4;
+    --bg-cream: #fef8f4;           /* Warm cream background */
+    
     --text-dark: #1a1a2e;
     --text-medium: #4a5568;
     --text-light: #718096;
@@ -752,7 +756,7 @@ section {
    ========================================== */
 
 .why-choose {
-    background: white;
+    background: var(--bg-light);
 }
 
 .why-grid {
@@ -764,14 +768,46 @@ section {
 
 .why-card {
     padding: var(--spacing-md);
-    border-left: 4px solid var(--accent-color);
-    background: var(--bg-light);
+    background: white;
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--secondary-color), var(--accent-color));
+    transition: width var(--transition-base);
+}
+
+.why-card:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.why-card:hover::before {
+    width: 8px;
 }
 
 .why-card h3 {
-    color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: 1.2rem;
     margin-bottom: var(--spacing-sm);
+}
+
+.why-card p {
+    color: var(--text-medium);
+    line-height: 1.7;
 }
 
 /* ==========================================
@@ -868,8 +904,21 @@ section {
    ========================================== */
 
 .final-cta {
-    background: var(--bg-cream);
+    background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
     padding: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.final-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
 }
 
 .cta-content {
@@ -879,14 +928,19 @@ section {
 }
 
 .cta-content h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: var(--spacing-md);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .cta-content > p {
     font-size: 1.2rem;
     color: var(--text-medium);
     margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
 }
 
 .cta-buttons {
@@ -908,9 +962,20 @@ section {
    ========================================== */
 
 .main-footer {
-    background: var(--text-dark);
+    background: var(--bg-dark);
     color: rgba(255,255,255,0.8);
     padding: var(--spacing-xl) 0 var(--spacing-md);
+    position: relative;
+}
+
+.main-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
 }
 
 .footer-grid {
@@ -924,6 +989,7 @@ section {
     color: white;
     margin-bottom: var(--spacing-sm);
     font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .footer-col ul {
@@ -935,33 +1001,47 @@ section {
 }
 
 .footer-col a {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.7);
+    transition: all var(--transition-base);
+    display: inline-block;
 }
 
 .footer-col a:hover {
     color: var(--accent-color);
+    transform: translateX(3px);
 }
 
 .gdc-note {
-    background: rgba(255,255,255,0.1);
+    background: rgba(0, 223, 162, 0.15);
+    border: 1px solid rgba(0, 223, 162, 0.3);
     display: inline-block;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     margin-top: var(--spacing-sm);
     font-size: 0.9rem;
+    color: var(--accent-color);
+    font-weight: 600;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: var(--spacing-md);
     text-align: center;
 }
 
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+}
+
 .disclaimer {
     font-size: 0.85rem;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.5);
     margin-top: var(--spacing-sm);
-    line-height: 1.5;
+    line-height: 1.6;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ==========================================
@@ -1089,208 +1169,4 @@ section {
     .main-footer {
         display: none;
     }
-}
-
-/* ==========================================
-   WHY CHOOSE US
-   ========================================== */
-
-.why-choose {
-    background: var(--bg-light);
-}
-
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-lg);
-}
-
-.why-card {
-    padding: var(--spacing-md);
-    background: white;
-    border-radius: var(--radius-lg);
-    position: relative;
-    overflow: hidden;
-    transition: all var(--transition-base);
-    box-shadow: var(--shadow-sm);
-}
-
-.why-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(180deg, var(--secondary-color), var(--accent-color));
-    transition: width var(--transition-base);
-}
-
-.why-card:hover {
-    transform: translateX(8px);
-    box-shadow: var(--shadow-lg);
-}
-
-.why-card:hover::before {
-    width: 8px;
-}
-
-.why-card h3 {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 1.2rem;
-    margin-bottom: var(--spacing-sm);
-}
-
-.why-card p {
-    color: var(--text-medium);
-    line-height: 1.7;
-}
-
-/* ==========================================
-   FINAL CTA
-   ========================================== */
-
-.final-cta {
-    background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
-    padding: var(--spacing-xl) 0;
-    position: relative;
-}
-
-.final-cta::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 800px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
-}
-
-.cta-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.cta-content h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    margin-bottom: var(--spacing-md);
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.cta-content > p {
-    font-size: 1.2rem;
-    color: var(--text-medium);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.8;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: var(--spacing-sm);
-    justify-content: center;
-    margin-bottom: var(--spacing-md);
-    flex-wrap: wrap;
-}
-
-.cta-note {
-    font-size: 0.95rem;
-    color: var(--text-light);
-    font-style: italic;
-}
-
-/* ==========================================
-   FOOTER - MODERN
-   ========================================== */
-
-.main-footer {
-    background: var(--bg-dark);
-    color: rgba(255,255,255,0.8);
-    padding: var(--spacing-xl) 0 var(--spacing-md);
-    position: relative;
-}
-
-.main-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-}
-
-.footer-col h4 {
-    color: white;
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col ul li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-col a {
-    color: rgba(255,255,255,0.7);
-    transition: all var(--transition-base);
-    display: inline-block;
-}
-
-.footer-col a:hover {
-    color: var(--accent-color);
-    transform: translateX(3px);
-}
-
-.gdc-note {
-    background: rgba(0, 223, 162, 0.15);
-    border: 1px solid rgba(0, 223, 162, 0.3);
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-sm);
-    margin-top: var(--spacing-sm);
-    font-size: 0.9rem;
-    color: var(--accent-color);
-    font-weight: 600;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: var(--spacing-md);
-    text-align: center;
-}
-
-.footer-bottom p {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.6);
-}
-
-.disclaimer {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.5);
-    margin-top: var(--spacing-sm);
-    line-height: 1.6;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
 }
