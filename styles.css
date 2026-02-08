@@ -165,6 +165,10 @@ a:hover {
     width: auto;
 }
 
+.logo span {
+    white-space: nowrap;
+}
+
 .logo a:hover {
     color: var(--primary-light);
 }
