@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Missing Teeth & Dentures | Bournemouth Dental Implants</title>
+    <meta name="description" content="Replace loose dentures or failing teeth with permanent dental implants in Bournemouth. Fixed teeth solutions for denture wearers and patients with failing dentition.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html">Bournemouth Dental Implants</a>
+                </div>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
+                    <li><a href="missing-teeth.html" class="active">Missing Teeth</a></li>
+                    <li><a href="patient-journey.html">Patient Journey</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / Missing Teeth Solutions
+            </div>
+            <h1>Replace Missing, Loose, or Failing Teeth with Permanent Dental Implants</h1>
+            <p class="lead">Whether you're wearing dentures or facing multiple failing teeth, there's a better way forward. Dental implants give you back the freedom, confidence, and quality of life you deserve.</p>
+        </div>
+    </section>
+
+    <div class="sticky-cta">
+        <div class="container">
+            <div class="sticky-cta-content">
+                <span class="sticky-cta-text">Ready to explore your options?</span>
+                <a href="contact.html" class="btn btn-primary btn-small">Book Free Consultation</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-layout">
+                <div class="content-main">
+                    <h2>You Don't Have to Live with the Frustration</h2>
+                    <p>If you're struggling with dentures that slip, or if your natural teeth are failing and causing pain, you're dealing with challenges that go far beyond just your mouth. It affects what you eat, how you speak, whether you smile in photos, and how confident you feel in social situations.</p>
+                    
+                    <p>You might have been told that dentures are your only option, or that fixing your failing teeth would require years of treatment. That's not true. Modern dental implant technology offers a permanent solution that can transform your life—often in just one day.</p>
+
+                    <div class="emphasis">
+                        <strong>The truth is:</strong> Dental implants are no longer just for people missing one or two teeth. Full arch implant systems like All-on-4 and All-on-6 can replace an entire set of teeth with just 4-6 implants, giving you fixed, permanent teeth that look, feel, and function like natural teeth.
+                    </div>
+
+                    <h2 id="dentures">If You're Wearing Dentures</h2>
+                    <p>Dentures were designed as a temporary solution, but many people wear them for years or even decades. Over time, you've likely noticed they become looser, more uncomfortable, and harder to manage. That's because dentures don't stop the bone loss that occurs when you lose your natural teeth—in fact, they can accelerate it.</p>
+
+                    <h3>Common Denture Challenges Our Patients Face</h3>
+                    <ul class="check-list red">
+                        <li>Dentures that slip or click when eating or speaking</li>
+                        <li>Sore spots and ulcers from plates rubbing against your gums</li>
+                        <li>Having to avoid certain foods like steak, apples, or crusty bread</li>
+                        <li>Using messy adhesives every day</li>
+                        <li>Anxiety about dentures falling out in public</li>
+                        <li>Difficulty tasting food properly</li>
+                        <li>Feeling like dentures make you look older</li>
+                        <li>The daily hassle of removing and cleaning dentures</li>
+                        <li>Needing new dentures every few years as your jaw shrinks</li>
+                    </ul>
+
+                    <h3>How Dental Implants Replace Dentures</h3>
+                    <p>Instead of a removable plate that sits on your gums, dental implants are surgically placed into your jawbone. They act as artificial tooth roots, providing a stable foundation for a full set of fixed teeth. This is called a "full arch" or "full mouth" restoration.</p>
+
+                    <p>The transformation is immediate and life-changing:</p>
+                    <ul class="check-list green">
+                        <li>Your new teeth are permanently fixed—they never come out</li>
+                        <li>You can eat anything you want without worry</li>
+                        <li>No adhesives, no daily removal, no cleaning denture baths</li>
+                        <li>Stops further bone loss and preserves your facial structure</li>
+                        <li>You brush and floss your implant teeth like natural teeth</li>
+                        <li>Designed to last 20+ years with proper care</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Can I Get Implants If I've Worn Dentures for Years?</h4>
+                        <p>Yes. Even if you've worn dentures for decades, you're likely still a candidate for dental implants. Advances in implant technology—particularly the All-on-4 technique—mean that even patients with significant bone loss can receive implants without extensive bone grafting.</p>
+                        <p>The only way to know for certain is to have a consultation with a 3D scan of your jaw. This allows us to assess your bone volume and plan your treatment with precision.</p>
+                    </div>
+
+                    <h2 id="failing-teeth">If You Have Failing Teeth</h2>
+                    <p>Perhaps you still have your natural teeth, but they're causing you constant problems. Multiple root canals, failing crowns, gum disease, loose teeth, infections—at some point, the question becomes: "Is it worth trying to save these teeth, or is there a better solution?"</p>
+
+                    <h3>Signs Your Teeth May Be Failing</h3>
+                    <ul>
+                        <li>Multiple teeth are loose or mobile</li>
+                        <li>You've had several root canal treatments that have failed</li>
+                        <li>Chronic gum disease that isn't responding to treatment</li>
+                        <li>Teeth are broken, cracked, or severely worn down</li>
+                        <li>You have recurring dental abscesses or infections</li>
+                        <li>Crowns or bridges keep falling off or failing</li>
+                        <li>You're constantly spending money on patching up problems</li>
+                        <li>Your dentist has told you that you're "running out of options"</li>
+                    </ul>
+
+                    <p>If several of these apply to you, it may be time to consider a full arch implant solution. Rather than spending years and thousands of pounds trying to save failing teeth, you can replace your entire arch with permanent implant teeth in one comprehensive treatment.</p>
+
+                    <h3>Why Full Arch Implants Make Sense for Failing Dentition</h3>
+                    <p>When you have multiple failing teeth, the traditional approach would be to:</p>
+                    <ul>
+                        <li>Extract the worst teeth</li>
+                        <li>Perform root canals on others</li>
+                        <li>Replace extracted teeth with bridges or partial dentures</li>
+                        <li>Hope the remaining teeth hold up</li>
+                    </ul>
+
+                    <p>This approach is costly, time-consuming, and often ends up failing within a few years anyway—leaving you back where you started, but with even less bone and fewer options.</p>
+
+                    <p class="emphasis">A full arch implant solution offers a fresh start. We remove all failing teeth, place 4-6 dental implants, and fit a complete set of fixed teeth—all in one day. You walk out with a brand new, permanent smile.</p>
+
+                    <div class="info-box">
+                        <h4>Won't Removing My Teeth Be Painful?</h4>
+                        <p>The treatment is performed under local anaesthesia (and sedation if you prefer), so you won't feel pain during the procedure. Many patients are surprised by how comfortable the process is. Post-surgery discomfort is typically mild and easily managed with over-the-counter pain relief. Most people return to work within 2-3 days.</p>
+                    </div>
+
+                    <h2>What Happens Next?</h2>
+                    <p>If you're ready to explore whether dental implants are right for you, the first step is a free consultation. During this appointment, we'll:</p>
+
+                    <ul class="check-list green">
+                        <li>Listen to your concerns and understand your goals</li>
+                        <li>Perform a clinical examination</li>
+                        <li>Take a 3D scan (CBCT) to assess your bone structure</li>
+                        <li>Discuss your treatment options</li>
+                        <li>Provide transparent pricing and finance options</li>
+                        <li>Answer all your questions</li>
+                    </ul>
+
+                    <p>There's no obligation to proceed. Our goal is to give you the information you need to make the right decision for your situation.</p>
+
+                    <div class="cta-inline">
+                        <p><strong>Ready to take the next step?</strong></p>
+                        <a href="contact.html" class="btn btn-primary">Book Free Consultation</a>
+                        <a href="tel:01202555555" class="btn btn-secondary">Call: 01202 555 555</a>
+                    </div>
+
+                    <h2>Frequently Asked Questions</h2>
+
+                    <h3>Am I too old for dental implants?</h3>
+                    <p>Age is rarely a barrier. As long as you're in reasonable general health, you can benefit from dental implants. We successfully treat patients in their 70s, 80s, and beyond. The key factors are bone quality and overall health, not age.</p>
+
+                    <h3>How long does treatment take?</h3>
+                    <p>You'll receive provisional fixed teeth on the same day as your implant surgery, so you're never without teeth. The entire process from consultation to final permanent teeth typically takes 3-6 months.</p>
+
+                    <h3>What if I don't have enough bone?</h3>
+                    <p>The All-on-4 and All-on-6 techniques are specifically designed to work even with reduced bone volume. Implants are placed at specific angles to maximise contact with available bone. In most cases, bone grafting is not required.</p>
+
+                    <h3>Will I be able to eat normally?</h3>
+                    <p>Yes. Once fully healed, you can eat virtually anything you want. Unlike dentures, there are no dietary restrictions. You'll be able to bite into apples, enjoy steak, and eat crunchy or chewy foods without worry.</p>
+
+                    <h3>How much do dental implants cost?</h3>
+                    <p>The cost of full arch dental implants typically ranges from £15,000 to £25,000 per arch, depending on the complexity of your case and the materials used. We offer transparent pricing and 0% finance options. <a href="pricing.html">View detailed pricing information</a>.</p>
+
+                    <h3>Do you offer finance?</h3>
+                    <p>Yes. We work with reputable healthcare finance providers to offer flexible payment plans, including 0% finance options for qualified patients. Treatment can be spread over 12, 24, or 36 months.</p>
+
+                    <h3>Are dental implants safe?</h3>
+                    <p>Dental implants have been used successfully for over 50 years and have an excellent safety record. Like any surgical procedure, there are risks (infection, nerve damage, implant failure), but these are rare when treatment is performed by experienced clinicians. We'll discuss all risks during your consultation.</p>
+
+                    <h3>What happens if an implant fails?</h3>
+                    <p>Implant failure is rare (success rates exceed 95%), but if it does occur within the first year, we typically replace the implant at no additional cost. Your treatment plan will include details about our warranty.</p>
+
+                </div>
+
+                <aside class="sidebar">
+                    <div class="sidebar-cta">
+                        <h3>Book Your Free Consultation</h3>
+                        <p>Discover if dental implants are right for you. No obligation, no pressure.</p>
+                        <a href="contact.html" class="btn btn-primary btn-block">Book Now</a>
+                        <p class="sidebar-note">Or call: <a href="tel:01202555555">01202 555 555</a></p>
+                    </div>
+
+                    <div class="sidebar-box highlight">
+                        <h4>Patient Success Story</h4>
+                        <p>"I wore dentures for 12 years and hated every minute. Getting implants was the best decision I ever made. I can finally eat properly and smile without worry."</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;"><strong>— Susan P., Poole</strong></p>
+                    </div>
+
+                    <div class="sidebar-box">
+                        <h4>Related Information</h4>
+                        <ul class="sidebar-links">
+                            <li><a href="full-arch-implants.html">Full Arch Implant Details</a></li>
+                            <li><a href="patient-journey.html">Treatment Process</a></li>
+                            <li><a href="pricing.html">Pricing & Finance</a></li>
+                            <li><a href="testimonials.html">Patient Stories</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Bournemouth Dental Implants</h4>
+                    <p>Specialist dental implant practice providing full arch rehabilitation and advanced prosthodontic care to patients across Bournemouth and Dorset.</p>
+                    <p class="gdc-note">GDC Registered Practice</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
+                        <li><a href="missing-teeth.html">Missing Teeth</a></li>
+                        <li><a href="patient-journey.html">Patient Journey</a></li>
+                        <li><a href="pricing.html">Pricing & Finance</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Patient Resources</h4>
+                    <ul>
+                        <li><a href="testimonials.html">Patient Stories</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Complaints Procedure</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Information</h4>
+                    <p><strong>Address:</strong><br>123 Richmond Hill<br>Bournemouth, Dorset<br>BH2 6EJ</p>
+                    <p><strong>Phone:</strong> <a href="tel:01202555555">01202 555 555</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@bmthimplants.co.uk">info@bmthimplants.co.uk</a></p>
+                    <p><strong>Hours:</strong><br>Mon-Fri: 9am-6pm<br>Sat: 9am-2pm</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bournemouth Dental Implants. All rights reserved.</p>
+                <p class="disclaimer">This website is for informational purposes only and does not constitute medical advice. Individual results may vary. All treatment carries risks which will be discussed during your consultation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
