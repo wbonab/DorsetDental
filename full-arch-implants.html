@@ -3,399 +3,742 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Arch Dental Implants | All-on-4 Treatment Bournemouth</title>
-    <meta name="description" content="Full arch dental implants (All-on-4/All-on-X) in Bournemouth. Planning-led approach to complete arch rehabilitation. Advanced prosthodontic training.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="page-styles.css">
+    <meta name="description" content="Full arch dental implant rehabilitation in Bournemouth. Replace a complete upper or lower arch with fixed implant-supported teeth. GDC registered, advanced 3D planning.">
+    <title>Full Arch Implants | Complete Arch Rehabilitation - Bournemouth Dental Implants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            line-height: 1.7;
+            color: #ffffff;
+            background: #0a0a0a;
+        }
+        .container { max-width: 1600px; margin: 0 auto; padding: 0 3rem; }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .nav-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { 
+            font-weight: 300; 
+            font-size: 1rem; 
+            color: #ffffff;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: #ffffff; }
+        .nav-cta {
+            background: white;
+            color: #0a0a0a !important;
+            padding: 0.7rem 1.8rem;
+            font-weight: 600;
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            padding: 12rem 0 6rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%);
+        }
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .breadcrumb {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .breadcrumb a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: rgba(255,255,255,0.8);
+        }
+        .page-hero h1 {
+            font-size: 5rem;
+            line-height: 1.1;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .page-hero-lead {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Content Sections */
+        section { padding: 6rem 0; }
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .section-header h2 {
+            font-size: 3rem;
+            line-height: 1.2;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-bottom: 4rem;
+        }
+        .content-block h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .content-block p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+        }
+        .content-block li {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            color: rgba(255,255,255,0.8);
+        }
+        .content-block li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .feature-box {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .feature-box:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.2);
+            transform: translateY(-4px);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .feature-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .feature-box p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 3rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            transition: all 0.4s;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .btn-primary {
+            background: white;
+            color: #0a0a0a;
+        }
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #000000;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+        .footer-about h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .footer-about p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        
+        /* Compact Credentials Section */
+        .credentials-section {
+            padding: 6rem 0;
+            background: rgba(255,255,255,0.02);
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .clinician-profile-compact {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .profile-image-compact {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+        }
+        .profile-image-compact img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+        .profile-content-compact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .profile-lead {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        .credentials-compact {
+            display: grid;
+            gap: 1.5rem;
+        }
+        .cred-item-compact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .cred-item-compact:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .cred-label-compact {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.5);
+            font-weight: 600;
+        }
+        .cred-value-compact {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            .nav-content {
+                padding: 0 1.5rem;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                text-align: center;
+                padding: 2rem 0;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+            .nav-menu li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+            .nav-menu a {
+                display: block;
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            .nav-cta {
+                margin: 1rem auto 0;
+                display: inline-block;
+                width: auto;
+            }
+            .page-hero {
+                padding: 8rem 1.5rem 4rem;
+            }
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            .page-hero-lead {
+                font-size: 1rem;
+            }
+            section {
+                padding: 3rem 0;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .cta-section p {
+                font-size: 1rem;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            
+            /* Mobile Compact Credentials */
+            .credentials-section {
+                padding: 3rem 0;
+            }
+            .clinician-profile-compact {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .profile-image-compact {
+                height: 400px;
+            }
+            .profile-content-compact h2 {
+                font-size: 2rem;
+            }
+            .profile-lead {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html">Bournemouth Implants</a>
-                </div>
-                <button class="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="full-arch-implants.html" class="active">Full Arch Implants</a></li>
-                    <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                    <li><a href="patient-journey.html">Patient Journey</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="nav-cta">Request Assessment</a></li>
-                </ul>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Bournemouth Dental Implants</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="full-arch.html">Full Arch</a></li>
+                <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                <li><a href="patient-journey.html">Journey</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact" class="nav-cta">Book Assessment</a></li>
+            </ul>
         </div>
     </nav>
 
     <section class="page-hero">
-        <div class="container">
+        <div class="page-hero-content">
             <div class="breadcrumb">
                 <a href="index.html">Home</a> / Full Arch Implants
             </div>
-            <h1>Full Arch Dental Implants</h1>
-            <p class="lead">When multiple teeth have failed or dentures are no longer viable, full arch treatment provides a fixed, stable foundation. This is where planning matters most—and where outcomes depend on getting the surgical and prosthetic details right.</p>
+            <h1>Full Arch<br>Rehabilitation</h1>
+            <p class="page-hero-lead">Complete upper or lower arch replacement using fixed implant-supported prosthetics. A comprehensive solution for patients with multiple failing teeth or complete edentulism.</p>
         </div>
     </section>
 
-    <div class="sticky-cta">
+    <section>
         <div class="container">
-            <div class="sticky-cta-content">
-                <span class="sticky-cta-text">Considering full arch treatment?</span>
-                <a href="contact.html" class="btn btn-primary btn-small">Request Assessment</a>
-            </div>
-        </div>
-    </div>
-
-    <section class="content-section">
-        <div class="container">
-            <div class="content-layout">
-                <div class="content-main">
-                    <h2>What Are Full Arch Dental Implants?</h2>
-                    <p>Full arch implants replace an entire upper or lower arch of teeth using strategically placed implants—typically four to six—to support a fixed prosthetic bridge. The technique is often referred to as "All-on-4" or "All-on-X" depending on the number of implants used.</p>
-                    
-                    <p>Unlike removable dentures that rest on soft tissue and depend on adhesives for retention, full arch restorations are permanently fixed to the implants. They're designed to function like natural teeth, allowing you to eat, speak, and maintain oral hygiene without the limitations that come with removable prosthetics.</p>
-
-                    <h2>Clinical Advantages of Full Arch Treatment</h2>
-                    <p>Full arch implant rehabilitation offers functional and biological advantages over conventional dentures and other tooth replacement approaches:</p>
-
-                    <div class="benefit-grid">
-                        <div class="benefit-item">
-                            <h3>✓ Fixed Stability</h3>
-                            <p>Restorations remain stable during function. No movement during eating or speaking, no reliance on adhesive products.</p>
-                        </div>
-                        <div class="benefit-item">
-                            <h3>✓ Dietary Freedom</h3>
-                            <p>Return to foods that are difficult or impossible to manage with dentures. Normal masticatory function is restored in most cases.</p>
-                        </div>
-                        <div class="benefit-item">
-                            <h3>✓ Prosthetic Aesthetics</h3>
-                            <p>Restorations are designed to suit facial proportions and soft tissue architecture. Appearance is individualised, not standardised.</p>
-                        </div>
-                        <div class="benefit-item">
-                            <h3>✓ Bone Preservation</h3>
-                            <p>Implants provide mechanical loading to bone, reducing the progressive resorption seen with conventional dentures in many patients.</p>
-                        </div>
-                        <div class="benefit-item">
-                            <h3>✓ Functional Predictability</h3>
-                            <p>When properly planned and executed, full arch restorations provide stable, long-term function with appropriate maintenance.</p>
-                        </div>
-                        <div class="benefit-item">
-                            <h3>✓ Psychological Impact</h3>
-                            <p>Many patients report improved confidence and reduced self-consciousness compared to their experience with removable prosthetics.</p>
-                        </div>
-                    </div>
-
-                    <h2>How the All-on-4/All-on-X Protocol Works</h2>
-                    <p>The clinical rationale behind full arch implant placement involves several key principles:</p>
-
-                    <ol class="numbered-list">
-                        <li><strong>Strategic Positioning:</strong> Implants are placed in areas of the jaw with optimal bone density and volume, often avoiding the need for extensive grafting procedures.</li>
-                        <li><strong>Angulation Considerations:</strong> Posterior implants may be angled to engage available bone and achieve adequate anteroposterior spread for prosthetic support.</li>
-                        <li><strong>Immediate Loading Protocols:</strong> In suitable cases, a provisional fixed restoration can be provided on the day of surgery, though this depends on achieving adequate primary stability.</li>
-                        <li><strong>Biomechanical Distribution:</strong> Implant positions are planned to distribute occlusal forces evenly across the arch, supporting long-term prosthetic stability.</li>
-                    </ol>
-
-                    <p>This approach allows for predictable outcomes in many cases while potentially reducing treatment complexity compared to traditional multiple-implant protocols. However, not every patient is a candidate for immediate loading, and treatment plans must be individualised based on clinical findings.</p>
-
-                    <h2>Candidacy for Full Arch Implants</h2>
-                    <p>Full arch treatment is appropriate for some patients but not all. Suitability depends on several clinical and patient-related factors:</p>
-
-                    <ul class="benefit-list">
-                        <li>Most or all teeth in an arch are missing or have been deemed non-restorable</li>
-                        <li>Remaining teeth are failing despite attempts at conventional treatment</li>
-                        <li>Current dentures are non-functional due to bone resorption or patient intolerance</li>
-                        <li>Adequate bone volume exists, or you're willing to consider grafting procedures where indicated</li>
-                        <li>General health status allows for surgical intervention and healing</li>
-                        <li>Non-smoker, or willingness to cease smoking before and after treatment</li>
-                        <li>Realistic expectations regarding outcomes, maintenance requirements, and prosthetic lifespan</li>
-                    </ul>
-
-                    <p>During your assessment, we'll evaluate oral health, bone anatomy via CBCT imaging, medical history, and treatment objectives to determine whether full arch treatment is clinically appropriate. Where additional procedures such as bone grafting are required, these will be discussed with realistic timelines and outcome expectations.</p>
-
-                    <h2>The Treatment Pathway</h2>
-                    
-                    <h3>1. Initial Assessment (60-90 minutes)</h3>
-                    <p>Comprehensive evaluation includes:</p>
-                    <ul class="benefit-list">
-                        <li>Discussion of your concerns, dental history, and treatment goals</li>
-                        <li>CBCT scan to assess bone quality, volume, and anatomical considerations</li>
-                        <li>Digital photographs and diagnostic records</li>
-                        <li>Treatment planning discussion, including whether you're a candidate for immediate loading</li>
-                        <li>Written treatment plan with itemised cost breakdown</li>
-                    </ul>
-
-                    <h3>2. Diagnostic Planning Phase (1-2 weeks)</h3>
-                    <p>Digital planning determines surgical and prosthetic approach:</p>
-                    <ul class="benefit-list">
-                        <li>Virtual implant placement based on bone anatomy and prosthetic requirements</li>
-                        <li>Fabrication of surgical guide for guided implant placement</li>
-                        <li>Design and fabrication of provisional restoration (if immediate loading is planned)</li>
-                        <li>Finalisation of treatment timeline and surgical protocol</li>
-                    </ul>
-
-                    <h3>3. Surgical Phase (3-4 hours)</h3>
-                    <p>Implant placement and provisional restoration delivery (where clinically appropriate):</p>
-                    <ul class="benefit-list">
-                        <li>Extraction of any remaining non-restorable teeth</li>
-                        <li>Implant placement using guided surgery protocols</li>
-                        <li>Provisional fixed bridge attachment (if primary stability allows for immediate loading)</li>
-                        <li>Post-operative instructions, medications, and follow-up scheduling</li>
-                    </ul>
-
-                    <h3>4. Osseointegration Period (3-6 months)</h3>
-                    <p>During the healing and integration phase:</p>
-                    <ul class="benefit-list">
-                        <li>Implants integrate with surrounding bone tissue</li>
-                        <li>Provisional restoration remains in place (if immediate loading was used)</li>
-                        <li>Regular review appointments to monitor healing and tissue response</li>
-                        <li>Dietary restrictions gradually relaxed as healing progresses</li>
-                    </ul>
-
-                    <h3>5. Definitive Prosthetic Phase (2-3 appointments)</h3>
-                    <p>Following confirmed osseointegration:</p>
-                    <ul class="benefit-list">
-                        <li>Impressions or digital scans for definitive bridge fabrication</li>
-                        <li>Try-in appointments to verify fit, occlusion, and aesthetics</li>
-                        <li>Delivery of final restoration with occlusal adjustments</li>
-                        <li>Maintenance protocols and hygiene instructions</li>
-                    </ul>
-
-                    <h2>Recovery Expectations</h2>
-                    
-                    <h3>Post-Surgical Recovery</h3>
-                    <p>Most patients experience:</p>
-                    <ul class="benefit-list">
-                        <li><strong>Discomfort:</strong> Typically manageable with prescribed or over-the-counter analgesia. Pain levels vary considerably between patients.</li>
-                        <li><strong>Oedema:</strong> Swelling usually peaks around day three and subsides over the following week.</li>
-                        <li><strong>Dietary modification:</strong> Soft diet required for 4-6 weeks to protect implants during early healing.</li>
-                        <li><strong>Return to normal activities:</strong> Most patients resume work within 2-3 days, though this depends on the extent of surgery and individual healing response.</li>
-                    </ul>
-
-                    <h3>Long-Term Maintenance Requirements</h3>
-                    <p>Implant longevity depends on ongoing maintenance:</p>
-                    <ul class="benefit-list">
-                        <li>Daily oral hygiene using techniques specific to full arch restorations</li>
-                        <li>Use of interdental cleaning aids and irrigation devices to clean prosthetic-tissue interfaces</li>
-                        <li>Professional maintenance appointments every six months</li>
-                        <li>Specialist hygiene cleaning by clinicians trained in implant maintenance</li>
-                        <li>Smoking cessation, as tobacco use significantly increases risk of complications</li>
-                    </ul>
-
-                    <h2>Longevity and Prosthetic Lifespan</h2>
-                    <p>With appropriate maintenance, dental implants can remain functional for 20+ years in many cases. The prosthetic bridge typically requires replacement every 10-15 years due to wear, though the implants themselves usually remain in situ.</p>
-
-                    <p>Factors influencing long-term outcomes include:</p>
-                    <ul class="benefit-list">
-                        <li>Quality of oral hygiene and patient compliance with maintenance protocols</li>
-                        <li>Regular professional maintenance and early intervention when issues arise</li>
-                        <li>Smoking status—tobacco use is associated with increased implant failure rates</li>
-                        <li>Systemic health conditions affecting healing and bone metabolism</li>
-                        <li>Quality of initial surgical placement and prosthetic design</li>
-                    </ul>
-
-                    <h2>Full Arch Implants vs. Conventional Dentures</h2>
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Full Arch Implants</th>
-                                <th>Conventional Dentures</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Retention</strong></td>
-                                <td>Fixed to implants—does not move</td>
-                                <td>Tissue-borne—may lack stability</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Masticatory Function</strong></td>
-                                <td>Restores near-normal chewing ability</td>
-                                <td>Reduced bite force, dietary limitations</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Bone Preservation</strong></td>
-                                <td>Provides mechanical loading to bone</td>
-                                <td>Progressive bone resorption common</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Daily Maintenance</strong></td>
-                                <td>Cleaned in situ like natural teeth</td>
-                                <td>Requires removal, cleaning, soaking</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Adhesive Products</strong></td>
-                                <td>Not required</td>
-                                <td>Often necessary for retention</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Patient Comfort</strong></td>
-                                <td>Fixed restoration—no soft tissue pressure</td>
-                                <td>May cause ulceration or discomfort</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Functional Lifespan</strong></td>
-                                <td>20+ years (implants), 10-15 years (prosthesis)</td>
-                                <td>5-7 years before replacement typically needed</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Initial Investment</strong></td>
-                                <td>Significant upfront cost</td>
-                                <td>Lower initial expenditure</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Lifetime Cost</strong></td>
-                                <td>Higher initial, lower long-term</td>
-                                <td>Lower initial, cumulative replacement costs</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Common Questions About Full Arch Treatment</h2>
-                    
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <h3>What level of discomfort should I expect?</h3>
-                            <p>Surgery is performed under local anaesthesia, so you won't feel pain during the procedure itself. Post-operative discomfort varies significantly between patients but is generally manageable with prescribed analgesia. Many patients report less discomfort than anticipated, though this isn't universal.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>Will I have teeth during the treatment process?</h3>
-                            <p>In most cases, yes. If you're a candidate for immediate loading, a provisional fixed restoration is provided on the day of surgery. However, immediate loading isn't suitable for all patients—some cases require a delayed loading protocol with a removable temporary prosthesis during healing.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>Can both arches be treated simultaneously?</h3>
-                            <p>While technically possible, we typically recommend treating one arch at a time. This approach makes post-operative recovery more manageable and ensures you can eat comfortably throughout treatment. Individual circumstances may vary.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>What if bone volume is inadequate?</h3>
-                            <p>The All-on-4/All-on-X protocol is designed to utilise available bone efficiently, often avoiding extensive grafting. However, some cases do require bone augmentation or alternative approaches such as zygomatic implants. Assessment and CBCT imaging clarify what's needed in your specific situation.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>When can I return to normal eating?</h3>
-                            <p>You'll need to follow a soft diet for 4-6 weeks while implants integrate. After this initial healing phase, dietary restrictions are gradually relaxed. Once osseointegration is confirmed and the definitive restoration is in place, most patients can eat normally, though extremely hard or sticky foods may still pose risks to prosthetic components.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>What are the success rates?</h3>
-                            <p>Full arch implants show high survival rates in the literature—generally above 95% at five years when placed by experienced clinicians in appropriate cases. However, success depends on multiple factors including bone quality, surgical technique, prosthetic design, patient compliance with maintenance, smoking status, and systemic health. Individual outcomes vary.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>Is there an age limit for implant treatment?</h3>
-                            <p>Age itself isn't a contraindication. We've successfully treated patients in their 70s and 80s. What matters is overall health status, healing capacity, and bone quality. If you're medically fit for tooth extraction under local anaesthetic, you're likely suitable for implant placement, though assessment is needed to confirm.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>Are sedation options available?</h3>
-                            <p>Yes. For patients with anxiety about surgical procedures, we can arrange sedation. Options range from oral sedation to intravenous sedation, depending on your medical history and preferences. This is discussed during your assessment.</p>
-                        </div>
-                    </div>
-
-                    <h2>Next Steps</h2>
-                    <p>If conventional dentures are no longer adequate or multiple teeth have failed, full arch implant treatment may provide a predictable, long-term solution. The starting point is an assessment—clinical examination, radiographic imaging, and discussion of whether this approach suits your situation.</p>
-
-                    <p>Request an assessment to understand your options and whether full arch treatment is clinically appropriate for you.</p>
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">Treatment Overview</div>
+                    <h2>What is Full Arch Rehabilitation?</h2>
+                    <p>Full arch rehabilitation replaces an entire upper or lower arch of teeth with a fixed prosthetic restoration supported by 4-6 dental implants. This treatment is suitable for patients who have lost most or all teeth in an arch, or whose remaining teeth are failing.</p>
                 </div>
 
-                <aside class="sidebar">
-                    <div class="sidebar-box cta-box">
-                        <h4>Request a Full-Arch Assessment</h4>
-                        <p>Determine whether full arch treatment is appropriate for your clinical situation.</p>
-                        <a href="contact.html" class="btn btn-primary btn-block">Request Assessment</a>
-                        <p class="sidebar-note">Or call: <a href="tel:+441202528949">01202 528 949</a></p>
-                    </div>
-
-                    <div class="sidebar-box highlight">
-                        <h4>Treatment Overview</h4>
-                        <p>✓ Fixed implant-supported restoration<br>
-                        ✓ Typically 4-6 implants per arch<br>
-                        ✓ Provisional restoration often same-day<br>
-                        ✓ No adhesive products required<br>
-                        ✓ £25,000 per arch typically</p>
-                    </div>
-
-                    <div class="sidebar-box">
-                        <h4>Related Information</h4>
-                        <ul class="sidebar-links">
-                            <li><a href="dentures-to-fixed.html">Dentures to Fixed Teeth</a></li>
-                            <li><a href="missing-teeth.html">Missing Teeth Options</a></li>
-                            <li><a href="patient-journey.html">Patient Journey</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
+                <div class="two-column">
+                    <div class="content-block">
+                        <h3>Who is this for?</h3>
+                        <p>Full arch treatment may be suitable if you have:</p>
+                        <ul>
+                            <li>Multiple failing or missing teeth in one arch</li>
+                            <li>Advanced periodontal disease affecting most teeth</li>
+                            <li>Complete tooth loss (edentulism) in upper or lower arch</li>
+                            <li>Dentures that are uncomfortable or unstable</li>
+                            <li>Teeth that are beyond saving with conventional treatment</li>
                         </ul>
                     </div>
-                </aside>
-            </div>
-        </div>
-    </section>
-
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Request an Assessment</h2>
-                <p>If you're considering full arch implant treatment, an initial consultation clarifies whether this approach suits your clinical situation, what the realistic outcomes are, and what the process involves.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-large">Request Assessment</a>
-                    <a href="tel:+441202528949" class="btn btn-secondary btn-large">Call: 01202 528 949</a>
+                    <div class="content-block">
+                        <h3>The Treatment Process</h3>
+                        <p>Full arch rehabilitation is delivered in carefully planned phases:</p>
+                        <ul>
+                            <li>Comprehensive clinical assessment and CBCT scan</li>
+                            <li>Digital treatment planning with 3D software</li>
+                            <li>Surgical placement of 4-6 implant fixtures</li>
+                            <li>Healing period (typically 3-6 months)</li>
+                            <li>Prosthetic fabrication and final restoration</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <section style="background: rgba(255,255,255,0.02);">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Bournemouth Implants</h4>
-                    <p>A planning-led implant and rehabilitation service managing cases from targeted implant placement through to complex full arch treatment across Bournemouth and Dorset.</p>
-                    <p class="gdc-note">GDC Registered Dentists</p>
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">Key Benefits</div>
+                    <h2>Why Choose Full Arch Implants?</h2>
                 </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
+                <div class="feature-grid">
+                    <div class="feature-box">
+                        <div class="feature-icon">🦷</div>
+                        <h4>Fixed Solution</h4>
+                        <p>Permanently fixed teeth that don't need to be removed. No denture adhesives or worry about slipping.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">💪</div>
+                        <h4>Restored Function</h4>
+                        <p>Eat, speak, and smile with confidence. Natural biting force restored for a full diet.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🔬</div>
+                        <h4>Bone Preservation</h4>
+                        <p>Implants stimulate jawbone, preventing the bone loss that occurs with missing teeth.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">⏱️</div>
+                        <h4>Long-Term Solution</h4>
+                        <p>With proper care, implant-supported teeth can last for many years or even decades.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">😊</div>
+                        <h4>Natural Appearance</h4>
+                        <p>Custom-designed prosthetics that look and feel like your natural teeth.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🎯</div>
+                        <h4>Precision Planning</h4>
+                        <p>3D CBCT imaging ensures optimal implant positioning for best outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">Investment</div>
+                    <h2>Treatment Cost</h2>
+                    <p>Full arch rehabilitation is a comprehensive treatment requiring advanced planning, surgical expertise, and high-quality prosthetic materials.</p>
+                </div>
+                <div class="two-column">
+                    <div class="content-block">
+                        <h3>£25,000 per arch</h3>
+                        <p>This includes:</p>
+                        <ul>
+                            <li>Comprehensive clinical assessment</li>
+                            <li>CBCT 3D imaging and digital planning</li>
+                            <li>Surgical placement of 4-6 implant fixtures</li>
+                            <li>All healing components and materials</li>
+                            <li>Final fixed prosthetic restoration</li>
+                            <li>Post-treatment review appointments</li>
+                        </ul>
+                    </div>
+                    <div class="content-block">
+                        <h3>Why This Investment?</h3>
+                        <p>Full arch treatment represents:</p>
+                        <ul>
+                            <li>Postgraduate-trained clinical expertise</li>
+                            <li>Advanced 3D imaging and planning technology</li>
+                            <li>Premium-grade titanium implant systems</li>
+                            <li>High-quality prosthetic materials</li>
+                            <li>Comprehensive treatment over 6-12 months</li>
+                            <li>Long-term solution with proper maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="credentials-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="clinician-profile-compact">
+                    <div class="profile-image-compact">
+                        <img src="images/dr-will-bonab.jpg" alt="Dr. Will Bonab - Prosthodontist">
+                    </div>
+                    <div class="profile-content-compact">
+                        <div class="section-label">Your Clinician</div>
+                        <h2>Dr. Will Bonab BDS</h2>
+                        <p class="profile-lead">Postgraduate-trained prosthodontist specialising in full arch implant rehabilitation and digital treatment planning.</p>
+                        <div class="credentials-compact">
+                            <div class="cred-item-compact">
+                                <span class="cred-label-compact">Primary Qualification</span>
+                                <span class="cred-value-compact">King's College London</span>
+                            </div>
+                            <div class="cred-item-compact">
+                                <span class="cred-label-compact">Advanced Training</span>
+                                <span class="cred-value-compact">Prosthodontics, Harvard University</span>
+                            </div>
+                            <div class="cred-item-compact">
+                                <span class="cred-label-compact">GDC Registration</span>
+                                <span class="cred-value-compact">318594</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Discuss Full Arch Treatment?</h2>
+            <p>Book a comprehensive assessment to determine if full arch rehabilitation is right for you.</p>
+            <a href="#contact" class="btn btn-primary">Request Clinical Assessment</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Bournemouth Dental Implants</h3>
+                    <p>Expert dental implant treatment in Bournemouth. From single tooth replacement to full arch rehabilitation, we provide personalised care using advanced 3D planning technology.</p>
+                    <p style="margin-top: 1.5rem;">
+                        <strong>Bright Blue Dental Practice</strong><br>
+                        233 Charminster Road<br>
+                        Bournemouth BH8 9QJ
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Tel: 01202 528 949<br>
+                        Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b7874756f7a786f6e685b79746e69757e76746e6f7372766b777a756f6835787476">[email&#160;protected]</a>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Treatments</h4>
                     <ul>
-                        <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
+                        <li><a href="full-arch.html">Full Arch Implants</a></li>
                         <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                        <li><a href="patient-journey.html">Patient Journey</a></li>
+                        <li><a href="single-implants.html">Single Implants</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="patient-journey.html">Patient Journey</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Patient Resources</h4>
-                    <ul>
-                        <li><a href="testimonials.html">Patient Testimonials</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="complaints.html">Complaints Procedure</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Information</h4>
-                    <p><strong>Treatment Location:</strong><br>233 Charminster Road<br>Bournemouth, Dorset<br>BH8 9QJ</p>
-                    <p><strong>Phone:</strong> <a href="tel:+441202528949" style="color: rgba(255,255,255,0.8);">01202 528 949</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:contactus@bournemouthimplants.com" style="color: rgba(255,255,255,0.8);">contactus@bournemouthimplants.com</a></p>
-                    <p><strong>Hours:</strong><br>Mon, Wed, Thu: 8am-5pm<br>Tue: 8am-7pm<br>Fri: 8am-2pm<br>Sat: By appointment</p>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Bournemouth Implants. All rights reserved.</p>
-                <p class="disclaimer">Bournemouth Implants is a dental implant service. Treatment is provided at 233 Charminster Road, Bournemouth from an established CQC-registered dental facility by GDC-registered dentists. This website is for informational purposes only and does not constitute medical advice. All dental implant treatment carries risks and individual outcomes vary. Treatment suitability is determined following comprehensive clinical and radiographic assessment.</p>
+                <p>&copy; 2024 Bournemouth Dental Implants. All rights reserved. | GDC Registration: 318594 | CQC Registered Practice</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.na
