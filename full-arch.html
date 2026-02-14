@@ -207,38 +207,43 @@
             color: rgba(255,255,255,0.5);
         }
         
-        /* Feature Grid */
-        .feature-grid {
+        /* Benefits Grid */
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
+            gap: 2rem;
             margin-top: 3rem;
         }
-        .feature-box {
-            background: rgba(255,255,255,0.05);
+        .benefit-card {
+            background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.1);
             padding: 2.5rem;
             border-radius: 8px;
-            text-align: center;
             transition: all 0.3s;
+            position: relative;
         }
-        .feature-box:hover {
-            background: rgba(255,255,255,0.08);
+        .benefit-card:hover {
+            background: rgba(255,255,255,0.05);
             border-color: rgba(255,255,255,0.2);
             transform: translateY(-4px);
         }
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+        .benefit-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            line-height: 1;
+            margin-bottom: 1rem;
+            font-family: 'Josefin Sans', sans-serif;
         }
-        .feature-box h4 {
+        .benefit-card h4 {
             font-size: 1.2rem;
             margin-bottom: 1rem;
             font-weight: 600;
             letter-spacing: 0.05em;
             text-transform: uppercase;
+            color: #ffffff;
         }
-        .feature-box p {
+        .benefit-card p {
             color: rgba(255,255,255,0.7);
             font-size: 0.95rem;
             line-height: 1.7;
@@ -467,7 +472,7 @@
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            .feature-grid {
+            .benefits-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
@@ -577,34 +582,34 @@
                     <div class="section-label">Key Benefits</div>
                     <h2>Why Choose Full Arch Implants?</h2>
                 </div>
-                <div class="feature-grid">
-                    <div class="feature-box">
-                        <div class="feature-icon">🦷</div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-number">01</div>
                         <h4>Fixed Solution</h4>
                         <p>Permanently fixed teeth that don't need to be removed. No denture adhesives or worry about slipping.</p>
                     </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">💪</div>
+                    <div class="benefit-card">
+                        <div class="benefit-number">02</div>
                         <h4>Restored Function</h4>
                         <p>Eat, speak, and smile with confidence. Natural biting force restored for a full diet.</p>
                     </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">🔬</div>
+                    <div class="benefit-card">
+                        <div class="benefit-number">03</div>
                         <h4>Bone Preservation</h4>
                         <p>Implants stimulate jawbone, preventing the bone loss that occurs with missing teeth.</p>
                     </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">⏱️</div>
+                    <div class="benefit-card">
+                        <div class="benefit-number">04</div>
                         <h4>Long-Term Solution</h4>
                         <p>With proper care, implant-supported teeth can last for many years or even decades.</p>
                     </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">😊</div>
+                    <div class="benefit-card">
+                        <div class="benefit-number">05</div>
                         <h4>Natural Appearance</h4>
                         <p>Custom-designed prosthetics that look and feel like your natural teeth.</p>
                     </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">🎯</div>
+                    <div class="benefit-card">
+                        <div class="benefit-number">06</div>
                         <h4>Precision Planning</h4>
                         <p>3D CBCT imaging ensures optimal implant positioning for best outcomes.</p>
                     </div>
