@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
@@ -18,336 +17,448 @@
             background: #0a0a0a;
         }
         .container { max-width: 1600px; margin: 0 auto; padding: 0 3rem; }
-
-```
-    /* Navigation - Overlay */
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: rgba(10, 10, 10, 0.95);
-        backdrop-filter: blur(20px);
-        padding: 1.5rem 0;
-        z-index: 1000;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .nav-content {
-        max-width: 1600px;
-        margin: 0 auto;
-        padding: 0 3rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .logo { 
-        font-weight: 300; 
-        font-size: 1rem; 
-        color: #ffffff;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-    }
-    .nav-menu {
-        display: flex;
-        gap: 3rem;
-        list-style: none;
-        align-items: center;
-    }
-    .nav-menu a {
-        text-decoration: none;
-        color: rgba(255,255,255,0.6);
-        font-size: 0.85rem;
-        font-weight: 400;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        transition: color 0.3s;
-    }
-    .nav-menu a:hover { color: #ffffff; }
-    .nav-cta {
-        background: white;
-        color: #0a0a0a !important;
-        padding: 0.7rem 1.8rem;
-        font-weight: 600;
-    }
-    
-    /* Hero - Full-Screen Image */
-    .hero {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        background: 
-            linear-gradient(rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.6)),
-            linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    }
-    .hero::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: 
-            radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%),
-            radial-gradient(circle at 70% 60%, rgba(255,255,255,0.02) 0%, transparent 50%);
-    }
-    .hero-content {
-        text-align: center;
-        max-width: 900px;
-        position: relative;
-        z-index: 1;
-    }
-    .photo-credit {
-        font-size: 0.7rem;
-        letter-spacing: 0.2em;
-        color: rgba(255,255,255,0.5);
-        margin-bottom: 3rem;
-        text-transform: uppercase;
-    }
-    .hero h1 { 
-        font-size: 5.5rem; 
-        line-height: 1.1;
-        font-weight: 300;
-        margin-bottom: 2rem;
-        color: #ffffff;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-    }
-    .hero-tagline {
-        font-size: 1.3rem;
-        margin-bottom: 4rem;
-        color: rgba(255,255,255,0.8);
-        line-height: 1.7;
-        font-weight: 300;
-        letter-spacing: 0.05em;
-    }
-    .hero-cta {
-        display: inline-flex;
-        gap: 2rem;
-    }
-    .btn {
-        padding: 1.2rem 3rem;
-        text-decoration: none;
-        transition: all 0.4s;
-        font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-    }
-    .btn-primary {
-        background: white;
-        color: #0a0a0a;
-    }
-    .btn-primary:hover {
-        background: rgba(255,255,255,0.9);
-        transform: translateY(-2px);
-    }
-    .btn-secondary {
-        background: transparent;
-        border: 1px solid rgba(255,255,255,0.5);
-        color: white;
-    }
-    .btn-secondary:hover {
-        border-color: white;
-    }
-    .scroll-indicator {
-        position: absolute;
-        bottom: 3rem;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.7rem;
-        letter-spacing: 0.2em;
-        color: rgba(255,255,255,0.4);
-        text-transform: uppercase;
-    }
-    
-    /* Credentials Section */
-    .credentials-section {
-        padding: 6rem 0;
-        background: #0a0a0a;
-        border-top: 1px solid rgba(255,255,255,0.08);
-    }
-    .credentials-wrapper {
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-    .credentials-showcase {
-        background: rgba(255,255,255,0.05);
-        backdrop-filter: blur(20px);
-        padding: 3rem 4rem;
-        border-radius: 8px;
-        border: 1px solid rgba(255,255,255,0.1);
-        box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-    }
-    .showcase-title {
-        font-size: 1.6rem;
-        color: #ffffff;
-        margin-bottom: 3rem;
-        font-weight: 600;
-        text-align: center;
-        padding-bottom: 1.5rem;
-        border-bottom: 2px solid rgba(255,255,255,0.2);
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-    }
-    .credentials-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-    }
-    .cred-block {
-        text-align: center;
-    }
-    .cred-label {
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: rgba(255,255,255,0.5);
-        margin-bottom: 0.75rem;
-        font-weight: 600;
-    }
-    .cred-info {
-        font-size: 1.05rem;
-        color: rgba(255,255,255,0.95);
-        font-weight: 600;
-        line-height: 1.5;
-    }
-    
-    /* Section - Visual Cards */
-    section { padding: 8rem 0; }
-    .section-header {
-        text-align: center;
-        max-width: 900px;
-        margin: 0 auto 5rem;
-    }
-    .section-label {
-        font-size: 0.75rem;
-        letter-spacing: 0.2em;
-        color: rgba(255,255,255,0.5);
-        margin-bottom: 2rem;
-        text-transform: uppercase;
-    }
-    .section-header h2 {
-        font-size: 3.5rem;
-        line-height: 1.2;
-        font-weight: 300;
-        margin-bottom: 2rem;
-        color: #ffffff;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-    }
-    .section-header p {
-        font-size: 1.15rem;
-        color: rgba(255,255,255,0.75);
-        line-height: 1.8;
-        font-weight: 300;
-    }
-    .visual-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-    }
-    .visual-card {
-        position: relative;
-        height: 550px;
-        overflow: hidden;
-        background: linear-gradient(135deg, #1a1a2e, #16213e);
-        transition: all 0.5s;
-    }
-    .visual-card::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, transparent 0%, rgba(10,10,10,0.8) 100%);
-        z-index: 1;
-    }
-    .visual-card:hover {
-        transform: scale(1.02);
-    }
-    .card-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 3rem;
-        z-index: 2;
-    }
-    .card-num {
-        font-size: 0.7rem;
-        letter-spacing: 0.2em;
-        color: rgba(255,255,255,0.5);
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-    }
-    .card h3 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-        color: #ffffff;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-    }
-    .card p {
-        color: rgba(255,255,255,0.8);
-        line-height: 1.7;
-        font-size: 0.95rem;
-    }
-    
-    /* Footer */
-    footer {
-        background: #000000;
-        padding: 4rem 0 2rem;
-        border-top: 1px solid rgba(255,255,255,0.08);
-    }
-    .footer-content {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        gap: 4rem;
-        margin-bottom: 3rem;
-    }
-    .footer-about h3 {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-    }
-    .footer-about p {
-        color: rgba(255,255,255,0.6);
-        line-height: 1.8;
-        font-size: 0.9rem;
-    }
-    .footer-links h4 {
-        font-size: 0.9rem;
-        margin-bottom: 1.5rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(255,255,255,0.8);
-    }
-    .footer-links ul {
-        list-style: none;
-    }
-    .footer-links li {
-        margin-bottom: 0.75rem;
-    }
-    .footer-links a {
-        color: rgba(255,255,255,0.6);
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: color 0.3s;
-    }
-    .footer-links a:hover {
-        color: #ffffff;
-    }
-    .footer-bottom {
-        padding-top: 2rem;
-        border-top: 1px solid rgba(255,255,255,0.08);
-        text-align: center;
-        color: rgba(255,255,255,0.4);
-        font-size: 0.85rem;
-    }
-</style>
-```
-
+        
+        /* Navigation - Overlay */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .nav-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { 
+            font-weight: 300; 
+            font-size: 1rem; 
+            color: #ffffff;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: #ffffff; }
+        .nav-cta {
+            background: white;
+            color: #0a0a0a !important;
+            padding: 0.7rem 1.8rem;
+            font-weight: 600;
+        }
+        
+        /* Hero - Full-Screen Image */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: 
+                linear-gradient(rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.6)),
+                linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255,255,255,0.02) 0%, transparent 50%);
+        }
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+        .photo-credit {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+        .hero h1 { 
+            font-size: 5.5rem; 
+            line-height: 1.1;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: #ffffff;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .hero-tagline {
+            font-size: 1.3rem;
+            margin-bottom: 4rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        .hero-cta {
+            display: inline-flex;
+            gap: 2rem;
+        }
+        .btn {
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            transition: all 0.4s;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .btn-primary {
+            background: white;
+            color: #0a0a0a;
+        }
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.5);
+            color: white;
+        }
+        .btn-secondary:hover {
+            border-color: white;
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+        }
+        
+        /* Credentials Section */
+        .credentials-section {
+            padding: 6rem 0;
+            background: #0a0a0a;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .credentials-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .credentials-showcase {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            padding: 3rem 4rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+        }
+        .showcase-title {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 3rem;
+            font-weight: 600;
+            text-align: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+        .cred-block {
+            text-align: center;
+        }
+        .cred-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        .cred-info {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+            line-height: 1.5;
+        }
+        
+        /* Section - Visual Cards */
+        section { padding: 8rem 0; }
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 5rem;
+        }
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .section-header h2 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: #ffffff;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .section-header p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+        .visual-card {
+            position: relative;
+            height: 550px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            transition: all 0.5s;
+        }
+        .visual-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(10,10,10,0.8) 100%);
+            z-index: 1;
+        }
+        .visual-card:hover {
+            transform: scale(1.02);
+        }
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 3rem;
+            z-index: 2;
+        }
+        .card-num {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        .card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .card p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000000;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+        .footer-about h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .footer-about p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            
+            /* Mobile Navigation */
+            .nav-content {
+                padding: 0 1.5rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-menu a {
+                font-size: 0.8rem;
+            }
+            
+            /* Mobile Hero */
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding: 8rem 1.5rem 4rem;
+            }
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+            }
+            .hero-tagline {
+                font-size: 1rem;
+                margin-bottom: 2.5rem;
+            }
+            .hero-cta {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            /* Mobile Credentials */
+            .credentials-section {
+                padding: 3rem 0;
+            }
+            .credentials-showcase {
+                padding: 2rem 1.5rem;
+            }
+            .showcase-title {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+            .credentials-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            /* Mobile Sections */
+            section {
+                padding: 4rem 0;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .section-header p {
+                font-size: 1rem;
+            }
+            
+            /* Mobile Cards */
+            .visual-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .visual-card {
+                height: 400px;
+            }
+            .card h3 {
+                font-size: 1.5rem;
+            }
+            
+            /* Mobile Footer */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            footer {
+                padding: 3rem 0 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero-tagline {
+                font-size: 0.9rem;
+            }
+            .photo-credit {
+                font-size: 0.65rem;
+            }
+            .btn {
+                padding: 1rem 2rem;
+                font-size: 0.75rem;
+            }
+            .card h3 {
+                font-size: 1.3rem;
+            }
+            .card p {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -365,130 +476,122 @@
         </div>
     </nav>
 
-```
-<section class="hero">
-    <div class="hero-content">
-        <div class="photo-credit">Planning-Led Dentistry</div>
-        <h1>Modern Dental<br>Rehabilitation</h1>
-        <p class="hero-tagline">Advanced dental implant solutions in Bournemouth. Our commitment to personalised medicine means every treatment—from single teeth to full arch—is tailored to your individual needs.</p>
-        <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary">Request Assessment</a>
-            <a href="#treatments" class="btn btn-secondary">Explore Treatments</a>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="photo-credit">Planning-Led Dentistry</div>
+            <h1>Modern Dental<br>Rehabilitation</h1>
+            <p class="hero-tagline">Advanced dental implant solutions in Bournemouth. Our commitment to personalised medicine means every treatment—from single teeth to full arch—is tailored to your individual needs.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Request Assessment</a>
+                <a href="#treatments" class="btn btn-secondary">Explore Treatments</a>
+            </div>
         </div>
-    </div>
-    <div class="scroll-indicator">Scroll to Explore</div>
-</section>
+        <div class="scroll-indicator">Scroll to Explore</div>
+    </section>
 
-<section class="credentials-section">
-    <div class="container">
-        <div class="credentials-wrapper">
-            <div class="credentials-showcase">
-                <div class="showcase-title">Professional Credentials</div>
-                <div class="credentials-grid">
-                    <div class="cred-block">
-                        <div class="cred-label">Lead Clinician</div>
-                        <div class="cred-info">Dr. Will Bonab BDS</div>
-                    </div>
-                    <div class="cred-block">
-                        <div class="cred-label">GDC Registration</div>
-                        <div class="cred-info">318594</div>
-                    </div>
-                    <div class="cred-block">
-                        <div class="cred-label">Primary Qualification</div>
-                        <div class="cred-info">Bachelor of Dental Surgery<br>King's College London</div>
-                    </div>
-                    <div class="cred-block">
-                        <div class="cred-label">Specialist Training</div>
-                        <div class="cred-info">Postgraduate Prosthodontics<br>Harvard University</div>
-                    </div>
-                    <div class="cred-block">
-                        <div class="cred-label">Technology</div>
-                        <div class="cred-info">3D CBCT Imaging<br>Digital Treatment Planning</div>
-                    </div>
-                    <div class="cred-block">
-                        <div class="cred-label">Practice Location</div>
-                        <div class="cred-info">Bright Blue Dental Practice<br>233 Charminster Road<br>Bournemouth BH8 9QJ</div>
+    <section class="credentials-section">
+        <div class="container">
+            <div class="credentials-wrapper">
+                <div class="credentials-showcase">
+                    <div class="showcase-title">Professional Credentials</div>
+                    <div class="credentials-grid">
+                        <div class="cred-block">
+                            <div class="cred-label">Lead Clinician</div>
+                            <div class="cred-info">Dr. Will Bonab BDS</div>
+                        </div>
+                        <div class="cred-block">
+                            <div class="cred-label">GDC Registration</div>
+                            <div class="cred-info">318594</div>
+                        </div>
+                        <div class="cred-block">
+                            <div class="cred-label">Primary Qualification</div>
+                            <div class="cred-info">Bachelor of Dental Surgery<br>King's College London</div>
+                        </div>
+                        <div class="cred-block">
+                            <div class="cred-label">Specialist Training</div>
+                            <div class="cred-info">Postgraduate Prosthodontics<br>Harvard University</div>
+                        </div>
+                        <div class="cred-block">
+                            <div class="cred-label">Technology</div>
+                            <div class="cred-info">3D CBCT Imaging<br>Digital Treatment Planning</div>
+                        </div>
+                        <div class="cred-block">
+                            <div class="cred-label">Practice Location</div>
+                            <div class="cred-info">Bright Blue Dental Practice<br>233 Charminster Road<br>Bournemouth BH8 9QJ</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="treatments" style="background: #0a0a0a;">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">Treatment Options</div>
-            <h2>Implant Services</h2>
-            <p>We provide comprehensive dental implant treatment from single tooth replacement to complete arch rehabilitation. All cases are planned using 3D CBCT imaging to ensure optimal outcomes.</p>
-        </div>
-        <div class="visual-grid">
-            <div class="visual-card">
-                <div class="card-overlay">
-                    <div class="card-num">Treatment 01</div>
-                    <h3>Full Arch Rehabilitation</h3>
-                    <p>Complete upper or lower arch replacement using fixed implant-supported prosthetics. Suitable for patients with multiple failing teeth or complete edentulism.</p>
+    <section id="treatments" style="background: #0a0a0a;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Treatment Options</div>
+                <h2>Implant Services</h2>
+                <p>We provide comprehensive dental implant treatment from single tooth replacement to complete arch rehabilitation. All cases are planned using 3D CBCT imaging to ensure optimal outcomes.</p>
+            </div>
+            <div class="visual-grid">
+                <div class="visual-card">
+                    <div class="card-overlay">
+                        <div class="card-num">Treatment 01</div>
+                        <h3>Full Arch Rehabilitation</h3>
+                        <p>Complete upper or lower arch replacement using fixed implant-supported prosthetics. Suitable for patients with multiple failing teeth or complete edentulism.</p>
+                    </div>
+                </div>
+                <div class="visual-card">
+                    <div class="card-overlay">
+                        <div class="card-num">Treatment 02</div>
+                        <h3>Dentures to Fixed</h3>
+                        <p>Transition from removable dentures to permanently fixed implant-retained teeth. Restore confidence and natural function.</p>
+                    </div>
+                </div>
+                <div class="visual-card">
+                    <div class="card-overlay">
+                        <div class="card-num">Treatment 03</div>
+                        <h3>Single & Multiple Implants</h3>
+                        <p>Replace missing teeth without affecting adjacent healthy teeth. Natural-looking ceramic crowns on titanium implants.</p>
+                    </div>
                 </div>
             </div>
-            <div class="visual-card">
-                <div class="card-overlay">
-                    <div class="card-num">Treatment 02</div>
-                    <h3>Dentures to Fixed</h3>
-                    <p>Transition from removable dentures to permanently fixed implant-retained teeth. Restore confidence and natural function.</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Bournemouth Dental Implants</h3>
+                    <p>Expert dental implant treatment in Bournemouth. From single tooth replacement to full arch rehabilitation, we provide personalised care using advanced 3D planning technology.</p>
+                    <p style="margin-top: 1.5rem;">
+                        <strong>Bright Blue Dental Practice</strong><br>
+                        233 Charminster Road<br>
+                        Bournemouth BH8 9QJ
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Tel: 01202 528 949<br>
+                        Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="34575b5a40555740414774565b41465a51595b41405c5d594458555a40471a575b59">[email&#160;protected]</a>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Treatments</h4>
+                    <ul>
+                        <li><a href="full-arch.html">Full Arch Implants</a></li>
+                        <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                        <li><a href="single-implants.html">Single Implants</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="patient-journey.html">Patient Journey</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="visual-card">
-                <div class="card-overlay">
-                    <div class="card-num">Treatment 03</div>
-                    <h3>Single & Multiple Implants</h3>
-                    <p>Replace missing teeth without affecting adjacent healthy teeth. Natural-looking ceramic crowns on titanium implants.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer id="contact">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-about">
-                <h3>Bournemouth Dental Implants</h3>
-                <p>Expert dental implant treatment in Bournemouth. From single tooth replacement to full arch rehabilitation, we provide personalised care using advanced 3D planning technology.</p>
-                <p style="margin-top: 1.5rem;">
-                    <strong>Bright Blue Dental Practice</strong><br>
-                    233 Charminster Road<br>
-                    Bournemouth BH8 9QJ
-                </p>
-                <p style="margin-top: 1rem;">
-                    Tel: 01202 528 949<br>
-                    Email: contactus@bournemouthimplants.com
-                </p>
-            </div>
-            <div class="footer-links">
-                <h4>Treatments</h4>
-                <ul>
-                    <li><a href="full-arch.html">Full Arch Implants</a></li>
-                    <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                    <li><a href="single-implants.html">Single Implants</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Information</h4>
-                <ul>
-                    <li><a href="patient-journey.html">Patient Journey</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Bournemouth Dental Implants. All rights reserved. | GDC Registration: 318594 | CQC Registered Practice</p>
-        </div>
-    </div>
-</footer>
-```
-
-</body>
-</html>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bournemouth Dental Implants. All ri
