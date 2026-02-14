@@ -1,323 +1,494 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Arch Dental Implants Bournemouth | Bournemouth Implants</title>
-    <meta name="description" content="Planning-led implant and rehabilitation service in Bournemouth. From targeted implant solutions to complex full-arch cases. Advanced prosthodontic training.">
-    <meta name="keywords" content="dental implants Bournemouth, full arch implants, fixed teeth, dentures to fixed, Bournemouth dentist, dental implants Dorset">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Full Arch Dental Implants Bournemouth">
-    <meta property="og:description" content="Planning-led implant and rehabilitation service in Bournemouth. From targeted solutions to complex full-arch cases.">
-    <meta property="og:image" content="https://bournemouthimplants.com/images/og-image.jpg">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Full Arch Dental Implants Bournemouth">
-    <meta name="twitter:description" content="Planning-led implant and rehabilitation service in Bournemouth. From targeted solutions to complex full-arch cases.">
-    <meta name="twitter:image" content="https://bournemouthimplants.com/images/og-image.jpg">
-    
+    <meta name="description" content="Expert dental implant treatment in Bournemouth. Personalised medicine from single tooth replacement to full arch rehabilitation. GDC registered, postgraduate trained clinicians.">
+    <title>Bournemouth Dental Implants | Expert Implant Treatment & Full Arch Rehabilitation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            line-height: 1.7;
+            color: #ffffff;
+            background: #0a0a0a;
+        }
+        .container { max-width: 1600px; margin: 0 auto; padding: 0 3rem; }
+
+```
+    /* Navigation - Overlay */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 1.5rem 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-content {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo { 
+        font-weight: 300; 
+        font-size: 1rem; 
+        color: #ffffff;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+    }
+    .nav-menu {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+        align-items: center;
+    }
+    .nav-menu a {
+        text-decoration: none;
+        color: rgba(255,255,255,0.6);
+        font-size: 0.85rem;
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        transition: color 0.3s;
+    }
+    .nav-menu a:hover { color: #ffffff; }
+    .nav-cta {
+        background: white;
+        color: #0a0a0a !important;
+        padding: 0.7rem 1.8rem;
+        font-weight: 600;
+    }
+    
+    /* Hero - Full-Screen Image */
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: 
+            linear-gradient(rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.6)),
+            linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: 
+            radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%),
+            radial-gradient(circle at 70% 60%, rgba(255,255,255,0.02) 0%, transparent 50%);
+    }
+    .hero-content {
+        text-align: center;
+        max-width: 900px;
+        position: relative;
+        z-index: 1;
+    }
+    .photo-credit {
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        color: rgba(255,255,255,0.5);
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+    }
+    .hero h1 { 
+        font-size: 5.5rem; 
+        line-height: 1.1;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        color: #ffffff;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    .hero-tagline {
+        font-size: 1.3rem;
+        margin-bottom: 4rem;
+        color: rgba(255,255,255,0.8);
+        line-height: 1.7;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+    }
+    .hero-cta {
+        display: inline-flex;
+        gap: 2rem;
+    }
+    .btn {
+        padding: 1.2rem 3rem;
+        text-decoration: none;
+        transition: all 0.4s;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+    }
+    .btn-primary {
+        background: white;
+        color: #0a0a0a;
+    }
+    .btn-primary:hover {
+        background: rgba(255,255,255,0.9);
+        transform: translateY(-2px);
+    }
+    .btn-secondary {
+        background: transparent;
+        border: 1px solid rgba(255,255,255,0.5);
+        color: white;
+    }
+    .btn-secondary:hover {
+        border-color: white;
+    }
+    .scroll-indicator {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        color: rgba(255,255,255,0.4);
+        text-transform: uppercase;
+    }
+    
+    /* Credentials Section */
+    .credentials-section {
+        padding: 6rem 0;
+        background: #0a0a0a;
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .credentials-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .credentials-showcase {
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(20px);
+        padding: 3rem 4rem;
+        border-radius: 8px;
+        border: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+    .showcase-title {
+        font-size: 1.6rem;
+        color: #ffffff;
+        margin-bottom: 3rem;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .credentials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+    .cred-block {
+        text-align: center;
+    }
+    .cred-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(255,255,255,0.5);
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+    }
+    .cred-info {
+        font-size: 1.05rem;
+        color: rgba(255,255,255,0.95);
+        font-weight: 600;
+        line-height: 1.5;
+    }
+    
+    /* Section - Visual Cards */
+    section { padding: 8rem 0; }
+    .section-header {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 5rem;
+    }
+    .section-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        color: rgba(255,255,255,0.5);
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+    .section-header h2 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        color: #ffffff;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    .section-header p {
+        font-size: 1.15rem;
+        color: rgba(255,255,255,0.75);
+        line-height: 1.8;
+        font-weight: 300;
+    }
+    .visual-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+    .visual-card {
+        position: relative;
+        height: 550px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        transition: all 0.5s;
+    }
+    .visual-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 0%, rgba(10,10,10,0.8) 100%);
+        z-index: 1;
+    }
+    .visual-card:hover {
+        transform: scale(1.02);
+    }
+    .card-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 3rem;
+        z-index: 2;
+    }
+    .card-num {
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        color: rgba(255,255,255,0.5);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+    .card h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        color: #ffffff;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    .card p {
+        color: rgba(255,255,255,0.8);
+        line-height: 1.7;
+        font-size: 0.95rem;
+    }
+    
+    /* Footer */
+    footer {
+        background: #000000;
+        padding: 4rem 0 2rem;
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 3rem;
+    }
+    .footer-about h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .footer-about p {
+        color: rgba(255,255,255,0.6);
+        line-height: 1.8;
+        font-size: 0.9rem;
+    }
+    .footer-links h4 {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.8);
+    }
+    .footer-links ul {
+        list-style: none;
+    }
+    .footer-links li {
+        margin-bottom: 0.75rem;
+    }
+    .footer-links a {
+        color: rgba(255,255,255,0.6);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.3s;
+    }
+    .footer-links a:hover {
+        color: #ffffff;
+    }
+    .footer-bottom {
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255,255,255,0.08);
+        text-align: center;
+        color: rgba(255,255,255,0.4);
+        font-size: 0.85rem;
+    }
+</style>
+```
+
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html">Bournemouth Implants</a>
-                </div>
-                <button class="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
-                    <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                    <li><a href="patient-journey.html">Patient Journey</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="nav-cta">Request Assessment</a></li>
-                </ul>
-            </div>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Bournemouth Dental Implants</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="full-arch.html">Full Arch</a></li>
+                <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                <li><a href="patient-journey.html">Journey</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact" class="nav-cta">Book Assessment</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Modern Implant & Rehabilitation Dentistry</h1>
-                <p class="hero-subtitle">Whether you're facing failing teeth, progressive bone loss, or concerned about early tooth loss, treatment begins with assessment. We determine the right intervention—from targeted implant placement to full arch rehabilitation—based on your clinical picture, not a predetermined script.</p>
-                <div class="hero-cta">
-                    <a href="contact.html" class="btn btn-primary">Request an Implant & Rehabilitation Assessment</a>
-                    <a href="full-arch-implants.html" class="btn btn-secondary">Learn More</a>
-                </div>
-                <div class="trust-badges">
-                    <div class="badge">
-                        <span class="badge-icon">✓</span>
-                        <span>Advanced Prosthodontic Training</span>
+```
+<section class="hero">
+    <div class="hero-content">
+        <div class="photo-credit">Planning-Led Dentistry</div>
+        <h1>Modern Dental<br>Rehabilitation</h1>
+        <p class="hero-tagline">Advanced dental implant solutions in Bournemouth. Our commitment to personalised medicine means every treatment—from single teeth to full arch—is tailored to your individual needs.</p>
+        <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Request Assessment</a>
+            <a href="#treatments" class="btn btn-secondary">Explore Treatments</a>
+        </div>
+    </div>
+    <div class="scroll-indicator">Scroll to Explore</div>
+</section>
+
+<section class="credentials-section">
+    <div class="container">
+        <div class="credentials-wrapper">
+            <div class="credentials-showcase">
+                <div class="showcase-title">Professional Credentials</div>
+                <div class="credentials-grid">
+                    <div class="cred-block">
+                        <div class="cred-label">Lead Clinician</div>
+                        <div class="cred-info">Dr. Will Bonab BDS</div>
                     </div>
-                    <div class="badge">
-                        <span class="badge-icon">✓</span>
-                        <span>GDC Registered</span>
+                    <div class="cred-block">
+                        <div class="cred-label">GDC Registration</div>
+                        <div class="cred-info">318594</div>
                     </div>
-                    <div class="badge">
-                        <span class="badge-icon">✓</span>
-                        <span>Digital Planning Workflows</span>
+                    <div class="cred-block">
+                        <div class="cred-label">Primary Qualification</div>
+                        <div class="cred-info">Bachelor of Dental Surgery<br>King's College London</div>
                     </div>
-                    <div class="badge">
-                        <span class="badge-icon">✓</span>
-                        <span>Planning-Led Approach</span>
+                    <div class="cred-block">
+                        <div class="cred-label">Specialist Training</div>
+                        <div class="cred-info">Postgraduate Prosthodontics<br>Harvard University</div>
+                    </div>
+                    <div class="cred-block">
+                        <div class="cred-label">Technology</div>
+                        <div class="cred-info">3D CBCT Imaging<br>Digital Treatment Planning</div>
+                    </div>
+                    <div class="cred-block">
+                        <div class="cred-label">Practice Location</div>
+                        <div class="cred-info">Bright Blue Dental Practice<br>233 Charminster Road<br>Bournemouth BH8 9QJ</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Problem/Solution Section -->
-    <section class="problem-solution">
-        <div class="container">
-            <div class="section-intro">
-                <h2>When Dental Problems Are Worsening Faster Than You Expected</h2>
-                <p>Perhaps you've lost one tooth and worry about the next. Or you've been managing failing teeth for years, patching problems that keep returning. You've researched implants but can't tell if you're being under-treated or over-sold.</p>
-            </div>
-            <div class="two-col">
-                <div class="problem-col">
-                    <h3>The Situations We See</h3>
-                    <ul class="problem-list">
-                        <li>Dentures that no longer feel stable or secure</li>
-                        <li>Teeth that have failed despite repeated treatment</li>
-                        <li>Bone loss that's visibly changing your facial appearance</li>
-                        <li>One or two missing teeth with concerns about future deterioration</li>
-                        <li>Uncertainty about whether you need full arch treatment or something more targeted</li>
-                        <li>The sense that your current approach isn't addressing the underlying problem</li>
-                    </ul>
-                </div>
-                <div class="solution-col">
-                    <h3>What Planning-Led Implant Care Provides</h3>
-                    <ul class="solution-list">
-                        <li>Assessment that determines the right level of intervention for your situation</li>
-                        <li>Surgical planning informed by three-dimensional imaging</li>
-                        <li>Treatment scaled appropriately—from single implants to full arch rehabilitation</li>
-                        <li>Predictability based on diagnostic work, not guesswork</li>
-                        <li>Clear timelines and realistic outcomes discussed before treatment begins</li>
-                        <li>A pathway designed around long-term stability, not short-term patching</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="cta-center">
-                <a href="dentures-to-fixed.html" class="btn btn-primary">How Assessment Works</a>
-            </div>
+<section id="treatments" style="background: #0a0a0a;">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Treatment Options</div>
+            <h2>Implant Services</h2>
+            <p>We provide comprehensive dental implant treatment from single tooth replacement to complete arch rehabilitation. All cases are planned using 3D CBCT imaging to ensure optimal outcomes.</p>
         </div>
-    </section>
-
-    <!-- Services Overview -->
-    <section class="services-overview">
-        <div class="container">
-            <div class="section-intro centered">
-                <h2>Assessment Determines the Right Path</h2>
-                <p>Not every patient requires full arch treatment. Our focus is on matching intervention to clinical need—whether that means targeted implant placement for early tooth loss or comprehensive rehabilitation when multiple teeth have failed.</p>
+        <div class="visual-grid">
+            <div class="visual-card">
+                <div class="card-overlay">
+                    <div class="card-num">Treatment 01</div>
+                    <h3>Full Arch Rehabilitation</h3>
+                    <p>Complete upper or lower arch replacement using fixed implant-supported prosthetics. Suitable for patients with multiple failing teeth or complete edentulism.</p>
+                </div>
             </div>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Full Arch Implant Rehabilitation</h3>
-                    <p>When multiple teeth have failed or dentures are no longer viable, full arch treatment provides a fixed, stable foundation. This is where planning matters most—implant positions, bone grafting decisions, and prosthetic design are mapped digitally before surgery begins.</p>
-                    <a href="full-arch-implants.html" class="btn-link">Learn More →</a>
+            <div class="visual-card">
+                <div class="card-overlay">
+                    <div class="card-num">Treatment 02</div>
+                    <h3>Dentures to Fixed</h3>
+                    <p>Transition from removable dentures to permanently fixed implant-retained teeth. Restore confidence and natural function.</p>
                 </div>
-                <div class="service-card">
-                    <h3>Denture Conversion to Fixed Teeth</h3>
-                    <p>For patients ready to transition from removable dentures to permanently fixed implant-supported restorations. Requires radiographic assessment of bone anatomy, realistic expectation-setting, and commitment to maintenance protocols.</p>
-                    <a href="dentures-to-fixed.html" class="btn-link">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <h3>Targeted Implant Solutions</h3>
-                    <p>Early intervention when one or several teeth are lost prevents bone deterioration and avoids the need for more extensive treatment later. Assessment clarifies whether targeted placement is appropriate or whether a more comprehensive approach is indicated. Straightforward cases are often managed within our wider practice structure.</p>
-                    <a href="missing-teeth.html" class="btn-link">Learn More →</a>
+            </div>
+            <div class="visual-card">
+                <div class="card-overlay">
+                    <div class="card-num">Treatment 03</div>
+                    <h3>Single & Multiple Implants</h3>
+                    <p>Replace missing teeth without affecting adjacent healthy teeth. Natural-looking ceramic crowns on titanium implants.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Why Choose Us -->
-    <section class="why-choose">
-        <div class="container">
-            <div class="section-intro centered">
-                <h2>Why Planning Comes First</h2>
-                <p>Implant treatment isn't one-size-fits-all. The difference between a predictable outcome and an uncertain one lies in how thoroughly the case is assessed and how carefully treatment is matched to clinical reality.</p>
+<footer id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Bournemouth Dental Implants</h3>
+                <p>Expert dental implant treatment in Bournemouth. From single tooth replacement to full arch rehabilitation, we provide personalised care using advanced 3D planning technology.</p>
+                <p style="margin-top: 1.5rem;">
+                    <strong>Bright Blue Dental Practice</strong><br>
+                    233 Charminster Road<br>
+                    Bournemouth BH8 9QJ
+                </p>
+                <p style="margin-top: 1rem;">
+                    Tel: 01202 528 949<br>
+                    Email: contactus@bournemouthimplants.com
+                </p>
             </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <h3>Prosthodontic Training & Implant Focus</h3>
-                    <p>Dr Will Bonab has completed postgraduate prosthodontic training with a focused interest in implant-led rehabilitation. This background informs treatment planning for both straightforward and complex cases, ensuring intervention is scaled appropriately.</p>
-                </div>
-                <div class="why-card">
-                    <h3>Assessment Before Commitment</h3>
-                    <p>Initial consultations include clinical examination and radiographic imaging to determine what level of intervention is indicated. You'll understand whether your situation requires targeted implant placement or full arch rehabilitation—and why.</p>
-                </div>
-                <div class="why-card">
-                    <h3>Digital Surgical Planning</h3>
-                    <p>CBCT scans and planning software map implant positions, angulations, and prosthetic outcomes before surgery. This is standard for complex full arch cases and available for targeted implant placement where anatomy requires it.</p>
-                </div>
-                <div class="why-card">
-                    <h3>Comfortable with Complexity</h3>
-                    <p>Our practice focuses on cases where planning, surgical experience, and prosthodontic understanding make the difference. Full arch rehabilitation, bone grafting protocols, and immediate loading decisions are managed in-house.</p>
-                </div>
-                <div class="why-card">
-                    <h3>Transparent Pricing</h3>
-                    <p>Comprehensive full arch implant treatment typically costs £25,000 per arch. Targeted implant solutions vary depending on the number of implants and prosthetic complexity. Written treatment plans with itemised costs are provided following assessment.</p>
-                </div>
-                <div class="why-card">
-                    <h3>Right-Sized Treatment</h3>
-                    <p>Not every case requires full arch intervention. We'll tell you if targeted implant placement is more appropriate, if timing needs to be reconsidered, or if your expectations need adjusting before proceeding.</p>
-                </div>
+            <div class="footer-links">
+                <h4>Treatments</h4>
+                <ul>
+                    <li><a href="full-arch.html">Full Arch Implants</a></li>
+                    <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                    <li><a href="single-implants.html">Single Implants</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="patient-journey.html">Patient Journey</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials-home">
-        <div class="container">
-            <div class="section-intro centered">
-                <h2>Patient Experiences</h2>
-                <p>Outcomes vary depending on case complexity, patient anatomy, and healing response. These reflections represent individual journeys, not guaranteed results.</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">I'd been wearing dentures for over a decade. The assessment made it clear that full arch treatment was the right option for me. The process was thoroughly explained, and I felt confident about the decision.</p>
-                    <p class="testimonial-author">— Margaret S., Bournemouth</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">I'd lost two teeth and was worried about losing more. The consultation clarified that I didn't need full arch treatment—just targeted implants. I appreciated the honest advice and clear planning.</p>
-                    <p class="testimonial-author">— David T., Poole</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">The team explained why my situation required full arch rehabilitation rather than trying to save individual teeth. It was the right call. The difference in stability and function has been significant.</p>
-                    <p class="testimonial-author">— Susan P., Christchurch</p>
-                </div>
-            </div>
-            <div class="cta-center">
-                <a href="testimonials.html" class="btn btn-secondary">Read More Patient Feedback</a>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bournemouth Dental Implants. All rights reserved. | GDC Registration: 318594 | CQC Registered Practice</p>
         </div>
-    </section>
+    </div>
+</footer>
+```
 
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-intro centered">
-                <h2>The Treatment Pathway</h2>
-                <p>Whether your case requires targeted implant placement or comprehensive full arch rehabilitation, the process begins with diagnostic assessment and ends with long-term maintenance planning.</p>
-            </div>
-            <div class="journey-steps">
-                <div class="journey-step">
-                    <div class="step-number">1</div>
-                    <h3>Initial Assessment</h3>
-                    <p>Clinical examination, radiographic imaging, and discussion of your concerns. We determine what level of intervention is indicated and whether full arch treatment, targeted implants, or a different approach makes the most sense.</p>
-                </div>
-                <div class="journey-step">
-                    <div class="step-number">2</div>
-                    <h3>Diagnostic Planning</h3>
-                    <p>CBCT scans reveal bone anatomy in three dimensions. Digital planning determines implant positions, identifies grafting requirements, and maps prosthetic design. The extent of planning depends on case complexity.</p>
-                </div>
-                <div class="journey-step">
-                    <div class="step-number">3</div>
-                    <h3>Surgical Phase</h3>
-                    <p>Implants are placed using guided surgery where indicated. For full arch cases, provisional fixed restorations are typically provided the same day. Targeted implant cases may involve delayed or immediate loading depending on clinical conditions.</p>
-                </div>
-                <div class="journey-step">
-                    <div class="step-number">4</div>
-                    <h3>Integration Period</h3>
-                    <p>Implants integrate with bone over three to six months. Full arch patients wear provisional fixed teeth throughout. Targeted implant patients may have temporary restorations or healing caps, depending on the protocol used.</p>
-                </div>
-                <div class="journey-step">
-                    <div class="step-number">5</div>
-                    <h3>Final Restoration</h3>
-                    <p>Once integration is confirmed, definitive restorations are fabricated and fitted. For full arch cases, this involves custom-designed fixed bridges. For targeted implants, individual crowns or bridges are delivered.</p>
-                </div>
-                <div class="journey-step">
-                    <div class="step-number">6</div>
-                    <h3>Long-Term Maintenance</h3>
-                    <p>All implant cases require ongoing professional maintenance and hygiene protocols. Regular review appointments monitor tissue health, prosthetic integrity, and occlusal stability over years and decades.</p>
-                </div>
-            </div>
-            <div class="cta-center">
-                <a href="patient-journey.html" class="btn btn-secondary">See Detailed Pathway</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Request an Implant & Rehabilitation Assessment</h2>
-                <p>Whether you're concerned about early tooth loss or facing more extensive dental failure, assessment clarifies what intervention is appropriate. We'll examine your clinical situation, discuss realistic outcomes, and provide honest advice on timing and suitability.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">Request Assessment</a>
-                    <a href="tel:+441202528949" class="btn btn-secondary">Call: 01202 528 949</a>
-                </div>
-                <p class="cta-note">Assessments available Monday to Friday, with selected Saturday appointments.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Bournemouth Implants</h4>
-                    <p>A planning-led implant and rehabilitation service managing cases from targeted implant placement through to complex full arch treatment across Bournemouth and Dorset.</p>
-                    <p class="gdc-note">GDC Registered Dentists</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
-                        <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                        <li><a href="patient-journey.html">Patient Journey</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Patient Resources</h4>
-                    <ul>
-                        <li><a href="testimonials.html">Patient Testimonials</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="complaints.html">Complaints Procedure</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Information</h4>
-                    <p><strong>Treatment Location:</strong><br>233 Charminster Road<br>Bournemouth, Dorset<br>BH8 9QJ</p>
-                    <p><strong>Phone:</strong> <a href="tel:+441202528949" style="color: rgba(255,255,255,0.8);">01202 528 949</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:contactus@bournemouthimplants.com" style="color: rgba(255,255,255,0.8);">contactus@bournemouthimplants.com</a></p>
-                    <p><strong>Hours:</strong><br>Mon, Wed, Thu: 8am-5pm<br>Tue: 8am-7pm<br>Fri: 8am-2pm<br>Sat: By appointment</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Bournemouth Implants. All rights reserved.</p>
-                <p class="disclaimer">Bournemouth Implants is a dental implant service. Treatment is provided at 233 Charminster Road, Bournemouth from an established CQC-registered dental facility by GDC-registered dentists. This website is for informational purposes only and does not constitute medical advice. All dental implant treatment carries risks and individual outcomes vary. Treatment suitability is determined following comprehensive clinical and radiographic assessment.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
