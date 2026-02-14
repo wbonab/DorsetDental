@@ -3,367 +3,633 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Journey | Full Arch Implant Process Bournemouth</title>
-    <meta name="description" content="Step-by-step guide to your full arch dental implant journey in Bournemouth. From consultation to final teeth. Know exactly what to expect.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="page-styles.css">
+    <meta name="description" content="Your implant treatment journey in Bournemouth. From initial assessment through to final zirconia ceramic teeth - comprehensive digital planning and expert care.">
+    <title>Patient Journey | Treatment Process - Bournemouth Dental Implants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            line-height: 1.7;
+            color: #ffffff;
+            background: #0a0a0a;
+        }
+        .container { max-width: 1600px; margin: 0 auto; padding: 0 3rem; }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .nav-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { 
+            font-weight: 300; 
+            font-size: 1rem; 
+            color: #ffffff;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: #ffffff; }
+        .nav-cta {
+            background: white;
+            color: #0a0a0a !important;
+            padding: 0.7rem 1.8rem;
+            font-weight: 600;
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            padding: 12rem 0 6rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%);
+        }
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .breadcrumb {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .breadcrumb a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: rgba(255,255,255,0.8);
+        }
+        .page-hero h1 {
+            font-size: 5rem;
+            line-height: 1.1;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .page-hero-lead {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Content Sections */
+        section { padding: 6rem 0; }
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .section-header h2 {
+            font-size: 3rem;
+            line-height: 1.2;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+        }
+        
+        /* Journey Steps */
+        .journey-steps {
+            display: grid;
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        .step {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 3rem;
+            padding: 3rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .step:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.2);
+            transform: translateX(8px);
+        }
+        .step-number {
+            font-size: 5rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            line-height: 1;
+        }
+        .step-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .step-content p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .step-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .step-content li {
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            color: rgba(255,255,255,0.75);
+        }
+        .step-content li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        /* Timeline */
+        .timeline-box {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .timeline-box h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .timeline-box p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 3rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            transition: all 0.4s;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .btn-primary {
+            background: white;
+            color: #0a0a0a;
+        }
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #000000;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+        .footer-about h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .footer-about p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            .nav-content {
+                padding: 0 1.5rem;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                text-align: center;
+                padding: 2rem 0;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+            .nav-menu li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+            .nav-menu a {
+                display: block;
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            .nav-cta {
+                margin: 1rem auto 0;
+                display: inline-block;
+                width: auto;
+            }
+            .page-hero {
+                padding: 8rem 1.5rem 4rem;
+            }
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            .page-hero-lead {
+                font-size: 1rem;
+            }
+            section {
+                padding: 3rem 0;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .step {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 2rem;
+            }
+            .step-number {
+                font-size: 3rem;
+            }
+            .step-content h3 {
+                font-size: 1.5rem;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .cta-section p {
+                font-size: 1rem;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html">Bournemouth Implants</a>
-                </div>
-                <button class="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
-                    <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                    <li><a href="patient-journey.html" class="active">Patient Journey</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
-                </ul>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Bournemouth Dental Implants</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="full-arch.html">Full Arch</a></li>
+                <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                <li><a href="patient-journey.html">Journey</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact" class="nav-cta">Book Assessment</a></li>
+            </ul>
         </div>
     </nav>
 
     <section class="page-hero">
-        <div class="container">
+        <div class="page-hero-content">
             <div class="breadcrumb">
                 <a href="index.html">Home</a> / Patient Journey
             </div>
-            <h1>Your Journey to Fixed Teeth</h1>
-            <p class="lead">A clear, step-by-step guide to what happens from your first consultation through to your beautiful new smile.</p>
+            <h1>Your Treatment<br>Journey</h1>
+            <p class="page-hero-lead">From initial assessment through to your final zirconia ceramic teeth - a comprehensive, planning-led approach to dental implant treatment.</p>
         </div>
     </section>
 
-    <section class="content-section">
+    <section>
         <div class="container">
-            <div class="content-layout">
-                <div class="content-main">
-                    <h2>What to Expect: Your Complete Journey</h2>
-                    <p>We understand that considering full arch dental implants is a big decision. One of the best ways to feel confident is to know exactly what to expect at every stage.</p>
-                    
-                    <p>This guide walks you through the entire process, from your very first phone call to your long-term care. There are no surprises—just a clear, transparent journey to your new smile.</p>
-
-                    <div class="timeline-overview">
-                        <h3>Timeline Overview</h3>
-                        <ul class="timeline-list">
-                            <li><strong>Week 1:</strong> Initial consultation and planning</li>
-                            <li><strong>Week 2-4:</strong> Treatment planning and preparation</li>
-                            <li><strong>Surgery Day:</strong> Implants placed, temporary teeth fitted</li>
-                            <li><strong>Months 1-6:</strong> Healing and integration</li>
-                            <li><strong>Month 6+:</strong> Final teeth fitted</li>
-                            <li><strong>Ongoing:</strong> Regular maintenance appointments</li>
-                        </ul>
-                    </div>
-
-                    <h2>Stage 1: Initial Enquiry</h2>
-                    <p>Your journey begins with a simple phone call or online enquiry. When you contact us, you'll speak with a friendly member of our team who will:</p>
-                    
-                    <ul class="benefit-list">
-                        <li>Listen to your concerns and what you're hoping to achieve</li>
-                        <li>Answer any initial questions you have</li>
-                        <li>Explain the consultation process</li>
-                        <li>Book you in for a free, no-obligation consultation</li>
-                        <li>Send you information to read before your appointment</li>
-                    </ul>
-
-                    <p>There's no pressure, no sales pitch—just helpful information to prepare you for your consultation.</p>
-
-                    <h2>Stage 2: Free Consultation</h2>
-                    <p><strong>Duration: 45-60 minutes</strong></p>
-                    <p>Your consultation is comprehensive and gives us the information we need to recommend the best treatment for you.</p>
-
-                    <h3>What Happens During Your Consultation:</h3>
-                    <div class="process-steps">
-                        <div class="process-step">
-                            <div class="process-content">
-                                <h4>1. Discussion (15-20 minutes)</h4>
-                                <p>We'll talk about your current situation, what's bothering you, and what you're hoping to achieve. This is your opportunity to ask questions and voice any concerns.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-content">
-                                <h4>2. Clinical Examination (10-15 minutes)</h4>
-                                <p>A thorough examination of your teeth, gums, bite, and oral health. We'll check for any issues that need addressing.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-content">
-                                <h4>3. 3D CT Scan (5 minutes)</h4>
-                                <p>A quick, painless 3D scan that gives us detailed information about your bone density and anatomy. This is essential for planning your treatment.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-content">
-                                <h4>4. Treatment Discussion (15-20 minutes)</h4>
-                                <p>We'll review your scan together, explain your options, discuss what's achievable, and answer all your questions.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-content">
-                                <h4>5. Written Quote</h4>
-                                <p>Before you leave, you'll receive a comprehensive written treatment plan and transparent pricing. No hidden costs, no surprises.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>After Your Consultation</h3>
-                    <p>Take your time to think things over. There's absolutely no pressure to make an immediate decision. We're here to answer questions whenever you need us.</p>
-
-                    <h2>Stage 3: Treatment Planning</h2>
-                    <p><strong>Duration: 1-2 weeks</strong></p>
-                    <p>Once you decide to proceed, we begin detailed treatment planning:</p>
-
-                    <ul class="benefit-list">
-                        <li><strong>Digital Smile Design:</strong> Using software, we design your new smile based on your facial features and preferences</li>
-                        <li><strong>Surgical Planning:</strong> We determine the exact position, angle, and depth of each implant</li>
-                        <li><strong>Temporary Teeth Creation:</strong> We fabricate your temporary fixed teeth to be fitted on surgery day</li>
-                        <li><strong>Pre-operative Appointment:</strong> Review your treatment plan, answer final questions, and prepare for surgery</li>
-                    </ul>
-
-                    <h2>Stage 4: Surgery Day</h2>
-                    <p><strong>Duration: 2-4 hours per arch</strong></p>
-                    <p>This is the day you've been waiting for. Here's exactly what happens:</p>
-
-                    <h3>Before Surgery</h3>
-                    <ul class="benefit-list">
-                        <li>Arrive at the practice (we recommend bringing someone to accompany you home)</li>
-                        <li>Complete any final paperwork</li>
-                        <li>Discuss sedation options if chosen</li>
-                        <li>Local anaesthetic is administered—you'll be completely numb and comfortable</li>
-                    </ul>
-
-                    <h3>During Surgery</h3>
-                    <p>The procedure follows these steps:</p>
-                    <ol style="line-height: 1.8;">
-                        <li><strong>Preparation:</strong> Any remaining teeth that need extraction are removed</li>
-                        <li><strong>Implant Placement:</strong> 4-6 implants are placed using guided surgery techniques for precision</li>
-                        <li><strong>Immediate Teeth:</strong> Your temporary fixed bridge is attached to the implants</li>
-                        <li><strong>Final Checks:</strong> We ensure everything fits properly and comfortably</li>
-                    </ol>
-
-                    <p>Throughout the procedure, you're kept comfortable and informed. Most patients are surprised by how straightforward it is.</p>
-
-                    <h3>Immediately After Surgery</h3>
-                    <p>You'll leave the practice with your new fixed teeth in place. You'll receive:</p>
-                    <ul class="benefit-list">
-                        <li>Detailed aftercare instructions</li>
-                        <li>Pain medication and antibiotics if needed</li>
-                        <li>Emergency contact number</li>
-                        <li>Follow-up appointment scheduled</li>
-                    </ul>
-
-                    <h2>Stage 5: Initial Recovery</h2>
-                    <p><strong>Duration: 1-2 weeks</strong></p>
-
-                    <h3>First 24-48 Hours</h3>
-                    <ul class="benefit-list">
-                        <li>Rest at home—take it easy</li>
-                        <li>Apply ice packs to reduce swelling</li>
-                        <li>Eat soft, cool foods</li>
-                        <li>Take prescribed medications as directed</li>
-                        <li>Avoid strenuous activity</li>
-                    </ul>
-
-                    <h3>First Week</h3>
-                    <ul class="benefit-list">
-                        <li>Swelling and bruising are normal and will subside</li>
-                        <li>Stick to soft foods (mashed potato, soup, yoghurt, scrambled eggs)</li>
-                        <li>Gently clean your teeth as instructed</li>
-                        <li>Most patients return to work after 3-5 days</li>
-                    </ul>
-
-                    <h3>Week 2 Onwards</h3>
-                    <ul class="benefit-list">
-                        <li>Gradually introduce more normal foods</li>
-                        <li>Swelling should be mostly resolved</li>
-                        <li>Continue with good oral hygiene</li>
-                        <li>Attend your 2-week check-up</li>
-                    </ul>
-
-                    <h2>Stage 6: Healing Period</h2>
-                    <p><strong>Duration: 3-6 months</strong></p>
-                    <p>During this phase, your implants are integrating with your bone—a process called osseointegration. This creates the strong foundation for your final teeth.</p>
-
-                    <h3>What to Expect:</h3>
-                    <ul class="benefit-list">
-                        <li>You'll wear your comfortable temporary fixed teeth</li>
-                        <li>Gradually return to normal eating (avoiding very hard foods)</li>
-                        <li>Attend periodic check-ups (typically at 2 weeks, 6 weeks, and 3 months)</li>
-                        <li>Your temporary teeth may be adjusted for optimal comfort</li>
-                        <li>By month 3, you'll feel completely normal</li>
-                    </ul>
-
-                    <h3>Life During Healing</h3>
-                    <p>Most patients adapt quickly to their temporary teeth. You can work, socialize, and live normally. Many people report that even the temporary teeth feel better than their dentures ever did.</p>
-
-                    <h2>Stage 7: Final Teeth Fitting</h2>
-                    <p><strong>Duration: 2-3 appointments over 2-4 weeks</strong></p>
-                    <p>Once your implants have fully integrated, it's time for your permanent teeth.</p>
-
-                    <h3>The Process:</h3>
-                    <div class="process-steps">
-                        <div class="process-step">
-                            <div class="process-content">
-                                <h4>Appointment 1: Impressions & Design</h4>
-                                <p>We take detailed impressions and measurements. You'll help design your final smile—choosing the shade, shape, and size of your teeth.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-content">
-                                <h4>Appointment 2: Try-In</h4>
-                                <p>You'll try your new teeth and we'll make any adjustments needed to ensure they're perfect.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-content">
-                                <h4>Appointment 3: Final Fitting</h4>
-                                <p>Your beautiful, permanent teeth are fitted and secured. You'll leave with your complete new smile.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h2>Stage 8: Ongoing Care</h2>
-                    <p>Your implants can last for decades with proper care. Here's what you need to do:</p>
-
-                    <h3>Daily Care at Home:</h3>
-                    <ul class="benefit-list">
-                        <li>Brush your teeth twice daily</li>
-                        <li>Floss or use interdental brushes daily</li>
-                        <li>Use a water flosser if recommended</li>
-                        <li>Maintain good overall oral hygiene</li>
-                    </ul>
-
-                    <h3>Regular Check-ups:</h3>
-                    <ul class="benefit-list">
-                        <li><strong>First year:</strong> Appointments at 3, 6, and 12 months</li>
-                        <li><strong>After first year:</strong> Annual check-ups and professional cleaning</li>
-                        <li>We'll check implant health, clean your teeth, and address any issues</li>
-                    </ul>
-
-                    <h2>Common Questions About the Journey</h2>
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <h3>Will I be without teeth at any point?</h3>
-                            <p>No. You'll receive temporary fixed teeth on the same day as your surgery. You're never without teeth.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>How much pain should I expect?</h3>
-                            <p>Most patients report less discomfort than expected. The first few days may involve some soreness and swelling, but this is typically manageable with over-the-counter pain relief. Many patients say it's less painful than a tooth extraction.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>When can I return to work?</h3>
-                            <p>Most patients return to work within 3-5 days. If your job is physically demanding, you may need a week.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Can I eat normally?</h3>
-                            <p>You'll start with soft foods and gradually progress to normal eating over 2-3 months. Once your final teeth are fitted, you can eat virtually anything.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>What if something goes wrong?</h3>
-                            <p>Complications are rare, but we're always here if you need us. You'll have an emergency contact number and can reach us anytime during your recovery.</p>
-                        </div>
-                    </div>
-
-                    <h2>Ready to Start Your Journey?</h2>
-                    <p>The first step is simple—book your free consultation. There's no obligation, no pressure, just honest advice and clear information to help you make the right decision for you.</p>
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">Treatment Process</div>
+                    <h2>Six Phases to Your New Smile</h2>
+                    <p>Every case is different, but this outline shows the typical journey for full arch implant treatment.</p>
                 </div>
 
-                <aside class="sidebar">
-                    <div class="sidebar-box cta-box">
-                        <h4>Start Your Journey Today</h4>
-                        <p>Book your free consultation and take the first step toward your new smile.</p>
-                        <a href="contact.html" class="btn btn-primary btn-block">Book Now</a>
-                        <p class="sidebar-note">Or call: <a href="tel:+441202528949">01202 528 949</a></p>
+                <div class="journey-steps">
+                    <div class="step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Initial Consultation</h3>
+                            <p>Your journey begins with a comprehensive clinical assessment:</p>
+                            <ul>
+                                <li>Discussion of your concerns and treatment goals</li>
+                                <li>Clinical examination of existing teeth and oral health</li>
+                                <li>Review of medical history and medications</li>
+                                <li>Preliminary treatment planning discussion</li>
+                                <li>Explanation of available options</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="sidebar-box">
-                        <h4>Quick Timeline</h4>
-                        <ul class="sidebar-links" style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 0.75rem;">📅 <strong>Week 1:</strong> Consultation</li>
-                            <li style="margin-bottom: 0.75rem;">🗓️ <strong>Weeks 2-4:</strong> Planning</li>
-                            <li style="margin-bottom: 0.75rem;">🏥 <strong>Surgery Day:</strong> New teeth</li>
-                            <li style="margin-bottom: 0.75rem;">⏳ <strong>3-6 months:</strong> Healing</li>
-                            <li>✅ <strong>Final:</strong> Permanent teeth</li>
-                        </ul>
+                    <div class="step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Diagnostic Imaging</h3>
+                            <p>Advanced 3D imaging provides detailed anatomical information:</p>
+                            <ul>
+                                <li>CBCT scan captures complete jaw structure</li>
+                                <li>Assessment of bone volume and quality</li>
+                                <li>Identification of anatomical landmarks</li>
+                                <li>Digital treatment planning using specialist software</li>
+                                <li>Determination of implant number and positioning</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="sidebar-box highlight">
-                        <h4>Patient Experience</h4>
-                        <p>"The entire process was so much easier than I expected. The team kept me informed every step of the way, and I always knew exactly what was happening next."</p>
-                        <p style="font-size: 0.9rem; margin-top: 0.5rem;"><strong>— Patricia L., Bournemouth</strong></p>
+                    <div class="step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Treatment Planning</h3>
+                            <p>Detailed planning ensures optimal outcomes:</p>
+                            <ul>
+                                <li>Digital design of implant positions</li>
+                                <li>Assessment of bone grafting requirements</li>
+                                <li>Timeline development for phased treatment</li>
+                                <li>Detailed cost breakdown provided</li>
+                                <li>Discussion of material options for final teeth</li>
+                            </ul>
+                        </div>
                     </div>
-                </aside>
-            </div>
-        </div>
-    </section>
 
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Begin Your Journey to a New Smile</h2>
-                <p>Book your free consultation today. No obligation, no pressure—just expert guidance and honest advice.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-large">Book Free Consultation</a>
-                    <a href="tel:+441202528949" class="btn btn-secondary btn-large">Call: 01202 528 949</a>
+                    <div class="step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Surgical Phase</h3>
+                            <p>Implant placement is performed under local anaesthesia:</p>
+                            <ul>
+                                <li>Extraction of failing teeth if required</li>
+                                <li>Bone grafting procedures if indicated</li>
+                                <li>Placement of 4-6 titanium implant fixtures per arch</li>
+                                <li>Fitting of temporary prosthesis if appropriate</li>
+                                <li>Post-operative instructions and medications</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">05</div>
+                        <div class="step-content">
+                            <h3>Healing Period</h3>
+                            <p>Time for osseointegration - bone bonding with implants:</p>
+                            <ul>
+                                <li>Typical healing period of 3-6 months</li>
+                                <li>Regular review appointments to monitor progress</li>
+                                <li>Temporary restoration worn during healing</li>
+                                <li>Soft diet recommendations during integration</li>
+                                <li>Gradual increase in function as healing progresses</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">06</div>
+                        <div class="step-content">
+                            <h3>Final Restoration</h3>
+                            <p>Fabrication and fitting of your permanent zirconia teeth:</p>
+                            <ul>
+                                <li>Digital impressions captured for precision</li>
+                                <li>Custom design of zirconia ceramic prosthesis</li>
+                                <li>Try-in appointment to verify fit and aesthetics</li>
+                                <li>Final fitting and adjustment of permanent teeth</li>
+                                <li>Maintenance and care instructions provided</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-box">
+                    <h3>Typical Timeline</h3>
+                    <p>Full arch treatment typically takes 6-12 months from initial consultation to final restoration. The exact timeline depends on your individual healing capacity, bone quality, and whether grafting procedures are required.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <section class="cta-section">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Bournemouth Implants</h4>
-                    <p>Dedicated dental implant service providing full arch rehabilitation and advanced prosthodontic care to patients across Bournemouth and Dorset.</p>
-                    <p class="gdc-note">GDC Registered Dentists</p>
+            <h2>Ready to Begin Your Journey?</h2>
+            <p>Book your initial consultation to discuss your treatment options.</p>
+            <a href="#contact" class="btn btn-primary">Request Assessment</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Bournemouth Dental Implants</h3>
+                    <p>Expert dental implant treatment in Bournemouth. From single tooth replacement to full arch rehabilitation, we provide personalised care using advanced 3D planning technology.</p>
+                    <p style="margin-top: 1.5rem;">
+                        <strong>Bright Blue Dental Practice</strong><br>
+                        233 Charminster Road<br>
+                        Bournemouth BH8 9QJ
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Tel: 01202 528 949<br>
+                        Email: contactus@bournemouthimplants.com
+                    </p>
                 </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <h4>Treatments</h4>
                     <ul>
-                        <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
+                        <li><a href="full-arch.html">Full Arch Implants</a></li>
                         <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                        <li><a href="single-implants.html">Single Implants</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Information</h4>
+                    <ul>
                         <li><a href="patient-journey.html">Patient Journey</a></li>
-                        <li><a href="pricing.html">Pricing & Finance</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Patient Resources</h4>
-                    <ul>
-                        <li><a href="testimonials.html">Patient Testimonials</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="complaints.html">Complaints Procedure</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Information</h4>
-                    <p><strong>Treatment Location:</strong><br>233 Charminster Road<br>Bournemouth, Dorset<br>BH8 9QJ</p>
-                    <p><strong>Phone:</strong> <a href="tel:+441202528949" style="color: rgba(255,255,255,0.8);">01202 528 949</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:contactus@bournemouthimplants.com" style="color: rgba(255,255,255,0.8);">contactus@bournemouthimplants.com</a></p>
-                    <p><strong>Hours:</strong><br>Mon, Wed, Thu: 8am-5pm<br>Tue: 8am-7pm<br>Fri: 8am-2pm<br>Sat: By appointment</p>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Bournemouth Implants. All rights reserved.</p>
-                <p class="disclaimer">Bournemouth Implants is a dental implant service. Treatment is provided at 233 Charminster Road, Bournemouth from an established CQC-registered dental facility by GDC-registered dentists. This website is for informational purposes only and does not constitute medical advice. Individual results may vary. All treatment carries risks which will be discussed during your consultation.</p>
+                <p>&copy; 2024 Bournemouth Dental Implants. All rights reserved. | GDC Registration: 318594 | CQC Registered Practice</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
