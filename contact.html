@@ -3,61 +3,479 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Book Free Consultation Bournemouth Dental Implants</title>
-    <meta name="description" content="Contact Bournemouth Implants to book your free consultation. Call 01202 528 949 or use our contact form. Located in Bournemouth, Dorset.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="page-styles.css">
+    <meta name="description" content="Contact Bournemouth Dental Implants - Book your consultation for full arch implants and dental rehabilitation. Located at 233 Charminster Road, Bournemouth.">
+    <title>Contact Us | Book Consultation - Bournemouth Dental Implants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            line-height: 1.7;
+            color: #ffffff;
+            background: #0a0a0a;
+        }
+        .container { max-width: 1600px; margin: 0 auto; padding: 0 3rem; }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .nav-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { 
+            font-weight: 300; 
+            font-size: 1rem; 
+            color: #ffffff;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: #ffffff; }
+        .nav-cta {
+            background: white;
+            color: #0a0a0a !important;
+            padding: 0.7rem 1.8rem;
+            font-weight: 600;
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            padding: 12rem 0 6rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%);
+        }
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .breadcrumb {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .breadcrumb a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: rgba(255,255,255,0.8);
+        }
+        .page-hero h1 {
+            font-size: 5rem;
+            line-height: 1.1;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .page-hero-lead {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Content Sections */
+        section { padding: 6rem 0; }
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 3rem;
+            border-radius: 12px;
+        }
+        .contact-form h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 4px;
+            color: #ffffff;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.08);
+        }
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .form-group select {
+            cursor: pointer;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: white;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-2px);
+        }
+        
+        /* Contact Information */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        .info-box {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 3rem;
+            border-radius: 12px;
+        }
+        .info-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .info-item {
+            margin-bottom: 1.5rem;
+        }
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+        .info-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .info-value {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.95);
+            line-height: 1.6;
+        }
+        .info-value a {
+            color: rgba(255,255,255,0.95);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .info-value a:hover {
+            color: #ffffff;
+        }
+        
+        /* Map Container */
+        .map-container {
+            margin-top: 4rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .map-placeholder {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .map-placeholder h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .map-placeholder p {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Footer */
+        footer {
+            background: #000000;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+        .footer-about h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .footer-about p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            .nav-content {
+                padding: 0 1.5rem;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                text-align: center;
+                padding: 2rem 0;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+            .nav-menu li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+            .nav-menu a {
+                display: block;
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            .nav-cta {
+                margin: 1rem auto 0;
+                display: inline-block;
+                width: auto;
+            }
+            .page-hero {
+                padding: 8rem 1.5rem 4rem;
+            }
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            .page-hero-lead {
+                font-size: 1rem;
+            }
+            section {
+                padding: 3rem 0;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .contact-form {
+                padding: 2rem;
+            }
+            .contact-form h2 {
+                font-size: 2rem;
+            }
+            .info-box {
+                padding: 2rem;
+            }
+            .map-placeholder {
+                height: 350px;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html">Bournemouth Implants</a>
-                </div>
-                <button class="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
-                    <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                    <li><a href="patient-journey.html">Patient Journey</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="active nav-cta">Book Consultation</a></li>
-                </ul>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Bournemouth Dental Implants</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="full-arch.html">Full Arch</a></li>
+                <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                <li><a href="patient-journey.html">Journey</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="nav-cta">Book Assessment</a></li>
+            </ul>
         </div>
     </nav>
 
     <section class="page-hero">
-        <div class="container">
+        <div class="page-hero-content">
             <div class="breadcrumb">
                 <a href="index.html">Home</a> / Contact
             </div>
-            <h1>Book Your Free Consultation</h1>
-            <p class="lead">Ready to explore your options? Get in touch today—we're here to help.</p>
+            <h1>Get In<br>Touch</h1>
+            <p class="page-hero-lead">Book your comprehensive consultation to discuss dental implant treatment options and receive a personalised treatment plan.</p>
         </div>
     </section>
 
-    <section class="content-section">
+    <section>
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-form-section">
-                    <h2>Send Us a Message</h2>
-                    <p>Fill out the form below and we'll get back to you within 24 hours (usually much sooner). Or call us directly for an immediate response.</p>
-                    
-                    <form class="contact-form" action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-row">
+            <div class="content-wrapper">
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <h2>Request Consultation</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
                             <div class="form-group">
                                 <label for="email">Email Address *</label>
                                 <input type="email" id="email" name="email" required>
@@ -67,205 +485,150 @@
                                 <label for="phone">Phone Number *</label>
                                 <input type="tel" id="phone" name="phone" required>
                             </div>
+                            
+                            <div class="form-group">
+                                <label for="treatment">Treatment Interest</label>
+                                <select id="treatment" name="treatment">
+                                    <option value="">Please select...</option>
+                                    <option value="full-arch">Full Arch Rehabilitation</option>
+                                    <option value="dentures">Dentures to Fixed Teeth</option>
+                                    <option value="single">Single Implant</option>
+                                    <option value="multiple">Multiple Implants</option>
+                                    <option value="consultation">General Consultation</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" placeholder="Please tell us about your situation and what you'd like to achieve..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Request Consultation</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="info-box">
+                            <h3>Practice Location</h3>
+                            <div class="info-item">
+                                <div class="info-label">Address</div>
+                                <div class="info-value">
+                                    Bright Blue Dental Practice<br>
+                                    233 Charminster Road<br>
+                                    Bournemouth<br>
+                                    BH8 9QJ
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="preferred-contact">Preferred Contact Method</label>
-                            <select id="preferred-contact" name="preferred-contact">
-                                <option value="phone">Phone</option>
-                                <option value="email">Email</option>
-                                <option value="either">Either</option>
-                            </select>
+                        <div class="info-box">
+                            <h3>Contact Details</h3>
+                            <div class="info-item">
+                                <div class="info-label">Phone</div>
+                                <div class="info-value">
+                                    <a href="tel:01202528949">01202 528 949</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Email</div>
+                                <div class="info-value">
+                                    <a href="mailto:contactus@bournemouthimplants.com">contactus@bournemouthimplants.com</a>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="message">Tell Us About Your Situation</label>
-                            <textarea id="message" name="message" rows="5" placeholder="e.g., I've been wearing dentures for 10 years and I'm interested in full arch implants..."></textarea>
+                        <div class="info-box">
+                            <h3>Opening Hours</h3>
+                            <div class="info-item">
+                                <div class="info-label">Monday - Friday</div>
+                                <div class="info-value">9:00 AM - 5:00 PM</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Saturday</div>
+                                <div class="info-value">By Appointment</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Sunday</div>
+                                <div class="info-value">Closed</div>
+                            </div>
                         </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="consent" name="consent" required>
-                            <label for="consent">I consent to Bournemouth Implants contacting me about my enquiry. See our <a href="privacy-policy.html">Privacy Policy</a>.</label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
-                        
-                        <p class="form-note">* Required fields</p>
-                    </form>
+                    </div>
                 </div>
                 
-                <div class="contact-info-section">
-                    <h2>Get In Touch</h2>
-                    <p>We're here to help. Contact us by phone, email, or visit us at our Bournemouth location.</p>
-                    
-                    <div class="contact-info-item">
-                        <strong>📞 Phone</strong>
-                        <p><a href="tel:+441202528949">01202 528 949</a></p>
-                        <p style="font-size: 0.9rem; color: #7f8c9a;">Mon, Wed, Thu: 8am-5pm<br>Tue: 8am-7pm<br>Fri: 8am-2pm<br>Sat: By appointment</p>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <h4>233 Charminster Road, Bournemouth</h4>
+                        <p>Central Bournemouth location with convenient parking</p>
                     </div>
-                    
-                    <div class="contact-info-item">
-                        <strong>✉️ Email</strong>
-                        <p><a href="mailto:contactus@bournemouthimplants.com">contactus@bournemouthimplants.com</a></p>
-                        <p style="font-size: 0.9rem; color: #7f8c9a;">We aim to respond within 24 hours</p>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <strong>📍 Treatment Location</strong>
-                        <p>Bournemouth Implants<br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Bournemouth Dental Implants</h3>
+                    <p>Expert dental implant treatment in Bournemouth. From single tooth replacement to full arch rehabilitation, we provide personalised care using advanced 3D planning technology.</p>
+                    <p style="margin-top: 1.5rem;">
+                        <strong>Bright Blue Dental Practice</strong><br>
                         233 Charminster Road<br>
-                        Bournemouth, Dorset<br>
-                        BH8 9QJ</p>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <strong>🚗 Parking & Access</strong>
-                        <p>Convenient parking available nearby. The practice is easily accessible from across Bournemouth, Poole, Christchurch, and Dorset.</p>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <strong>♿ Accessibility</strong>
-                        <p>We're committed to ensuring our practice is accessible to all patients. If you have specific accessibility requirements, please let us know when booking.</p>
-                    </div>
+                        Bournemouth BH8 9QJ
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Tel: 01202 528 949<br>
+                        Email: contactus@bournemouthimplants.com
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section" style="background: var(--bg-light); padding: var(--spacing-xl) 0;">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">What Happens Next?</h2>
-            
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="process-number">1</div>
-                    <div class="process-content">
-                        <h3>We'll Contact You</h3>
-                        <p>Within 24 hours, we'll call or email you to discuss your enquiry and answer any initial questions.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="process-number">2</div>
-                    <div class="process-content">
-                        <h3>Book Your Consultation</h3>
-                        <p>We'll schedule a convenient time for your free, no-obligation consultation.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="process-number">3</div>
-                    <div class="process-content">
-                        <h3>Comprehensive Assessment</h3>
-                        <p>At your consultation, we'll examine your oral health, take a 3D scan, and discuss your options.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="process-number">4</div>
-                    <div class="process-content">
-                        <h3>Receive Your Plan</h3>
-                        <p>You'll receive a detailed treatment plan and transparent pricing to take away and consider.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: var(--spacing-md);">Frequently Asked Questions</h2>
-            
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Is the consultation really free?</h3>
-                    <p>Yes, completely free with no obligation. You'll receive a comprehensive examination, 3D CT scan, and written treatment plan at no cost.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>How long does a consultation take?</h3>
-                    <p>Allow 45-60 minutes for your consultation. This gives us enough time to assess your situation thoroughly and answer all your questions.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Do I need a referral?</h3>
-                    <p>No referral is necessary. You can book directly with us.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>What should I bring to my consultation?</h3>
-                    <p>Just yourself! If you have any recent dental records or x-rays, feel free to bring them, but it's not essential.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Can I bring someone with me?</h3>
-                    <p>Absolutely. Many patients find it helpful to bring a family member or friend for support.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>What if I can't make it during regular hours?</h3>
-                    <p>We offer some Saturday appointments by arrangement. Please mention your availability when booking and we'll do our best to accommodate you.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="final-cta" style="background: white; border-top: 3px solid var(--primary-color);">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Not Ready to Book Yet?</h2>
-                <p>That's perfectly fine. Explore our website to learn more about full arch dental implants and what to expect.</p>
-                <div class="cta-buttons">
-                    <a href="full-arch-implants.html" class="btn btn-secondary btn-large">Learn About Treatment</a>
-                    <a href="patient-journey.html" class="btn btn-secondary btn-large">View Patient Journey</a>
-                    <a href="testimonials.html" class="btn btn-secondary btn-large">Read Success Stories</a>
-                </div>
-                <p class="cta-note">Or give us a call anytime: <a href="tel:+441202528949" style="color: var(--primary-color); font-weight: 600;">01202 528 949</a></p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Bournemouth Implants</h4>
-                    <p>Dedicated dental implant service providing full arch rehabilitation and advanced prosthodontic care to patients across Bournemouth and Dorset.</p>
-                    <p class="gdc-note">GDC Registered Dentists</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <h4>Treatments</h4>
                     <ul>
-                        <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
+                        <li><a href="full-arch.html">Full Arch Implants</a></li>
                         <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                        <li><a href="single-implants.html">Single Implants</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Information</h4>
+                    <ul>
                         <li><a href="patient-journey.html">Patient Journey</a></li>
-                        <li><a href="pricing.html">Pricing & Finance</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Patient Resources</h4>
-                    <ul>
-                        <li><a href="testimonials.html">Patient Testimonials</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="complaints.html">Complaints Procedure</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Information</h4>
-                    <p><strong>Treatment Location:</strong><br>233 Charminster Road<br>Bournemouth, Dorset<br>BH8 9QJ</p>
-                    <p><strong>Phone:</strong> <a href="tel:+441202528949" style="color: rgba(255,255,255,0.8);">01202 528 949</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:contactus@bournemouthimplants.com" style="color: rgba(255,255,255,0.8);">contactus@bournemouthimplants.com</a></p>
-                    <p><strong>Hours:</strong><br>Mon, Wed, Thu: 8am-5pm<br>Tue: 8am-7pm<br>Fri: 8am-2pm<br>Sat: By appointment</p>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Bournemouth Implants. All rights reserved.</p>
-                <p class="disclaimer">Bournemouth Implants is a dental implant service. Treatment is provided at 233 Charminster Road, Bournemouth from an established CQC-registered dental facility by GDC-registered dentists. This website is for informational purposes only and does not constitute medical advice. Individual results may vary. All treatment carries risks which will be discussed during your consultation.</p>
+                <p>&copy; 2024 Bournemouth Dental Implants. All rights reserved. | GDC Registration: 318594 | CQC Registered Practice</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Form handling (you'll need to implement backend submission)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your enquiry. We will contact you shortly to arrange your consultation.');
+            // Add your form submission logic here
+        });
+    </script>
 </body>
 </html>
