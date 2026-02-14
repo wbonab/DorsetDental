@@ -3,291 +3,484 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Testimonials | Real Reviews Bournemouth Dental Implants</title>
-    <meta name="description" content="Read genuine patient testimonials from full arch dental implant patients in Bournemouth. Real stories, real results. 5-star reviews.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="page-styles.css">
+    <meta name="description" content="Patient testimonials for Bournemouth Dental Implants. Read reviews from patients who have received full arch rehabilitation and dental implant treatment.">
+    <title>Patient Testimonials | Reviews - Bournemouth Dental Implants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            line-height: 1.7;
+            color: #ffffff;
+            background: #0a0a0a;
+        }
+        .container { max-width: 1600px; margin: 0 auto; padding: 0 3rem; }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .nav-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { 
+            font-weight: 300; 
+            font-size: 1rem; 
+            color: #ffffff;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: #ffffff; }
+        .nav-cta {
+            background: white;
+            color: #0a0a0a !important;
+            padding: 0.7rem 1.8rem;
+            font-weight: 600;
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            padding: 12rem 0 6rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%);
+        }
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .breadcrumb {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .breadcrumb a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: rgba(255,255,255,0.8);
+        }
+        .page-hero h1 {
+            font-size: 5rem;
+            line-height: 1.1;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .page-hero-lead {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Content Sections */
+        section { padding: 6rem 0; }
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .section-header h2 {
+            font-size: 3rem;
+            line-height: 1.2;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+        }
+        
+        /* Placeholder Notice */
+        .placeholder-notice {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 4rem;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .placeholder-notice h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .placeholder-notice p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 3rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            transition: all 0.4s;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .btn-primary {
+            background: white;
+            color: #0a0a0a;
+        }
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #000000;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+        .footer-about h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .footer-about p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            .nav-content {
+                padding: 0 1.5rem;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                text-align: center;
+                padding: 2rem 0;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+            .nav-menu li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+            .nav-menu a {
+                display: block;
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            .nav-cta {
+                margin: 1rem auto 0;
+                display: inline-block;
+                width: auto;
+            }
+            .page-hero {
+                padding: 8rem 1.5rem 4rem;
+            }
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            .page-hero-lead {
+                font-size: 1rem;
+            }
+            section {
+                padding: 3rem 0;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .placeholder-notice {
+                padding: 2.5rem;
+            }
+            .placeholder-notice h3 {
+                font-size: 1.5rem;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .cta-section p {
+                font-size: 1rem;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html">Bournemouth Implants</a>
-                </div>
-                <button class="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
-                    <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                    <li><a href="patient-journey.html">Patient Journey</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html" class="active">Testimonials</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
-                </ul>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Bournemouth Dental Implants</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="full-arch.html">Full Arch</a></li>
+                <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                <li><a href="patient-journey.html">Journey</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="nav-cta">Book Assessment</a></li>
+            </ul>
         </div>
     </nav>
 
     <section class="page-hero">
-        <div class="container">
+        <div class="page-hero-content">
             <div class="breadcrumb">
                 <a href="index.html">Home</a> / Testimonials
             </div>
-            <h1>Life-Changing Results from Real Patients</h1>
-            <p class="lead">Read honest reviews from people who have transformed their lives with full arch dental implants at our Bournemouth practice.</p>
+            <h1>Patient<br>Testimonials</h1>
+            <p class="page-hero-lead">Real experiences from patients who have undergone dental implant treatment at Bournemouth Dental Implants.</p>
         </div>
     </section>
 
-    <section class="content-section">
+    <section>
         <div class="container">
-            <div class="content-layout">
-                <div class="content-main">
-                    <h2>What Our Patients Say</h2>
-                    <p>We're proud of the life-changing results we achieve for our patients. But don't just take our word for it—read what real people have to say about their experience with full arch dental implants.</p>
-                    
-                    <p class="emphasis">All testimonials are from genuine patients who have consented to share their stories.</p>
-
-                    <div class="testimonial-full">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="stars">⭐⭐⭐⭐⭐</div>
-                                <h3>Freedom from 20 Years of Dentures</h3>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"I wore dentures for over 20 years and absolutely hated every minute of it. The constant slipping, the adhesives, not being able to eat properly—it was a nightmare. Getting full arch implants has completely transformed my life. I can eat steak again! I can laugh without worrying. I can smile in photos. The team at Bournemouth Implants was incredible throughout the entire process—professional, caring, and patient with all my questions. I only wish I'd done this years ago. If you're considering it, don't wait like I did."</p>
-                        <p class="testimonial-author-full">— Margaret S., Bournemouth</p>
-                        <p class="testimonial-meta">Treatment: Full upper arch implants | Age: 68</p>
-                    </div>
-
-                    <div class="testimonial-full">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="stars">⭐⭐⭐⭐⭐</div>
-                                <h3>Exceeded All My Expectations</h3>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"I was extremely nervous about getting dental implants—I'll admit I'd avoided the dentist for years because of anxiety. But the team made me feel so comfortable and explained everything in detail. The surgery was easier than I expected, and the recovery was manageable. But the results? Absolutely incredible. My new teeth look completely natural, and I forget they're not my real teeth. People have commented on how much younger I look. The confidence this has given me is priceless. Best decision I've ever made."</p>
-                        <p class="testimonial-author-full">— David T., Poole</p>
-                        <p class="testimonial-meta">Treatment: Full upper and lower arch implants | Age: 61</p>
-                    </div>
-
-                    <div class="testimonial-full">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="stars">⭐⭐⭐⭐⭐</div>
-                                <h3>Changed My Quality of Life</h3>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"The difference in my quality of life since getting implants is remarkable. Before, I was embarrassed by my dentures and avoided social situations. I couldn't eat out with friends because I was worried about my teeth slipping. Now I can do everything—eat whatever I want, go out to restaurants, smile in photos without feeling self-conscious. My family says I seem like a different person. The treatment was straightforward, the team was fantastic, and the results speak for themselves. Worth every penny."</p>
-                        <p class="testimonial-author-full">— Susan P., Christchurch</p>
-                        <p class="testimonial-meta">Treatment: Full lower arch implants | Age: 73</p>
-                    </div>
-
-                    <div class="testimonial-full">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="stars">⭐⭐⭐⭐⭐</div>
-                                <h3>Professional, Caring, Expert Care</h3>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"I had multiple failing teeth and was told by another dentist that there was nothing that could be done. Bournemouth Implants gave me hope and a clear treatment plan. The entire process was well-organized and professional. They used the latest technology to plan everything digitally, which gave me confidence. The surgery went smoothly, and I had temporary teeth the same day so I never looked toothless. Six months later, I got my final teeth and they're perfect. I can't recommend them highly enough."</p>
-                        <p class="testimonial-author-full">— Robert H., Bournemouth</p>
-                        <p class="testimonial-meta">Treatment: Full upper arch implants | Age: 59</p>
-                    </div>
-
-                    <div class="testimonial-full">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="stars">⭐⭐⭐⭐⭐</div>
-                                <h3>Felt Supported Every Step</h3>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"What impressed me most was how supported I felt throughout the entire journey. From the first consultation where they took time to explain everything in detail, through to the surgery and follow-up care, I never felt rushed or like just another patient. They answered every question I had (and I had a lot!), checked in on me after surgery, and made sure I was comfortable at every stage. The results are fantastic—my new teeth look and feel completely natural. But equally important to me was the care I received along the way."</p>
-                        <p class="testimonial-author-full">— Janet M., Wimborne</p>
-                        <p class="testimonial-meta">Treatment: Full upper arch implants | Age: 65</p>
-                    </div>
-
-                    <div class="testimonial-full">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="stars">⭐⭐⭐⭐⭐</div>
-                                <h3>Age Is Just a Number</h3>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"At 76, I thought I was too old for dental implants. The team assured me that age wasn't an issue—it was more about my overall health and bone density, which were both fine. The procedure was easier than I imagined. Yes, there was some discomfort for a few days, but nothing unbearable. Now, three years later, my implants are still perfect. I can eat properly for the first time in decades. My advice to anyone considering this: don't let age hold you back. It's never too late to improve your quality of life."</p>
-                        <p class="testimonial-author-full">— Patricia L., Poole</p>
-                        <p class="testimonial-meta">Treatment: Full lower arch implants | Age: 76</p>
-                    </div>
-
-                    <div class="testimonial-full">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="stars">⭐⭐⭐⭐⭐</div>
-                                <h3>From Embarrassment to Confidence</h3>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"I'd let my teeth go for years because I was terrified of the dentist. By the time I finally sought help, most of my teeth were loose or broken. I was so embarrassed. The team never judged me—they were nothing but kind and professional. They gave me a treatment plan that would fix everything with full arch implants. The transformation has been incredible. I went from hiding my smile to being proud of it. I can finally eat properly again, and my confidence has skyrocketed. This treatment gave me a second chance, and I'm so grateful."</p>
-                        <p class="testimonial-author-full">— James R., Bournemouth</p>
-                        <p class="testimonial-meta">Treatment: Full upper and lower arch implants | Age: 54</p>
-                    </div>
-
-                    <div class="testimonial-full">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="stars">⭐⭐⭐⭐⭐</div>
-                                <h3>Natural-Looking Results</h3>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"The thing that amazed me most was how natural my new teeth look. They're perfectly matched to my face and features—not too white, not too perfect, just natural. People can't tell they're implants unless I tell them. I've had so many compliments on my smile. The technical skill involved in creating teeth that look this good is remarkable. Beyond the aesthetics, they function perfectly too. I can eat anything, speak clearly, and they feel like my own teeth. Absolutely thrilled with the results."</p>
-                        <p class="testimonial-author-full">— Helen R., Christchurch</p>
-                        <p class="testimonial-meta">Treatment: Full upper arch implants | Age: 58</p>
-                    </div>
-
-                    <div class="testimonial-full">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="stars">⭐⭐⭐⭐⭐</div>
-                                <h3>Transparent and Honest</h3>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"What I appreciated most was the transparency. Before treatment, I received a detailed written quote that broke down all the costs. There were no surprises, no hidden fees. They explained exactly what would happen at each stage and gave me realistic expectations for recovery and results. This honesty made me trust them completely. The treatment itself went exactly as they described, and the results are everything I hoped for. It's refreshing to work with a practice that operates with such integrity."</p>
-                        <p class="testimonial-author-full">— Michael D., Bournemouth</p>
-                        <p class="testimonial-meta">Treatment: Full lower arch implants | Age: 67</p>
-                    </div>
-
-                    <div class="testimonial-full">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="stars">⭐⭐⭐⭐⭐</div>
-                                <h3>Best Investment I've Made</h3>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"Yes, full arch implants are expensive. But they're also the best investment I've ever made in myself. I spent years dealing with uncomfortable, unreliable dentures. The constant adhesives, the dietary restrictions, the embarrassment—it all took a toll on my quality of life. Since getting implants, everything has changed. I can eat what I want, smile with confidence, and live without constantly thinking about my teeth. When I consider the cost over the lifetime of the implants (which should be decades), it's absolutely worth it. My only regret is not doing it sooner."</p>
-                        <p class="testimonial-author-full">— Sarah T., Poole</p>
-                        <p class="testimonial-meta">Treatment: Full upper arch implants | Age: 62</p>
-                    </div>
-
-                    <h2>Common Themes from Our Patients</h2>
-                    <p>While every patient's journey is unique, we hear similar sentiments again and again:</p>
-
-                    <div class="theme-grid">
-                        <div class="theme-card">
-                            <h4>"I wish I'd done it sooner"</h4>
-                            <p>Many patients tell us their biggest regret is waiting so long to get treatment.</p>
-                        </div>
-                        <div class="theme-card">
-                            <h4>"The recovery was easier than expected"</h4>
-                            <p>Most patients are pleasantly surprised by how manageable the recovery process is.</p>
-                        </div>
-                        <div class="theme-card">
-                            <h4>"It changed my life"</h4>
-                            <p>The impact goes far beyond teeth—it's about confidence, quality of life, and freedom.</p>
-                        </div>
-                        <div class="theme-card">
-                            <h4>"The team was amazing"</h4>
-                            <p>Professional, caring, patient-focused care makes all the difference.</p>
-                        </div>
-                    </div>
-
-                    <h2>Your Turn to Transform Your Smile</h2>
-                    <p>These are just a few of the many success stories we've been privileged to be part of. If you're considering full arch dental implants, we'd love to discuss how we can help you achieve similar life-changing results.</p>
-
-                    <p>Book your free consultation today and discover how we can help you achieve similar life-changing results.</p>
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">Reviews</div>
+                    <h2>Patient Experiences</h2>
+                    <p>Read about the outcomes and experiences of patients who have completed implant treatment.</p>
                 </div>
 
-                <aside class="sidebar">
-                    <div class="sidebar-box cta-box">
-                        <h4>Start Your Journey</h4>
-                        <p>Book your free consultation and discover what's possible for your smile.</p>
-                        <a href="contact.html" class="btn btn-primary btn-block">Book Now</a>
-                        <p class="sidebar-note">Or call: <a href="tel:+441202528949">01202 528 949</a></p>
-                    </div>
-
-                    <div class="sidebar-box highlight">
-                        <h4>⭐⭐⭐⭐⭐</h4>
-                        <p><strong>5-Star Reviews</strong></p>
-                        <p>Our patients consistently rate us 5 stars for care, results, and service.</p>
-                    </div>
-
-                    <div class="sidebar-box">
-                        <h4>What Patients Love</h4>
-                        <ul class="sidebar-links">
-                            <li>✓ Life-changing results</li>
-                            <li>✓ Professional care</li>
-                            <li>✓ Clear communication</li>
-                            <li>✓ Transparent pricing</li>
-                            <li>✓ Natural appearance</li>
-                        </ul>
-                    </div>
-                </aside>
+                <div class="placeholder-notice">
+                    <h3>Coming Soon</h3>
+                    <p>We're currently collecting verified patient testimonials to share on this page.</p>
+                    <p>All reviews will be from patients who have completed treatment at Bournemouth Dental Implants and consented to share their experiences.</p>
+                    <p style="margin-top: 2rem;">In the meantime, please contact us directly to discuss your treatment questions or to arrange a consultation where you can learn more about the patient experience.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="final-cta">
+    <section class="cta-section">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Write Your Own Success Story?</h2>
-                <p>Book yours today and discover how we can help you achieve similar life-changing results.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-large">Book Free Consultation</a>
-                    <a href="tel:+441202528949" class="btn btn-secondary btn-large">Call: 01202 528 949</a>
-                </div>
-                <p class="cta-note">No obligation. No pressure. Just honest guidance.</p>
-            </div>
+            <h2>Start Your Journey</h2>
+            <p>Book a consultation to discuss your dental implant treatment options.</p>
+            <a href="contact.html" class="btn btn-primary">Request Assessment</a>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Bournemouth Implants</h4>
-                    <p>Dedicated dental implant service providing full arch rehabilitation and advanced prosthodontic care to patients across Bournemouth and Dorset.</p>
-                    <p class="gdc-note">GDC Registered Dentists</p>
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Bournemouth Dental Implants</h3>
+                    <p>Expert dental implant treatment in Bournemouth. From single tooth replacement to full arch rehabilitation, we provide personalised care using advanced 3D planning technology.</p>
+                    <p style="margin-top: 1.5rem;">
+                        <strong>Bright Blue Dental Practice</strong><br>
+                        233 Charminster Road<br>
+                        Bournemouth BH8 9QJ
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Tel: 01202 528 949<br>
+                        Email: contactus@bournemouthimplants.com
+                    </p>
                 </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <h4>Treatments</h4>
                     <ul>
-                        <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
+                        <li><a href="full-arch.html">Full Arch Implants</a></li>
                         <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                        <li><a href="single-implants.html">Single Implants</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Information</h4>
+                    <ul>
                         <li><a href="patient-journey.html">Patient Journey</a></li>
-                        <li><a href="pricing.html">Pricing & Finance</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Patient Resources</h4>
-                    <ul>
-                        <li><a href="testimonials.html">Patient Testimonials</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="complaints.html">Complaints Procedure</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Information</h4>
-                    <p><strong>Treatment Location:</strong><br>233 Charminster Road<br>Bournemouth, Dorset<br>BH8 9QJ</p>
-                    <p><strong>Phone:</strong> <a href="tel:+441202528949" style="color: rgba(255,255,255,0.8);">01202 528 949</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:contactus@bournemouthimplants.com" style="color: rgba(255,255,255,0.8);">contactus@bournemouthimplants.com</a></p>
-                    <p><strong>Hours:</strong><br>Mon, Wed, Thu: 8am-5pm<br>Tue: 8am-7pm<br>Fri: 8am-2pm<br>Sat: By appointment</p>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Bournemouth Implants. All rights reserved.</p>
-                <p class="disclaimer">Bournemouth Implants is a dental implant service. Treatment is provided at 233 Charminster Road, Bournemouth from an established CQC-registered dental facility by GDC-registered dentists. This website is for informational purposes only and does not constitute medical advice. Individual results may vary. All treatment carries risks which will be discussed during your consultation.</p>
+                <p>&copy; 2024 Bournemouth Dental Implants. All rights reserved. | GDC Registration: 318594 | CQC Registered Practice</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
