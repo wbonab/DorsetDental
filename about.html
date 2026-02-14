@@ -3,273 +3,714 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Expert Dental Implants Bournemouth</title>
-    <meta name="description" content="Meet the team at Bournemouth Implants. Harvard-trained prosthodontist providing expert full arch dental implant treatment in Bournemouth, Dorset.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="page-styles.css">
+    <meta name="description" content="About Bournemouth Dental Implants - Dr. Will Bonab BDS, postgraduate-trained prosthodontist specialising in full arch rehabilitation and digital implant planning.">
+    <title>About Us | Dr. Will Bonab - Bournemouth Dental Implants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            line-height: 1.7;
+            color: #ffffff;
+            background: #0a0a0a;
+        }
+        .container { max-width: 1600px; margin: 0 auto; padding: 0 3rem; }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .nav-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { 
+            font-weight: 300; 
+            font-size: 1rem; 
+            color: #ffffff;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: #ffffff; }
+        .nav-cta {
+            background: white;
+            color: #0a0a0a !important;
+            padding: 0.7rem 1.8rem;
+            font-weight: 600;
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            padding: 12rem 0 6rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%);
+        }
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .breadcrumb {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .breadcrumb a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: rgba(255,255,255,0.8);
+        }
+        .page-hero h1 {
+            font-size: 5rem;
+            line-height: 1.1;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .page-hero-lead {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Content Sections */
+        section { padding: 6rem 0; }
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .section-header h2 {
+            font-size: 3rem;
+            line-height: 1.2;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+        }
+        
+        /* Clinician Profile - Large */
+        .clinician-profile-large {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+            margin-bottom: 6rem;
+        }
+        .profile-text-large {
+            padding: 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .profile-text-large h2 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .profile-bio-large {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2.5rem;
+        }
+        .qualifications-list {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .qual-item {
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .qual-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .qual-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .qual-value {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+        }
+        .profile-image-large {
+            position: relative;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0a0a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .profile-image-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Practice Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        .value-box {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .value-box:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.2);
+            transform: translateY(-4px);
+        }
+        .value-number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+        .value-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .value-box p {
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+        }
+        
+        /* Practice Info */
+        .practice-info {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 4rem;
+            border-radius: 12px;
+            margin-top: 4rem;
+        }
+        .practice-info h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .practice-info p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .practice-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .detail-item {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+        .detail-item h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        .detail-item p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 0;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 3rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            transition: all 0.4s;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .btn-primary {
+            background: white;
+            color: #0a0a0a;
+        }
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #000000;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+        .footer-about h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .footer-about p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            .nav-content {
+                padding: 0 1.5rem;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                text-align: center;
+                padding: 2rem 0;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+            .nav-menu li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+            .nav-menu a {
+                display: block;
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            .nav-cta {
+                margin: 1rem auto 0;
+                display: inline-block;
+                width: auto;
+            }
+            .page-hero {
+                padding: 8rem 1.5rem 4rem;
+            }
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            .page-hero-lead {
+                font-size: 1rem;
+            }
+            section {
+                padding: 3rem 0;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .clinician-profile-large {
+                grid-template-columns: 1fr;
+                margin-bottom: 3rem;
+            }
+            .profile-text-large {
+                padding: 2.5rem;
+            }
+            .profile-text-large h2 {
+                font-size: 2.5rem;
+            }
+            .profile-bio-large {
+                font-size: 1rem;
+            }
+            .profile-image-large {
+                min-height: 500px;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .practice-info {
+                padding: 2.5rem;
+            }
+            .practice-info h3 {
+                font-size: 2rem;
+            }
+            .practice-details {
+                grid-template-columns: 1fr;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .cta-section p {
+                font-size: 1rem;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html">Bournemouth Implants</a>
-                </div>
-                <button class="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
-                    <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                    <li><a href="patient-journey.html">Patient Journey</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
-                </ul>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Bournemouth Dental Implants</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="full-arch.html">Full Arch</a></li>
+                <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                <li><a href="patient-journey.html">Journey</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact" class="nav-cta">Book Assessment</a></li>
+            </ul>
         </div>
     </nav>
 
     <section class="page-hero">
-        <div class="container">
+        <div class="page-hero-content">
             <div class="breadcrumb">
-                <a href="index.html">Home</a> / About Us
+                <a href="index.html">Home</a> / About
             </div>
-            <h1>Expert Full Arch Implant Care in Bournemouth</h1>
-            <p class="lead">Dedicated to transforming lives through advanced dental implant treatment.</p>
+            <h1>About<br>Our Practice</h1>
+            <p class="page-hero-lead">Postgraduate-trained expertise in dental implant rehabilitation with a focus on digital planning, precision placement, and premium zirconia restorations.</p>
         </div>
     </section>
 
-    <section class="content-section">
+    <section>
         <div class="container">
-            <div class="content-layout">
-                <div class="content-main">
-                    <h2>About Bournemouth Implants</h2>
-                    <p>Bournemouth Implants is a specialist dental implant service focused exclusively on full arch rehabilitation. We help patients across Bournemouth, Poole, Christchurch, and throughout Dorset transition from dentures or failing teeth to permanently fixed dental implants.</p>
-
-                    <p>Our approach combines advanced training, cutting-edge technology, and genuine patient care to deliver exceptional, life-changing results.</p>
-
-                    <h2>Our Philosophy</h2>
-                    <p>We believe that everyone deserves to eat, smile, and live with confidence. Dental problems—whether from years of wearing dentures, failing teeth, or dental anxiety—shouldn't hold you back from enjoying life.</p>
-
-                    <p>Our mission is simple: to provide expert, compassionate care that transforms not just smiles, but lives.</p>
-
-                    <div class="values-grid">
-                        <div class="value-card">
-                            <h3>Expertise</h3>
-                            <p>Harvard-trained prosthodontist with specialized training in full arch rehabilitation and complex implant dentistry.</p>
-                        </div>
-                        <div class="value-card">
-                            <h3>Honesty</h3>
-                            <p>We provide transparent advice, realistic expectations, and clear pricing. No sales tactics, no hidden costs.</p>
-                        </div>
-                        <div class="value-card">
-                            <h3>Technology</h3>
-                            <p>State-of-the-art digital planning, 3D imaging, and guided surgery for precise, predictable results.</p>
-                        </div>
-                        <div class="value-card">
-                            <h3>Care</h3>
-                            <p>We treat every patient as an individual, taking time to understand your concerns and answer your questions.</p>
+            <div class="content-wrapper">
+                <div class="clinician-profile-large">
+                    <div class="profile-text-large">
+                        <h2>Dr. Will Bonab BDS</h2>
+                        <p class="profile-bio-large">Bournemouth Dental Implants is led by a clinician with dedicated postgraduate training in prosthodontics and implant dentistry. Dr. Will Bonab combines expertise from King's College London and Harvard University to deliver evidence-based, digitally-planned implant treatment.</p>
+                        <p class="profile-bio-large">With a focus on full arch rehabilitation, complex prosthetic cases, and digital treatment planning, every patient receives comprehensive assessment using 3D CBCT imaging and precision-guided implant placement.</p>
+                        
+                        <div class="qualifications-list">
+                            <div class="qual-item">
+                                <div class="qual-label">Primary Qualification</div>
+                                <div class="qual-value">Bachelor of Dental Surgery (BDS), King's College London</div>
+                            </div>
+                            <div class="qual-item">
+                                <div class="qual-label">Postgraduate Training</div>
+                                <div class="qual-value">Prosthodontics, Harvard University</div>
+                            </div>
+                            <div class="qual-item">
+                                <div class="qual-label">GDC Registration</div>
+                                <div class="qual-value">318594</div>
+                            </div>
+                            <div class="qual-item">
+                                <div class="qual-label">Special Interests</div>
+                                <div class="qual-value">Full Arch Rehabilitation, Digital Implant Planning, Complex Prosthodontics</div>
+                            </div>
                         </div>
                     </div>
+                    <div class="profile-image-large">
+                        <img src="images/dr-will-bonab.jpg" alt="Dr. Will Bonab - Prosthodontist">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <h2>Our Expertise</h2>
-                    <p>Full arch dental implant treatment is complex and requires specialized knowledge, training, and experience. At Bournemouth Implants, you benefit from:</p>
+    <section style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">Our Approach</div>
+                    <h2>Treatment Philosophy</h2>
+                    <p>Planning-led, evidence-based dental implant care with emphasis on precision and quality outcomes.</p>
+                </div>
 
-                    <ul class="benefit-list">
-                        <li><strong>Advanced Training:</strong> Postgraduate prosthodontic training at Harvard School of Dental Medicine, focused on complex implant rehabilitation</li>
-                        <li><strong>Specialized Focus:</strong> We concentrate exclusively on full arch cases, allowing us to refine our expertise</li>
-                        <li><strong>Digital Workflows:</strong> 3D planning software and guided surgery for precision placement</li>
-                        <li><strong>Comprehensive Care:</strong> Everything from planning through final restoration managed in-house</li>
-                        <li><strong>Proven Track Record:</strong> Years of successful full arch cases across Bournemouth and Dorset</li>
-                        <li><strong>Ongoing Education:</strong> Commitment to staying current with latest techniques and technology</li>
-                    </ul>
+                <div class="values-grid">
+                    <div class="value-box">
+                        <div class="value-number">01</div>
+                        <h3>Digital Planning</h3>
+                        <p>Every case begins with CBCT 3D imaging and digital treatment planning to ensure optimal implant positioning and predictable outcomes.</p>
+                    </div>
+                    <div class="value-box">
+                        <div class="value-number">02</div>
+                        <h3>Quality Materials</h3>
+                        <p>All final restorations are fabricated in premium zirconia ceramic for superior strength, aesthetics, and long-term stability.</p>
+                    </div>
+                    <div class="value-box">
+                        <div class="value-number">03</div>
+                        <h3>Personalised Care</h3>
+                        <p>Individual treatment plans tailored to your specific anatomy, clinical needs, and desired outcomes—no template approaches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <h2>Why Choose Us?</h2>
-                    <p>When you're considering full arch dental implants, choosing the right practice matters. Here's what sets us apart:</p>
-
-                    <h3>1. Specialist Training & Experience</h3>
-                    <p>Full arch implant treatment is not routine dentistry. It requires advanced training in prosthodontics, implant surgery, and complex rehabilitation. Our lead clinician completed postgraduate prosthodontic training at Harvard School of Dental Medicine, one of the world's leading institutions for advanced dental education.</p>
-
-                    <h3>2. Exclusive Focus on Full Arch Cases</h3>
-                    <p>We don't do general dentistry. We focus exclusively on full arch implant rehabilitation. This specialization means we've developed streamlined processes, refined techniques, and accumulated extensive experience in this specific area.</p>
-
-                    <h3>3. Advanced Technology</h3>
-                    <p>We invest heavily in technology that improves outcomes:</p>
-                    <ul class="benefit-list">
-                        <li><strong>3D CT Scanning:</strong> Detailed analysis of your bone and anatomy</li>
-                        <li><strong>Digital Planning Software:</strong> Virtual surgery before actual surgery</li>
-                        <li><strong>Guided Surgery:</strong> Surgical guides for precise implant placement</li>
-                        <li><strong>Digital Impressions:</strong> More comfortable and accurate than traditional impressions</li>
-                        <li><strong>CAD/CAM Design:</strong> Computer-designed teeth for optimal fit and aesthetics</li>
-                    </ul>
-
-                    <h3>4. Transparent & Honest Approach</h3>
-                    <p>We believe in giving you all the information you need to make an informed decision:</p>
-                    <ul class="benefit-list">
-                        <li>Comprehensive written treatment plans</li>
-                        <li>Transparent pricing with no hidden costs</li>
-                        <li>Realistic expectations about recovery and results</li>
-                        <li>Honest assessment of whether you're a suitable candidate</li>
-                        <li>Time to consider your options without pressure</li>
-                    </ul>
-
-                    <h3>5. Patient-Centered Care</h3>
-                    <p>We understand that considering dental implants can be daunting. Our approach is built around your needs:</p>
-                    <ul class="benefit-list">
-                        <li>Unhurried consultations where all questions are welcome</li>
-                        <li>Clear communication at every stage</li>
-                        <li>Sedation options available for anxious patients</li>
-                        <li>Emergency contact access during recovery</li>
-                        <li>Comprehensive aftercare and support</li>
-                    </ul>
-
-                    <h2>Our Treatment Location</h2>
-                    <p>Treatment is provided at our state-of-the-art facility in Bournemouth:</p>
+    <section>
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="practice-info">
+                    <h3>Practice Information</h3>
+                    <p>Bournemouth Dental Implants operates from an established CQC-registered dental facility in Bournemouth, providing comprehensive implant dentistry services with access to advanced diagnostic imaging and surgical equipment.</p>
+                    <p>Treatment is delivered in a modern clinical environment with emphasis on patient comfort, safety protocols, and clinical excellence.</p>
                     
-                    <div class="location-box">
-                        <h3>233 Charminster Road, Bournemouth, Dorset, BH8 9QJ</h3>
-                        <ul class="benefit-list">
-                            <li><strong>Accessible Location:</strong> Easy to reach from across Bournemouth, Poole, Christchurch, and Dorset</li>
-                            <li><strong>Parking Available:</strong> Convenient parking nearby</li>
-                            <li><strong>Modern Facility:</strong> Clean, comfortable, equipped with latest technology</li>
-                            <li><strong>CQC Registered:</strong> Meeting all healthcare standards and regulations</li>
-                        </ul>
+                    <div class="practice-details">
+                        <div class="detail-item">
+                            <h4>Location</h4>
+                            <p>Bright Blue Dental Practice<br>233 Charminster Road<br>Bournemouth BH8 9QJ</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Registration</h4>
+                            <p>CQC Registered Practice<br>GDC Registered Clinicians<br>Full Indemnity Coverage</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Technology</h4>
+                            <p>3D CBCT Imaging<br>Digital Treatment Planning<br>Precision Implant Placement</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Materials</h4>
+                            <p>Premium Titanium Implants<br>Zirconia Ceramic Prosthetics<br>High-Grade Components</p>
+                        </div>
                     </div>
-
-                    <h2>Our Commitment to Quality</h2>
-                    <p>Quality and safety are non-negotiable. We're committed to:</p>
-
-                    <ul class="benefit-list">
-                        <li><strong>GDC Registration:</strong> All clinicians registered with the General Dental Council</li>
-                        <li><strong>CQC Compliance:</strong> Operating from a CQC-registered facility</li>
-                        <li><strong>Infection Control:</strong> Rigorous sterilization and infection control protocols</li>
-                        <li><strong>Premium Materials:</strong> We use only high-quality, proven implant systems and materials</li>
-                        <li><strong>Continuing Education:</strong> Regular training to stay at the forefront of implant dentistry</li>
-                        <li><strong>Patient Safety:</strong> Comprehensive medical history review and safety protocols</li>
-                    </ul>
-
-                    <h2>Who We Help</h2>
-                    <p>We work with patients from all walks of life who share a common goal: to regain the confidence and function that comes with fixed teeth. Our patients include:</p>
-
-                    <ul class="benefit-list">
-                        <li>Long-term denture wearers ready for a permanent solution</li>
-                        <li>People with multiple failing or missing teeth</li>
-                        <li>Patients who've avoided the dentist due to anxiety</li>
-                        <li>Active individuals who want the freedom to eat and live normally</li>
-                        <li>Anyone who's had enough of the limitations of removable dentures</li>
-                    </ul>
-
-                    <p>Regardless of your situation, if you're unhappy with your teeth and considering a change, we're here to help.</p>
-
-                    <h2>Our Promise to You</h2>
-                    <div class="highlight-box">
-                        <ul class="benefit-list" style="margin-bottom: 0;">
-                            <li>We'll listen to your concerns and answer all your questions</li>
-                            <li>We'll provide honest advice about what's achievable</li>
-                            <li>We'll give you a transparent, written quote with no hidden costs</li>
-                            <li>We'll never pressure you to proceed—the decision is always yours</li>
-                            <li>We'll support you every step of the way, from consultation to long-term care</li>
-                            <li>We'll work hard to exceed your expectations and deliver results that transform your life</li>
-                        </ul>
-                    </div>
-
-                    <h2>Ready to Learn More?</h2>
-                    <p>If you're considering full arch dental implants, the first step is simply to have a conversation. Book a free consultation and we'll discuss your situation, explain your options, and help you understand what's possible.</p>
-
-                    <p>There's no obligation, no pressure—just expert guidance from a team that genuinely cares about helping you achieve the smile you deserve.</p>
-                </div>
-
-                <aside class="sidebar">
-                    <div class="sidebar-box cta-box">
-                        <h4>Meet With Us</h4>
-                        <p>Book your free consultation to discuss your dental implant options.</p>
-                        <a href="contact.html" class="btn btn-primary btn-block">Book Now</a>
-                        <p class="sidebar-note">Or call: <a href="tel:+441202528949">01202 528 949</a></p>
-                    </div>
-
-                    <div class="sidebar-box">
-                        <h4>Our Credentials</h4>
-                        <ul class="sidebar-links">
-                            <li>✓ Harvard-trained prosthodontist</li>
-                            <li>✓ GDC registered dentists</li>
-                            <li>✓ CQC registered facility</li>
-                            <li>✓ Years of experience</li>
-                            <li>✓ Specialist focus on full arch</li>
-                        </ul>
-                    </div>
-
-                    <div class="sidebar-box highlight">
-                        <h4>What Patients Say</h4>
-                        <p>"Professional, caring, expert care from start to finish. I couldn't have asked for better."</p>
-                        <p style="font-size: 0.9rem; margin-top: 0.5rem;"><strong>— Robert H., Bournemouth</strong></p>
-                    </div>
-                </aside>
-            </div>
-        </div>
-    </section>
-
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Experience Expert, Compassionate Care</h2>
-                <p>Book your free consultation and discover why patients across Dorset trust us with their dental implant treatment.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-large">Book Free Consultation</a>
-                    <a href="tel:+441202528949" class="btn btn-secondary btn-large">Call: 01202 528 949</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <section class="cta-section">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Bournemouth Implants</h4>
-                    <p>Dedicated dental implant service providing full arch rehabilitation and advanced prosthodontic care to patients across Bournemouth and Dorset.</p>
-                    <p class="gdc-note">GDC Registered Dentists</p>
+            <h2>Start Your Treatment Journey</h2>
+            <p>Book a comprehensive consultation to discuss your implant treatment options.</p>
+            <a href="#contact" class="btn btn-primary">Request Assessment</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Bournemouth Dental Implants</h3>
+                    <p>Expert dental implant treatment in Bournemouth. From single tooth replacement to full arch rehabilitation, we provide personalised care using advanced 3D planning technology.</p>
+                    <p style="margin-top: 1.5rem;">
+                        <strong>Bright Blue Dental Practice</strong><br>
+                        233 Charminster Road<br>
+                        Bournemouth BH8 9QJ
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Tel: 01202 528 949<br>
+                        Email: contactus@bournemouthimplants.com
+                    </p>
                 </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <h4>Treatments</h4>
                     <ul>
-                        <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
+                        <li><a href="full-arch.html">Full Arch Implants</a></li>
                         <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                        <li><a href="single-implants.html">Single Implants</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Information</h4>
+                    <ul>
                         <li><a href="patient-journey.html">Patient Journey</a></li>
-                        <li><a href="pricing.html">Pricing & Finance</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Patient Resources</h4>
-                    <ul>
-                        <li><a href="testimonials.html">Patient Testimonials</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="complaints.html">Complaints Procedure</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Information</h4>
-                    <p><strong>Treatment Location:</strong><br>233 Charminster Road<br>Bournemouth, Dorset<br>BH8 9QJ</p>
-                    <p><strong>Phone:</strong> <a href="tel:+441202528949" style="color: rgba(255,255,255,0.8);">01202 528 949</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:contactus@bournemouthimplants.com" style="color: rgba(255,255,255,0.8);">contactus@bournemouthimplants.com</a></p>
-                    <p><strong>Hours:</strong><br>Mon, Wed, Thu: 8am-5pm<br>Tue: 8am-7pm<br>Fri: 8am-2pm<br>Sat: By appointment</p>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Bournemouth Implants. All rights reserved.</p>
-                <p class="disclaimer">Bournemouth Implants is a dental implant service. Treatment is provided at 233 Charminster Road, Bournemouth from an established CQC-registered dental facility by GDC-registered dentists. This website is for informational purposes only and does not constitute medical advice. Individual results may vary. All treatment carries risks which will be discussed during your consultation.</p>
+                <p>&copy; 2024 Bournemouth Dental Implants. All rights reserved. | GDC Registration: 318594 | CQC Registered Practice</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
