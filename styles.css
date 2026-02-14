@@ -439,6 +439,61 @@ a:hover {
 }
 
 /* ==========================================
+   PAGE HERO SECTION (Internal Pages)
+   ========================================== */
+
+.page-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    padding: var(--spacing-lg) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(5, 191, 219, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 223, 162, 0.15) 0%, transparent 50%);
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero h1 {
+    color: #ffffff;
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-hero .lead,
+.page-hero p.lead {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.page-hero .breadcrumb {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.95rem;
+}
+
+.page-hero .breadcrumb a {
+    color: rgba(255, 255, 255, 0.85);
+    transition: all var(--transition-base);
+}
+
+.page-hero .breadcrumb a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================
    SECTIONS
    ========================================== */
 
@@ -632,7 +687,7 @@ section {
     margin-top: var(--spacing-lg);
 }
 
-.step {
+.journey-step {
     background: white;
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
@@ -642,7 +697,7 @@ section {
     position: relative;
 }
 
-.step:hover {
+.journey-step:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
 }
@@ -661,13 +716,13 @@ section {
     margin: 0 auto var(--spacing-sm);
 }
 
-.step h3 {
+.journey-step h3 {
     font-size: 1rem;
     margin-bottom: var(--spacing-xs);
     color: var(--primary-color);
 }
 
-.step p {
+.journey-step p {
     font-size: 0.9rem;
     color: var(--text-medium);
     line-height: 1.5;
