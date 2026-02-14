@@ -2,363 +2,802 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"="width=device-width, initial-scale=1.0">
-    <title>Dentures to Fixed Teeth | Upgrade to Dental Implants Bournemouth</title>
-    <meta name="description" content="Replace your dentures with permanently fixed dental implants in Bournemouth. No more slipping, adhesives, or dietary restrictions. Fixed teeth in a day.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="page-styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transition from removable dentures to fixed implant-supported teeth in Bournemouth. Restore confidence and function with permanently fixed prosthetics.">
+    <title>Dentures to Fixed Teeth | Implant Denture Conversion - Bournemouth Dental Implants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            line-height: 1.7;
+            color: #ffffff;
+            background: #0a0a0a;
+        }
+        .container { max-width: 1600px; margin: 0 auto; padding: 0 3rem; }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .nav-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { 
+            font-weight: 300; 
+            font-size: 1rem; 
+            color: #ffffff;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: #ffffff; }
+        .nav-cta {
+            background: white;
+            color: #0a0a0a !important;
+            padding: 0.7rem 1.8rem;
+            font-weight: 600;
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            padding: 12rem 0 6rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%);
+        }
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .breadcrumb {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .breadcrumb a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: rgba(255,255,255,0.8);
+        }
+        .page-hero h1 {
+            font-size: 5rem;
+            line-height: 1.1;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .page-hero-lead {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Content Sections */
+        section { padding: 6rem 0; }
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .section-header h2 {
+            font-size: 3rem;
+            line-height: 1.2;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-bottom: 4rem;
+        }
+        .content-block h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .content-block p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+        }
+        .content-block li {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            color: rgba(255,255,255,0.8);
+        }
+        .content-block li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        /* Comparison Box */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .comparison-box {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 3rem;
+            border-radius: 8px;
+        }
+        .comparison-box h4 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .feature-box {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .feature-box:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.2);
+            transform: translateY(-4px);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .feature-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .feature-box p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 3rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            transition: all 0.4s;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .btn-primary {
+            background: white;
+            color: #0a0a0a;
+        }
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #000000;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+        .footer-about h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .footer-about p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        
+        /* Compact Credentials Section */
+        .credentials-section {
+            padding: 6rem 0;
+            background: rgba(255,255,255,0.02);
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .clinician-profile-compact {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .profile-image-compact {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+        }
+        .profile-image-compact img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+        .profile-content-compact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .profile-lead {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        .credentials-compact {
+            display: grid;
+            gap: 1.5rem;
+        }
+        .cred-item-compact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .cred-item-compact:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .cred-label-compact {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.5);
+            font-weight: 600;
+        }
+        .cred-value-compact {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            .nav-content {
+                padding: 0 1.5rem;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                text-align: center;
+                padding: 2rem 0;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+            .nav-menu li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+            .nav-menu a {
+                display: block;
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            .nav-cta {
+                margin: 1rem auto 0;
+                display: inline-block;
+                width: auto;
+            }
+            .page-hero {
+                padding: 8rem 1.5rem 4rem;
+            }
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            .page-hero-lead {
+                font-size: 1rem;
+            }
+            section {
+                padding: 3rem 0;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .cta-section p {
+                font-size: 1rem;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            
+            /* Mobile Compact Credentials */
+            .credentials-section {
+                padding: 3rem 0;
+            }
+            .clinician-profile-compact {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .profile-image-compact {
+                height: 400px;
+            }
+            .profile-content-compact h2 {
+                font-size: 2rem;
+            }
+            .profile-lead {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html">Bournemouth Implants</a>
-                </div>
-                <button class="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
-                    <li><a href="dentures-to-fixed.html" class="active">Dentures to Fixed</a></li>
-                    <li><a href="patient-journey.html">Patient Journey</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
-                </ul>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Bournemouth Dental Implants</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="full-arch.html">Full Arch</a></li>
+                <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                <li><a href="patient-journey.html">Journey</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact" class="nav-cta">Book Assessment</a></li>
+            </ul>
         </div>
     </nav>
 
     <section class="page-hero">
-        <div class="container">
+        <div class="page-hero-content">
             <div class="breadcrumb">
-                <a href="index.html">Home</a> / Dentures to Fixed Teeth
+                <a href="index.html">Home</a> / Dentures to Fixed
             </div>
-            <h1>Say Goodbye to Dentures Forever</h1>
-            <p class="lead">Upgrade from removable dentures to permanently fixed teeth that look, feel, and function like your natural teeth used to.</p>
+            <h1>Dentures to<br>Fixed Teeth</h1>
+            <p class="page-hero-lead">Transition from removable complete dentures to permanently fixed implant-supported teeth. Restore confidence, function, and quality of life.</p>
         </div>
     </section>
 
-    <div class="sticky-cta">
+    <section>
         <div class="container">
-            <div class="sticky-cta-content">
-                <span class="sticky-cta-text">Ready to ditch your dentures?</span>
-                <a href="contact.html" class="btn btn-primary btn-small">Book Free Consultation</a>
-            </div>
-        </div>
-    </div>
-
-    <section class="content-section">
-        <div class="container">
-            <div class="content-layout">
-                <div class="content-main">
-                    <h2>Tired of Living with Dentures?</h2>
-                    <p>You're not alone. Millions of people across the UK struggle daily with the limitations and frustrations of removable dentures. While dentures were once the only option, modern dental implant technology now offers a permanent, life-changing alternative.</p>
-
-                    <p>If you're tired of dentures that slip, the mess of adhesives, dietary restrictions, and the constant worry about your teeth, it's time to discover what life could be like with fixed dental implants.</p>
-
-                    <h2>The Daily Struggles of Denture Wearers</h2>
-                    <p>Does this sound familiar?</p>
-
-                    <div class="problem-list-detailed">
-                        <div class="problem-item">
-                            <h3>Slipping and Movement</h3>
-                            <p>Your dentures shift when you eat, speak, or laugh. You constantly worry about embarrassing moments in social situations.</p>
-                        </div>
-                        <div class="problem-item">
-                            <h3>Adhesive Dependency</h3>
-                            <p>You can't leave home without denture adhesive. The taste is unpleasant, and you never feel truly secure even with it.</p>
-                        </div>
-                        <div class="problem-item">
-                            <h3>Dietary Restrictions</h3>
-                            <p>Steak, apples, corn on the cob—so many foods you once loved are now off-limits. You've adapted your diet around your dentures.</p>
-                        </div>
-                        <div class="problem-item">
-                            <h3>Sore Spots and Discomfort</h3>
-                            <p>Dentures rub against your gums, causing painful sore spots. Some days you just want to take them out and leave them out.</p>
-                        </div>
-                        <div class="problem-item">
-                            <h3>Bone Loss and Facial Changes</h3>
-                            <p>Your dentures keep getting looser as your bone shrinks. Your face looks older, and you've noticed your features changing.</p>
-                        </div>
-                        <div class="problem-item">
-                            <h3>Daily Maintenance Hassle</h3>
-                            <p>Every night: removal, cleaning, soaking. Every morning: adhesive application. It's exhausting and feels like a constant chore.</p>
-                        </div>
-                    </div>
-
-                    <p class="emphasis">There is a better way. Full arch dental implants can eliminate all of these problems—permanently.</p>
-
-                    <h2>How Fixed Implants Transform Your Life</h2>
-                    <p>Imagine waking up every day and simply brushing your teeth—no removal, no adhesive, no worry. That's life with dental implants.</p>
-
-                    <h3>What Changes When You Switch to Implants?</h3>
-                    <ul class="benefit-list">
-                        <li><strong>Complete Stability:</strong> Your teeth are permanently fixed. They never move, slip, or shift—ever.</li>
-                        <li><strong>Eat Anything:</strong> Steak, apples, nuts, crusty bread. All the foods you've been avoiding are back on the menu.</li>
-                        <li><strong>No More Adhesive:</strong> Forget about the taste, expense, and hassle of denture adhesive.</li>
-                        <li><strong>Speak Naturally:</strong> No more lisping or worrying about dentures clicking or slipping when you talk.</li>
-                        <li><strong>Preserve Your Face:</strong> Implants stop bone loss, preventing the sunken facial appearance that occurs with dentures.</li>
-                        <li><strong>Feel Natural:</strong> Your teeth feel like your own used to. Most patients forget they have implants.</li>
-                        <li><strong>Boost Confidence:</strong> Smile, laugh, and eat in public without a second thought.</li>
-                        <li><strong>Simple Care:</strong> Brush and floss like natural teeth. No special cleaning routines or overnight soaking.</li>
-                    </ul>
-
-                    <h2>Dentures vs. Fixed Implants: The Honest Comparison</h2>
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Daily Life</th>
-                                <th>With Dentures</th>
-                                <th>With Fixed Implants</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Morning Routine</strong></td>
-                                <td>Apply adhesive, insert dentures, check fit</td>
-                                <td>Brush and floss like natural teeth</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Eating</strong></td>
-                                <td>Soft foods only, cut into small pieces, avoid certain textures</td>
-                                <td>Eat anything you want with confidence</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Speaking</strong></td>
-                                <td>Potential clicking, slurring, self-consciousness</td>
-                                <td>Speak naturally without worry</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Social Events</strong></td>
-                                <td>Anxiety about slipping, limited food choices, worry</td>
-                                <td>Complete confidence and freedom</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Evening Routine</strong></td>
-                                <td>Remove, clean, soak dentures overnight</td>
-                                <td>Brush and floss before bed</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Comfort</strong></td>
-                                <td>Potential sore spots, adjustments needed</td>
-                                <td>Comfortable all day, every day</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Confidence</strong></td>
-                                <td>Constant awareness and worry</td>
-                                <td>Forget you have them</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <h2>Real Stories from Former Denture Wearers</h2>
-                    
-                    <div class="testimonial-full">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-quote">"I wore dentures for 15 years and they controlled my life. I couldn't eat properly, they'd slip at the worst times, and I felt like I aged 10 years. Getting implants was the best decision I ever made. I can eat steak again! I can laugh without worrying! I feel like myself again."</p>
-                        <p class="testimonial-author-full">— Patricia, 67, Bournemouth</p>
-                    </div>
-
-                    <div class="testimonial-full">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-quote">"My biggest regret about getting dental implants? Not doing it sooner. I spent 20 years dealing with dentures when I could have had fixed teeth all along. The difference is night and day. No adhesive, no slipping, no dietary restrictions. It's freedom."</p>
-                        <p class="testimonial-author-full">— Margaret, 72, Poole</p>
-                    </div>
-
-                    <div class="testimonial-full">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-quote">"I was so embarrassed by my dentures. They clicked when I talked, and I avoided eating in public. Since getting implants, my confidence has transformed. I smile in photos now. I go out to restaurants. I feel 20 years younger."</p>
-                        <p class="testimonial-author-full">— James, 64, Christchurch</p>
-                    </div>
-
-                    <h2>The Transition Process: What to Expect</h2>
-                    <p>Moving from dentures to fixed implants is straightforward. Here's how it works:</p>
-
-                    <div class="process-steps">
-                        <div class="process-step">
-                            <div class="process-number">1</div>
-                            <div class="process-content">
-                                <h3>Free Consultation</h3>
-                                <p>We assess your oral health, take a 3D scan, discuss your goals, and provide a clear treatment plan with transparent pricing. Bring your dentures—we'll evaluate your current situation.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-number">2</div>
-                            <div class="process-content">
-                                <h3>Digital Planning</h3>
-                                <p>Using advanced software, we plan your implant positions and design your new teeth. You'll see a preview of your results before surgery.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-number">3</div>
-                            <div class="process-content">
-                                <h3>Surgery Day</h3>
-                                <p>You arrive with your dentures. You leave with fixed teeth. We place your implants and attach a temporary fixed bridge the same day. No period without teeth.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-number">4</div>
-                            <div class="process-content">
-                                <h3>Healing Phase</h3>
-                                <p>Over 3-6 months, your implants integrate with your bone while you wear comfortable temporary fixed teeth. You'll gradually expand your diet during this time.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-number">5</div>
-                            <div class="process-content">
-                                <h3>Final Teeth</h3>
-                                <p>Once healed, we fit your permanent bridge—custom-designed to look natural and beautiful. These are the teeth you'll have for decades.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h2>Your Questions Answered</h2>
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <h3>Will I be without teeth during treatment?</h3>
-                            <p>Never. You'll receive temporary fixed teeth on the same day as your implant surgery. You come in with dentures, leave with fixed teeth.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>What if I've worn dentures for years and my bone has shrunk?</h3>
-                            <p>Even if you've experienced bone loss, you're likely still a candidate. The All-on-4 technique is specifically designed to work in areas with the best available bone. In some cases, bone grafting or advanced techniques may be needed, which we'll discuss during your consultation.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>Is the transition difficult?</h3>
-                            <p>Most former denture wearers adapt very quickly—often faster than those who had natural teeth, because they're used to having something in their mouth. The temporary teeth feel more comfortable than dentures from day one.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>How soon can I eat normally?</h3>
-                            <p>You'll start with a soft diet and gradually progress over 4-6 weeks. Once fully healed, there are no restrictions—you can eat anything.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>Do implants feel like dentures?</h3>
-                            <p>Not at all. Implants feel much more like natural teeth. There's no plastic covering the roof of your mouth, no movement, and you can taste food properly. Most patients say they forget they have implants.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>What does it cost compared to new dentures?</h3>
-                            <p>While the upfront cost is higher, implants typically cost less over 10-20 years when you factor in denture replacements, adjustments, adhesives, and related products. More importantly, the quality of life improvement is priceless.</p>
-                        </div>
-                    </div>
-
-                    <h2>Is It Time to Make the Change?</h2>
-                    <p>If you're reading this, you're probably already considering whether to continue with dentures or make the switch to implants. Here are some questions to ask yourself:</p>
-
-                    <ul class="benefit-list">
-                        <li>Are you happy with your dentures, or do you tolerate them?</li>
-                        <li>Do you avoid certain foods because of your dentures?</li>
-                        <li>Do you feel self-conscious in social situations?</li>
-                        <li>Are you spending money on adhesives and denture care products?</li>
-                        <li>Have your dentures become looser over time?</li>
-                        <li>Would you like to eat, speak, and smile with complete confidence?</li>
-                    </ul>
-
-                    <p>If you answered yes to any of these questions, it's worth exploring whether dental implants are right for you.</p>
-
-                    <h2>Take the First Step</h2>
-                    <p>The journey from dentures to fixed teeth begins with a conversation. Book a free consultation and we'll assess your situation, answer all your questions, and explain your options—with no pressure and no obligation.</p>
-
-                    <p>You've lived with dentures long enough. Discover what life could be like with permanently fixed teeth.</p>
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">Treatment Overview</div>
+                    <h2>Move Beyond Dentures</h2>
+                    <p>If you currently wear complete dentures and struggle with instability, discomfort, or dietary restrictions, implant-supported fixed teeth may offer a life-changing solution.</p>
                 </div>
 
-                <aside class="sidebar">
-                    <div class="sidebar-box cta-box">
-                        <h4>Ready to Ditch Dentures?</h4>
-                        <p>Book a free consultation to explore your options for fixed teeth.</p>
-                        <a href="contact.html" class="btn btn-primary btn-block">Book Now</a>
-                        <p class="sidebar-note">Or call: <a href="tel:+441202528949">01202 528 949</a></p>
-                    </div>
-
-                    <div class="sidebar-box highlight">
-                        <h4>Say Goodbye To...</h4>
-                        <p>✗ Denture adhesive<br>
-                        ✗ Slipping teeth<br>
-                        ✗ Dietary restrictions<br>
-                        ✗ Sore gums<br>
-                        ✗ Daily removal</p>
-                    </div>
-
-                    <div class="sidebar-box">
-                        <h4>Related Information</h4>
-                        <ul class="sidebar-links">
-                            <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
-                            <li><a href="patient-journey.html">Treatment Journey</a></li>
-                            <li><a href="pricing.html">Pricing & Finance</a></li>
-                            <li><a href="testimonials.html">Patient Stories</a></li>
+                <div class="comparison-grid">
+                    <div class="comparison-box">
+                        <h4>Traditional Dentures</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding-left: 0; margin-bottom: 1.5rem; color: rgba(255,255,255,0.7);">→ Must be removed for cleaning</li>
+                            <li style="padding-left: 0; margin-bottom: 1.5rem; color: rgba(255,255,255,0.7);">→ Can slip or move when eating/speaking</li>
+                            <li style="padding-left: 0; margin-bottom: 1.5rem; color: rgba(255,255,255,0.7);">→ Dietary restrictions required</li>
+                            <li style="padding-left: 0; margin-bottom: 1.5rem; color: rgba(255,255,255,0.7);">→ Ongoing bone loss continues</li>
+                            <li style="padding-left: 0; margin-bottom: 1.5rem; color: rgba(255,255,255,0.7);">→ Regular relines/adjustments needed</li>
+                            <li style="padding-left: 0; color: rgba(255,255,255,0.7);">→ May require adhesive products</li>
                         </ul>
                     </div>
-                </aside>
-            </div>
-        </div>
-    </section>
-
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Life Without Dentures Is Within Reach</h2>
-                <p>Book your free consultation and discover how fixed dental implants can transform your daily life.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-large">Book Free Consultation</a>
-                    <a href="tel:+441202528949" class="btn btn-secondary btn-large">Call: 01202 528 949</a>
+                    <div class="comparison-box">
+                        <h4>Fixed Implant Teeth</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding-left: 0; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">✓ Permanently fixed in place</li>
+                            <li style="padding-left: 0; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">✓ Stable when eating and speaking</li>
+                            <li style="padding-left: 0; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">✓ Eat all foods naturally</li>
+                            <li style="padding-left: 0; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">✓ Preserves jawbone structure</li>
+                            <li style="padding-left: 0; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">✓ No ongoing adjustments</li>
+                            <li style="padding-left: 0; color: rgba(255,255,255,0.9);">✓ Clean like natural teeth</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <section style="background: rgba(255,255,255,0.02);">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Bournemouth Implants</h4>
-                    <p>Dedicated dental implant service providing full arch rehabilitation and advanced prosthodontic care to patients across Bournemouth and Dorset.</p>
-                    <p class="gdc-note">GDC Registered Dentists</p>
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">The Conversion Process</div>
+                    <h2>Your Journey to Fixed Teeth</h2>
                 </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
+                <div class="two-column">
+                    <div class="content-block">
+                        <h3>Assessment Phase</h3>
+                        <p>We begin with comprehensive evaluation:</p>
+                        <ul>
+                            <li>Clinical examination of current dentures and oral health</li>
+                            <li>CBCT 3D imaging to assess bone volume and quality</li>
+                            <li>Digital treatment planning to determine implant positions</li>
+                            <li>Discussion of treatment options and timeline</li>
+                            <li>Financial planning and cost breakdown</li>
+                        </ul>
+                    </div>
+                    <div class="content-block">
+                        <h3>Treatment Phase</h3>
+                        <p>The conversion process involves:</p>
+                        <ul>
+                            <li>Surgical placement of 4-6 implant fixtures per arch</li>
+                            <li>Healing period of 3-6 months for osseointegration</li>
+                            <li>Prosthetic fabrication using digital impressions</li>
+                            <li>Final fitting and adjustment of fixed teeth</li>
+                            <li>Maintenance instructions and follow-up care</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">Key Benefits</div>
+                    <h2>What to Expect</h2>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-box">
+                        <div class="feature-icon">💪</div>
+                        <h4>Restored Confidence</h4>
+                        <p>Smile, speak, and eat without worry. No fear of dentures slipping at social occasions.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🍽️</div>
+                        <h4>Full Diet</h4>
+                        <p>Enjoy all foods without restriction. Bite force restored to near-natural levels.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🦴</div>
+                        <h4>Bone Preservation</h4>
+                        <p>Implants prevent the progressive bone loss that occurs with dentures.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🔒</div>
+                        <h4>Stability</h4>
+                        <p>Teeth remain securely fixed. No movement, clicking, or need for adhesives.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🎯</div>
+                        <h4>Natural Function</h4>
+                        <p>Clean and maintain like natural teeth. No overnight removal required.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">⏱️</div>
+                        <h4>Long-Term</h4>
+                        <p>Designed for durability. With proper care, can last for many years.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">Investment</div>
+                    <h2>Treatment Cost</h2>
+                    <p>Denture conversion requires the same comprehensive treatment as full arch rehabilitation.</p>
+                </div>
+                <div class="two-column">
+                    <div class="content-block">
+                        <h3>£25,000 per arch</h3>
+                        <p>Complete treatment includes:</p>
+                        <ul>
+                            <li>Comprehensive assessment and CBCT imaging</li>
+                            <li>3D digital treatment planning</li>
+                            <li>Surgical placement of 4-6 implants</li>
+                            <li>All surgical materials and components</li>
+                            <li>Final fixed prosthetic restoration</li>
+                            <li>Review and maintenance appointments</li>
+                        </ul>
+                    </div>
+                    <div class="content-block">
+                        <h3>Is This Right for You?</h3>
+                        <p>Consider this treatment if you:</p>
+                        <ul>
+                            <li>Currently wear complete dentures</li>
+                            <li>Experience instability or discomfort</li>
+                            <li>Have dietary restrictions due to dentures</li>
+                            <li>Want a permanent fixed solution</li>
+                            <li>Have adequate bone volume (confirmed by CBCT)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="credentials-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="clinician-profile-compact">
+                    <div class="profile-image-compact">
+                        <img src="images/dr-will-bonab.jpg" alt="Dr. Will Bonab - Prosthodontist">
+                    </div>
+                    <div class="profile-content-compact">
+                        <div class="section-label">Your Clinician</div>
+                        <h2>Dr. Will Bonab BDS</h2>
+                        <p class="profile-lead">Postgraduate-trained prosthodontist specialising in full arch implant rehabilitation and digital treatment planning.</p>
+                        <div class="credentials-compact">
+                            <div class="cred-item-compact">
+                                <span class="cred-label-compact">Primary Qualification</span>
+                                <span class="cred-value-compact">King's College London</span>
+                            </div>
+                            <div class="cred-item-compact">
+                                <span class="cred-label-compact">Advanced Training</span>
+                                <span class="cred-value-compact">Prosthodontics, Harvard University</span>
+                            </div>
+                            <div class="cred-item-compact">
+                                <span class="cred-label-compact">GDC Registration</span>
+                                <span class="cred-value-compact">318594</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Move Beyond Dentures?</h2>
+            <p>Book a consultation to determine if implant-supported fixed teeth are right for you.</p>
+            <a href="#contact" class="btn btn-primary">Request Clinical Assessment</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Bournemouth Dental Implants</h3>
+                    <p>Expert dental implant treatment in Bournemouth. From single tooth replacement to full arch rehabilitation, we provide personalised care using advanced 3D planning technology.</p>
+                    <p style="margin-top: 1.5rem;">
+                        <strong>Bright Blue Dental Practice</strong><br>
+                        233 Charminster Road<br>
+                        Bournemouth BH8 9QJ
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Tel: 01202 528 949<br>
+                        Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="93f0fcfde7f2f0e7e6e0d3f1fce6e1fdf6fefce6e7fbfafee3fff2fde7e0bdf0fcfe">[email&#160;protected]</a>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Treatments</h4>
                     <ul>
-                        <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
+                        <li><a href="full-arch.html">Full Arch Implants</a></li>
                         <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                        <li><a href="single-implants.html">Single Implants</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Information</h4>
+                    <ul>
                         <li><a href="patient-journey.html">Patient Journey</a></li>
-                        <li><a href="pricing.html">Pricing & Finance</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Patient Resources</h4>
-                    <ul>
-                        <li><a href="testimonials.html">Patient Testimonials</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="complaints.html">Complaints Procedure</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Information</h4>
-                    <p><strong>Treatment Location:</strong><br>233 Charminster Road<br>Bournemouth, Dorset<br>BH8 9QJ</p>
-                    <p><strong>Phone:</strong> <a href="tel:+441202528949" style="color: rgba(255,255,255,0.8);">01202 528 949</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:contactus@bournemouthimplants.com" style="color: rgba(255,255,255,0.8);">contactus@bournemouthimplants.com</a></p>
-                    <p><strong>Hours:</strong><br>Mon, Wed, Thu: 8am-5pm<br>Tue: 8am-7pm<br>Fri: 8am-2pm<br>Sat: By appointment</p>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Bournemouth Implants. All rights reserved.</p>
-                <p class="disclaimer">Bournemouth Implants is a dental implant service. Treatment is provided at 233 Charminster Road, Bournemouth from an established CQC-registered dental facility by GDC-registered dentists. This website is for informational purposes only and does not constitute medical advice. Individual results may vary. All treatment carries risks which will be discussed during your consultation.</p>
+                <p>&copy; 2024 Bournemouth Dental Implants. All rights reserved. | GDC Registration: 318594 | CQC Registered Practice</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.na
