@@ -3,363 +3,693 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Arch Implant Pricing | Transparent Costs Bournemouth</title>
-    <meta name="description" content="Transparent pricing for full arch dental implants in Bournemouth. Finance options available. No hidden costs. Book free consultation for personalized quote.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="page-styles.css">
+    <meta name="description" content="Dental implant pricing in Bournemouth. Transparent costs for full arch rehabilitation with premium zirconia ceramic teeth. Investment from £20,000-£28,000 per arch.">
+    <title>Pricing | Treatment Costs - Bournemouth Dental Implants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            line-height: 1.7;
+            color: #ffffff;
+            background: #0a0a0a;
+        }
+        .container { max-width: 1600px; margin: 0 auto; padding: 0 3rem; }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .nav-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { 
+            font-weight: 300; 
+            font-size: 1rem; 
+            color: #ffffff;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: #ffffff; }
+        .nav-cta {
+            background: white;
+            color: #0a0a0a !important;
+            padding: 0.7rem 1.8rem;
+            font-weight: 600;
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            padding: 12rem 0 6rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%);
+        }
+        .page-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .breadcrumb {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .breadcrumb a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: rgba(255,255,255,0.8);
+        }
+        .page-hero h1 {
+            font-size: 5rem;
+            line-height: 1.1;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .page-hero-lead {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Content Sections */
+        section { padding: 6rem 0; }
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .section-header h2 {
+            font-size: 3rem;
+            line-height: 1.2;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+        }
+        
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        .price-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 4rem;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+        .price-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255,255,255,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .price-card h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .price-range {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            line-height: 1;
+        }
+        .price-card .lead-text {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+        .price-includes {
+            margin-top: 2rem;
+        }
+        .price-includes h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.9);
+        }
+        .price-includes ul {
+            list-style: none;
+            padding: 0;
+        }
+        .price-includes li {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            color: rgba(255,255,255,0.8);
+            font-size: 1.05rem;
+        }
+        .price-includes li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: rgba(255,255,255,0.6);
+            font-weight: 600;
+        }
+        
+        /* Cost Factors */
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .factor-box {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+        .factor-box h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .factor-box p {
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+        }
+        
+        /* Material Highlight */
+        .material-box {
+            background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 4rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .material-box h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .material-box p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        .material-benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .material-benefit {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+        .material-benefit h5 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .material-benefit p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 3rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            transition: all 0.4s;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .btn-primary {
+            background: white;
+            color: #0a0a0a;
+        }
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #000000;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+        .footer-about h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .footer-about p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+        .footer-links h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            .nav-content {
+                padding: 0 1.5rem;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                text-align: center;
+                padding: 2rem 0;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+            .nav-menu li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+            .nav-menu a {
+                display: block;
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            .nav-cta {
+                margin: 1rem auto 0;
+                display: inline-block;
+                width: auto;
+            }
+            .page-hero {
+                padding: 8rem 1.5rem 4rem;
+            }
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            .page-hero-lead {
+                font-size: 1rem;
+            }
+            section {
+                padding: 3rem 0;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .price-card {
+                padding: 2rem;
+            }
+            .price-card h3 {
+                font-size: 1.8rem;
+            }
+            .price-range {
+                font-size: 2.5rem;
+            }
+            .factors-grid {
+                grid-template-columns: 1fr;
+            }
+            .material-benefits {
+                grid-template-columns: 1fr;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .cta-section p {
+                font-size: 1rem;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html">Bournemouth Implants</a>
-                </div>
-                <button class="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
-                    <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                    <li><a href="patient-journey.html">Patient Journey</a></li>
-                    <li><a href="pricing.html" class="active">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
-                </ul>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Bournemouth Dental Implants</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="full-arch.html">Full Arch</a></li>
+                <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                <li><a href="patient-journey.html">Journey</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact" class="nav-cta">Book Assessment</a></li>
+            </ul>
         </div>
     </nav>
 
     <section class="page-hero">
-        <div class="container">
+        <div class="page-hero-content">
             <div class="breadcrumb">
                 <a href="index.html">Home</a> / Pricing
             </div>
-            <h1>Transparent Pricing for Full Arch Dental Implants</h1>
-            <p class="lead">No hidden costs. No surprises. Just honest, clear pricing for your dental implant treatment.</p>
+            <h1>Treatment<br>Investment</h1>
+            <p class="page-hero-lead">Comprehensive full-arch implant treatment typically costs £25,000 per arch, with final pricing determined by your individual clinical requirements.</p>
         </div>
     </section>
 
-    <div class="sticky-cta">
+    <section>
         <div class="container">
-            <div class="sticky-cta-content">
-                <span class="sticky-cta-text">Get your personalized quote</span>
-                <a href="contact.html" class="btn btn-primary btn-small">Book Free Consultation</a>
-            </div>
-        </div>
-    </div>
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">Investment Range</div>
+                    <h2>Full Arch Rehabilitation</h2>
+                    <p>Comprehensive full-arch implant treatment typically costs £25,000 per arch, with final pricing determined by your individual clinical requirements.</p>
+                </div>
 
-    <section class="content-section">
-        <div class="container">
-            <div class="content-layout">
-                <div class="content-main">
-                    <h2>Investment in Your Smile</h2>
-                    <p>Full arch dental implants represent a significant investment in your health, confidence, and quality of life. We believe in complete transparency when it comes to costs—you deserve to know exactly what you're paying for.</p>
-
-                    <div class="highlight-box">
-                        <h3>Typical Investment Range</h3>
-                        <p><strong>Full arch implant treatment (per arch): £15,000 - £25,000</strong></p>
-                        <p style="margin-bottom: 0;">The exact cost depends on your individual needs, the complexity of your case, and the materials selected for your final teeth. We'll provide you with a detailed, written quote during your consultation.</p>
-                    </div>
-
-                    <h2>What's Included in the Price?</h2>
-                    <p>Our full arch implant treatment is all-inclusive. Your quote covers everything from start to finish:</p>
-
-                    <div class="pricing-grid">
-                        <div class="pricing-item">
-                            <h4>✓ Consultation & Planning</h4>
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h3>Complete Upper or Lower Arch</h3>
+                        <div class="price-range">£25,000</div>
+                        <p class="lead-text">Typical investment per arch, with final cost determined by number of implants required, bone grafting needs, and complexity of preparatory procedures.</p>
+                        
+                        <div class="price-includes">
+                            <h4>All Treatment Includes:</h4>
                             <ul>
-                                <li>Initial consultation</li>
-                                <li>3D CT scan</li>
-                                <li>Digital treatment planning</li>
-                                <li>Smile design</li>
+                                <li>Comprehensive clinical assessment and consultation</li>
+                                <li>CBCT 3D imaging and digital treatment planning</li>
+                                <li>Surgical placement of 4-6 titanium implant fixtures</li>
+                                <li>Bone grafting procedures if required</li>
+                                <li>Extraction of failing teeth where necessary</li>
+                                <li>Temporary prosthesis during healing period</li>
+                                <li>Final fixed zirconia ceramic restoration</li>
+                                <li>All post-treatment review appointments</li>
+                                <li>Detailed maintenance instructions</li>
                             </ul>
-                        </div>
-                        <div class="pricing-item">
-                            <h4>✓ Surgery & Implants</h4>
-                            <ul>
-                                <li>All surgical procedures</li>
-                                <li>4-6 premium implants</li>
-                                <li>Guided surgery technology</li>
-                                <li>Local anaesthetic</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-item">
-                            <h4>✓ Temporary Teeth</h4>
-                            <ul>
-                                <li>Immediate fixed bridge</li>
-                                <li>Fitted same day as surgery</li>
-                                <li>Any adjustments needed</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-item">
-                            <h4>✓ Final Restoration</h4>
-                            <ul>
-                                <li>Custom-crafted permanent teeth</li>
-                                <li>Premium materials</li>
-                                <li>Multiple try-in appointments</li>
-                                <li>Perfect fit guarantee</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-item">
-                            <h4>✓ Follow-up Care</h4>
-                            <ul>
-                                <li>All appointments in first year</li>
-                                <li>Post-operative checks</li>
-                                <li>Professional cleaning</li>
-                                <li>Any necessary adjustments</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-item">
-                            <h4>✓ Aftercare Support</h4>
-                            <ul>
-                                <li>Emergency contact line</li>
-                                <li>Oral hygiene instruction</li>
-                                <li>Maintenance guidance</li>
-                                <li>Ongoing support</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h2>Why Do Costs Vary?</h2>
-                    <p>Several factors influence the final cost of your treatment:</p>
-
-                    <ul class="benefit-list">
-                        <li><strong>Number of Implants:</strong> Most cases use 4-6 implants per arch. Some patients may need more for optimal stability.</li>
-                        <li><strong>Complexity of Surgery:</strong> Cases requiring bone grafting or sinus lifts cost more than straightforward placements.</li>
-                        <li><strong>Type of Final Teeth:</strong> Premium materials (like zirconia) cost more than standard acrylic, but offer superior aesthetics and durability.</li>
-                        <li><strong>Upper vs. Lower Arch:</strong> Upper arch treatment is sometimes more complex due to bone density and sinus anatomy.</li>
-                        <li><strong>Number of Arches:</strong> Treating both upper and lower arches together may offer cost savings.</li>
-                    </ul>
-
-                    <p>During your consultation, we'll assess your individual situation and provide an accurate, personalized quote.</p>
-
-                    <h2>Finance Options</h2>
-                    <p>We understand that full arch implant treatment is a significant investment. That's why we work with trusted third-party finance providers to offer flexible payment plans.</p>
-
-                    <div class="finance-options">
-                        <div class="finance-card">
-                            <h3>Interest-Free Finance</h3>
-                            <p><strong>0% APR available on selected plans</strong></p>
-                            <ul>
-                                <li>Spread cost over 6-12 months</li>
-                                <li>No interest charged</li>
-                                <li>Fixed monthly payments</li>
-                                <li>Subject to acceptance and affordability checks</li>
-                            </ul>
-                        </div>
-                        <div class="finance-card">
-                            <h3>Extended Payment Plans</h3>
-                            <p><strong>Up to 5 years to pay</strong></p>
-                            <ul>
-                                <li>Longer repayment periods available</li>
-                                <li>Competitive interest rates</li>
-                                <li>Manageable monthly payments</li>
-                                <li>Subject to credit approval</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <p><strong>Application Process:</strong> Our team will guide you through the finance application. Most decisions are instant, and we'll help you find a plan that suits your budget.</p>
-
-                    <h2>Is It Worth the Investment?</h2>
-                    <p>When considering the cost, it's helpful to think about full arch implants in terms of long-term value rather than just upfront expense.</p>
-
-                    <h3>Cost Comparison Over 20 Years</h3>
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Dentures</th>
-                                <th>Full Arch Implants</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Initial Cost</strong></td>
-                                <td>£1,000-£3,000</td>
-                                <td>£15,000-£25,000</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Replacements (every 5-7 years)</strong></td>
-                                <td>£2,000-£9,000</td>
-                                <td>£0 (implants last 20+ years)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Adhesives (yearly)</strong></td>
-                                <td>£3,000-£6,000</td>
-                                <td>£0</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Repairs & Adjustments</strong></td>
-                                <td>£1,000-£3,000</td>
-                                <td>Minimal</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Total 20-Year Cost</strong></td>
-                                <td>£7,000-£21,000</td>
-                                <td>£15,000-£25,000</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <p><em>*These are estimated costs for comparison purposes. Individual circumstances vary.</em></p>
-
-                    <h3>Beyond the Numbers</h3>
-                    <p>The true value of full arch implants goes beyond financial considerations:</p>
-
-                    <ul class="benefit-list">
-                        <li><strong>Quality of Life:</strong> Eat anything, speak clearly, smile confidently</li>
-                        <li><strong>Health Benefits:</strong> Better nutrition, preserved bone, improved oral health</li>
-                        <li><strong>Psychological Impact:</strong> Restored confidence and self-esteem</li>
-                        <li><strong>Convenience:</strong> No daily removal, no adhesives, no denture care</li>
-                        <li><strong>Longevity:</strong> A solution that can last decades with proper care</li>
-                    </ul>
-
-                    <div class="testimonial-full">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-quote">"Yes, it was a significant investment, but it's the best money I've ever spent. The difference it's made to my life is immeasurable. I only wish I'd done it sooner."</p>
-                        <p class="testimonial-author-full">— Helen R., Bournemouth</p>
-                    </div>
-
-                    <h2>Getting Your Personalized Quote</h2>
-                    <p>Every patient is unique, and so is every treatment plan. The only way to know your exact cost is to have a consultation.</p>
-
-                    <p><strong>During your free consultation, you'll receive:</strong></p>
-                    <ul class="benefit-list">
-                        <li>Comprehensive oral examination</li>
-                        <li>3D CT scan and analysis</li>
-                        <li>Detailed treatment plan</li>
-                        <li>Written quote with complete cost breakdown</li>
-                        <li>Finance options explained</li>
-                        <li>Opportunity to ask all your questions</li>
-                    </ul>
-
-                    <p>There's no obligation to proceed—we simply want to give you all the information you need to make an informed decision.</p>
-
-                    <h2>Frequently Asked Questions</h2>
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <h3>Do you offer payment plans?</h3>
-                            <p>Yes. We work with trusted finance providers to offer 0% interest-free plans (6-12 months) and extended payment plans (up to 5 years). Most applications receive instant decisions.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Are there any hidden costs?</h3>
-                            <p>No. Your written quote includes everything from consultation through to your final teeth and first year of follow-up care. The only additional costs would be if you choose optional extras like sedation.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Is the consultation really free?</h3>
-                            <p>Yes, completely free with no obligation. You'll receive a full examination, 3D CT scan, and written treatment plan at no cost.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Can I pay in installments without finance?</h3>
-                            <p>Yes. You can pay a deposit to secure your treatment date, with the balance due before or on your surgery day, or use one of our finance plans.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>What happens if something goes wrong after treatment?</h3>
-                            <p>All necessary follow-up care in the first year is included. If complications arise due to the treatment, we'll address them at no additional cost. Your treatment plan will detail our warranty terms.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Is treatment covered by insurance?</h3>
-                            <p>Private dental insurance policies vary significantly. Some offer partial coverage for implants. We recommend checking with your insurer. We can provide documentation to support any claims.</p>
                         </div>
                     </div>
                 </div>
-
-                <aside class="sidebar">
-                    <div class="sidebar-box cta-box">
-                        <h4>Get Your Personalized Quote</h4>
-                        <p>Book a free consultation to receive a detailed treatment plan and transparent pricing.</p>
-                        <a href="contact.html" class="btn btn-primary btn-block">Book Now</a>
-                        <p class="sidebar-note">Or call: <a href="tel:+441202528949">01202 528 949</a></p>
-                    </div>
-
-                    <div class="sidebar-box highlight">
-                        <h4>Price Promise</h4>
-                        <p>✓ No hidden costs<br>
-                        ✓ Written quote provided<br>
-                        ✓ All-inclusive pricing<br>
-                        ✓ Finance available<br>
-                        ✓ Free consultation</p>
-                    </div>
-
-                    <div class="sidebar-box">
-                        <h4>What's Included?</h4>
-                        <ul class="sidebar-links">
-                            <li>Consultation & Planning</li>
-                            <li>All Surgery & Implants</li>
-                            <li>Temporary Fixed Teeth</li>
-                            <li>Final Permanent Teeth</li>
-                            <li>First Year Follow-up</li>
-                        </ul>
-                    </div>
-                </aside>
             </div>
         </div>
     </section>
 
-    <section class="final-cta">
+    <section style="background: rgba(255,255,255,0.02);">
         <div class="container">
-            <div class="cta-content">
-                <h2>Transparent Pricing. No Surprises. No Pressure.</h2>
-                <p>Book your free consultation and discover exactly what your smile transformation will cost—with flexible payment options to make it affordable.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-large">Get Your Personalized Quote</a>
-                    <a href="tel:+441202528949" class="btn btn-secondary btn-large">Call: 01202 528 949</a>
+            <div class="content-wrapper">
+                <div class="section-header">
+                    <div class="section-label">Cost Factors</div>
+                    <h2>What Influences Price?</h2>
+                    <p>Several clinical factors determine your exact treatment cost.</p>
                 </div>
-                <p class="cta-note">Free consultation. No obligation.</p>
+
+                <div class="factors-grid">
+                    <div class="factor-box">
+                        <h4>Number of Implants</h4>
+                        <p>Full arch treatment typically requires 4-6 implants per arch. The exact number depends on your bone quality, jaw anatomy, and desired outcome. More implants may be recommended for optimal load distribution and long-term stability.</p>
+                    </div>
+                    <div class="factor-box">
+                        <h4>Bone Grafting Requirements</h4>
+                        <p>If you have experienced significant bone loss, grafting procedures may be necessary before or during implant placement. This increases treatment scope and cost but ensures optimal implant positioning and long-term success.</p>
+                    </div>
+                    <div class="factor-box">
+                        <h4>Extraction Procedures</h4>
+                        <p>Patients with failing teeth requiring removal will need extraction procedures as part of treatment. Complex extractions or multiple teeth requiring surgical removal will affect the overall treatment timeline and cost.</p>
+                    </div>
+                    <div class="factor-box">
+                        <h4>Temporary Prosthetics</h4>
+                        <p>During the healing phase, you may require temporary restorations. The type and complexity of temporary prosthesis needed varies between cases and influences total treatment investment.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <section>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Bournemouth Implants</h4>
-                    <p>Dedicated dental implant service providing full arch rehabilitation and advanced prosthodontic care to patients across Bournemouth and Dorset.</p>
-                    <p class="gdc-note">GDC Registered Dentists</p>
+            <div class="content-wrapper">
+                <div class="material-box">
+                    <h3>Premium Zirconia Ceramic Teeth</h3>
+                    <p>All final restorations are fabricated from high-grade zirconia ceramic - the premium material for fixed dental prosthetics.</p>
+                    
+                    <div class="material-benefits">
+                        <div class="material-benefit">
+                            <h5>Exceptional Strength</h5>
+                            <p>Zirconia is one of the strongest dental ceramics available, providing excellent durability for long-term function.</p>
+                        </div>
+                        <div class="material-benefit">
+                            <h5>Natural Aesthetics</h5>
+                            <p>Superior translucency and shade matching creates natural-looking teeth that blend seamlessly with your smile.</p>
+                        </div>
+                        <div class="material-benefit">
+                            <h5>Stain Resistant</h5>
+                            <p>Highly resistant to discolouration from food, drink, and tobacco - maintaining appearance over time.</p>
+                        </div>
+                        <div class="material-benefit">
+                            <h5>Biocompatible</h5>
+                            <p>Excellent tissue compatibility minimises soft tissue irritation and supports healthy gum integration.</p>
+                        </div>
+                        <div class="material-benefit">
+                            <h5>Colour Stability</h5>
+                            <p>Unlike traditional materials, zirconia maintains its colour indefinitely without yellowing or fading.</p>
+                        </div>
+                        <div class="material-benefit">
+                            <h5>Metal-Free</h5>
+                            <p>All-ceramic construction eliminates concerns about metal sensitivity and provides superior aesthetics.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Get Your Personalised Quote</h2>
+            <p>Book a consultation with CBCT imaging to determine your exact treatment requirements and cost.</p>
+            <a href="#contact" class="btn btn-primary">Request Assessment</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Bournemouth Dental Implants</h3>
+                    <p>Expert dental implant treatment in Bournemouth. From single tooth replacement to full arch rehabilitation, we provide personalised care using advanced 3D planning technology.</p>
+                    <p style="margin-top: 1.5rem;">
+                        <strong>Bright Blue Dental Practice</strong><br>
+                        233 Charminster Road<br>
+                        Bournemouth BH8 9QJ
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Tel: 01202 528 949<br>
+                        Email: contactus@bournemouthimplants.com
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Treatments</h4>
                     <ul>
-                        <li><a href="full-arch-implants.html">Full Arch Implants</a></li>
+                        <li><a href="full-arch.html">Full Arch Implants</a></li>
                         <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
+                        <li><a href="single-implants.html">Single Implants</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Information</h4>
+                    <ul>
                         <li><a href="patient-journey.html">Patient Journey</a></li>
-                        <li><a href="pricing.html">Pricing & Finance</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Patient Resources</h4>
-                    <ul>
-                        <li><a href="testimonials.html">Patient Testimonials</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                        <li><a href="complaints.html">Complaints Procedure</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Information</h4>
-                    <p><strong>Treatment Location:</strong><br>233 Charminster Road<br>Bournemouth, Dorset<br>BH8 9QJ</p>
-                    <p><strong>Phone:</strong> <a href="tel:+441202528949" style="color: rgba(255,255,255,0.8);">01202 528 949</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:contactus@bournemouthimplants.com" style="color: rgba(255,255,255,0.8);">contactus@bournemouthimplants.com</a></p>
-                    <p><strong>Hours:</strong><br>Mon, Wed, Thu: 8am-5pm<br>Tue: 8am-7pm<br>Fri: 8am-2pm<br>Sat: By appointment</p>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Bournemouth Implants. All rights reserved.</p>
-                <p class="disclaimer">Bournemouth Implants is a dental implant service. Treatment is provided at 233 Charminster Road, Bournemouth from an established CQC-registered dental facility by GDC-registered dentists. This website is for informational purposes only and does not constitute medical advice. Individual results may vary. All treatment carries risks which will be discussed during your consultation.</p>
+                <p>&copy; 2024 Bournemouth Dental Implants. All rights reserved. | GDC Registration: 318594 | CQC Registered Practice</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
