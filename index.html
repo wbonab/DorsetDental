@@ -1,782 +1,1339 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expert dental implant treatment in Bournemouth. Personalised medicine from single tooth replacement to full arch rehabilitation. GDC registered, postgraduate trained clinicians.">
-    <title>Bournemouth Dental Implants | Expert Implant Treatment & Full Arch Rehabilitation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Josefin Sans', sans-serif;
-            line-height: 1.7;
-            color: #ffffff;
-            background: #0a0a0a;
-        }
-        .container { max-width: 1600px; margin: 0 auto; padding: 0 3rem; }
-        
-        /* Navigation - Overlay */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            padding: 1.5rem 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-        .nav-content {
-            max-width: 1600px;
-            margin: 0 auto;
-            padding: 0 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo { 
-            font-weight: 300; 
-            font-size: 1rem; 
-            color: #ffffff;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-        .hamburger span {
-            width: 25px;
-            height: 2px;
-            background: white;
-            transition: all 0.3s;
-        }
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(7px, 7px);
-        }
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
-        .nav-menu {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-            align-items: center;
-        }
-        .nav-menu a {
-            text-decoration: none;
-            color: rgba(255,255,255,0.6);
-            font-size: 0.85rem;
-            font-weight: 400;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-        .nav-menu a:hover { color: #ffffff; }
-        .nav-cta {
-            background: white;
-            color: #0a0a0a !important;
-            padding: 0.7rem 1.8rem;
-            font-weight: 600;
-        }
-        
-        /* Hero - Full-Screen Image */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background: 
-                linear-gradient(rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.6)),
-                linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%),
-                radial-gradient(circle at 70% 60%, rgba(255,255,255,0.02) 0%, transparent 50%);
-        }
-        .hero-content {
-            text-align: center;
-            max-width: 900px;
-            position: relative;
-            z-index: 1;
-        }
-        .photo-credit {
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            color: rgba(255,255,255,0.5);
-            margin-bottom: 3rem;
-            text-transform: uppercase;
-        }
-        .hero h1 { 
-            font-size: 5.5rem; 
-            line-height: 1.1;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            color: #ffffff;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-        .hero-tagline {
-            font-size: 1.3rem;
-            margin-bottom: 4rem;
-            color: rgba(255,255,255,0.8);
-            line-height: 1.7;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-        }
-        .hero-cta {
-            display: inline-flex;
-            gap: 2rem;
-        }
-        .btn {
-            padding: 1.2rem 3rem;
-            text-decoration: none;
-            transition: all 0.4s;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-        }
-        .btn-primary {
-            background: white;
-            color: #0a0a0a;
-        }
-        .btn-primary:hover {
-            background: rgba(255,255,255,0.9);
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.5);
-            color: white;
-        }
-        .btn-secondary:hover {
-            border-color: white;
-        }
-        .scroll-indicator {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            color: rgba(255,255,255,0.4);
-            text-transform: uppercase;
-        }
-        
-        /* Credentials Section */
-        .credentials-section {
-            padding: 6rem 0;
-            background: #0a0a0a;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-        .credentials-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        /* Specialties Statement */
-        .specialties-statement {
-            text-align: center;
-            max-width: 1000px;
-            margin: 0 auto 6rem;
-            padding: 3rem 0;
-        }
-        .specialty-text {
-            font-size: 1.4rem;
-            line-height: 1.8;
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
-        .specialty-tagline {
-            font-size: 1.3rem;
-            color: #ffffff;
-            font-weight: 600;
-            font-style: italic;
-        }
-        
-        /* Clinician Profile Split */
-        .clinician-profile {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-            border-radius: 12px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
-        }
-        .profile-text {
-            padding: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .profile-text h2 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            font-weight: 600;
-            color: #ffffff;
-        }
-        .profile-bio {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 2rem;
-        }
-        .profile-mission {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: rgba(255,255,255,0.95);
-            margin-bottom: 2.5rem;
-            font-weight: 500;
-        }
-        .credentials-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .credential-badge {
-            padding: 0.6rem 1.5rem;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 4px;
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.9);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-        }
-        
-        /* Profile Image */
-        .profile-image {
-            position: relative;
-            background: linear-gradient(135deg, #1a1a2e 0%, #0a0a1a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .expertise-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2rem;
-            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
-        }
-        .expertise-tags {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-            width: 100%;
-        }
-        .expertise-tags span {
-            padding: 0.75rem 1rem;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            text-align: center;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: rgba(255,255,255,0.95);
-            font-weight: 600;
-        }
-        
-        /* Section - Visual Cards */
-        section { padding: 8rem 0; }
-        .section-header {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto 5rem;
-        }
-        .section-label {
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            color: rgba(255,255,255,0.5);
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-        }
-        .section-header h2 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            color: #ffffff;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-        .section-header p {
-            font-size: 1.15rem;
-            color: rgba(255,255,255,0.75);
-            line-height: 1.8;
-            font-weight: 300;
-        }
-        .visual-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-        }
-        .visual-card {
-            position: relative;
-            height: 550px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            transition: all 0.5s;
-        }
-        .visual-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, transparent 0%, rgba(10,10,10,0.8) 100%);
-            z-index: 1;
-        }
-        .visual-card:hover {
-            transform: scale(1.02);
-        }
-        .card-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 3rem;
-            z-index: 2;
-        }
-        .card-num {
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            color: rgba(255,255,255,0.5);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-        .card h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            color: #ffffff;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-        .card p {
-            color: rgba(255,255,255,0.8);
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-        
-        /* Footer */
-        footer {
-            background: #000000;
-            padding: 4rem 0 2rem;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 3rem;
-        }
-        .footer-about h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-        .footer-about p {
-            color: rgba(255,255,255,0.6);
-            line-height: 1.8;
-            font-size: 0.9rem;
-        }
-        .footer-links h4 {
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.8);
-        }
-        .footer-links ul {
-            list-style: none;
-        }
-        .footer-links li {
-            margin-bottom: 0.75rem;
-        }
-        .footer-links a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-        .footer-links a:hover {
-            color: #ffffff;
-        }
-        .footer-bottom {
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            text-align: center;
-            color: rgba(255,255,255,0.4);
-            font-size: 0.85rem;
-        }
-        
-        /* Mobile Responsive Styles */
-        @media (max-width: 768px) {
-            .container { padding: 0 1.5rem; }
-            
-            /* Mobile Navigation */
-            .nav-content {
-                padding: 0 1.5rem;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                right: 0;
-                background: rgba(10, 10, 10, 0.98);
-                backdrop-filter: blur(20px);
-                flex-direction: column;
-                gap: 0;
-                width: 100%;
-                text-align: center;
-                padding: 2rem 0;
-                transform: translateX(-100%);
-                transition: transform 0.3s ease;
-                border-bottom: 1px solid rgba(255,255,255,0.08);
-            }
-            .nav-menu.active {
-                transform: translateX(0);
-            }
-            .nav-menu li {
-                width: 100%;
-                border-bottom: 1px solid rgba(255,255,255,0.05);
-            }
-            .nav-menu a {
-                display: block;
-                padding: 1rem;
-                font-size: 0.9rem;
-            }
-            .nav-cta {
-                margin: 1rem auto 0;
-                display: inline-block;
-                width: auto;
-            }
-            
-            /* Mobile Hero */
-            .hero {
-                height: auto;
-                min-height: 100vh;
-                padding: 8rem 1.5rem 4rem;
-            }
-            .hero h1 {
-                font-size: 3rem;
-                margin-bottom: 1.5rem;
-            }
-            .hero-tagline {
-                font-size: 1rem;
-                margin-bottom: 2.5rem;
-            }
-            .hero-cta {
-                flex-direction: column;
-                gap: 1rem;
-                width: 100%;
-            }
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
-            
-            /* Mobile Credentials */
-            .credentials-section {
-                padding: 3rem 0;
-            }
-            .specialties-statement {
-                margin-bottom: 3rem;
-                padding: 2rem 0;
-            }
-            .specialty-text {
-                font-size: 1rem;
-            }
-            .specialty-tagline {
-                font-size: 1rem;
-            }
-            .clinician-profile {
-                grid-template-columns: 1fr;
-            }
-            .profile-text {
-                padding: 2rem;
-            }
-            .profile-text h2 {
-                font-size: 2rem;
-            }
-            .profile-bio {
-                font-size: 0.95rem;
-            }
-            .profile-mission {
-                font-size: 1rem;
-            }
-            .credentials-list {
-                gap: 0.5rem;
-            }
-            .credential-badge {
-                font-size: 0.75rem;
-                padding: 0.5rem 1rem;
-            }
-            .profile-image {
-                min-height: 500px;
-            }
-            .profile-image img {
-                object-position: center top;
-            }
-            .expertise-overlay {
-                padding: 1.5rem;
-            }
-            .expertise-tags {
-                grid-template-columns: 1fr;
-                gap: 0.5rem;
-            }
-            
-            /* Mobile Sections */
-            section {
-                padding: 4rem 0;
-            }
-            .section-header h2 {
-                font-size: 2rem;
-            }
-            .section-header p {
-                font-size: 1rem;
-            }
-            
-            /* Mobile Cards */
-            .visual-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .visual-card {
-                height: 400px;
-            }
-            .card h3 {
-                font-size: 1.5rem;
-            }
-            
-            /* Mobile Footer */
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-            footer {
-                padding: 3rem 0 1.5rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .hero-tagline {
-                font-size: 0.9rem;
-            }
-            .photo-credit {
-                font-size: 0.65rem;
-            }
-            .btn {
-                padding: 1rem 2rem;
-                font-size: 0.75rem;
-            }
-            .card h3 {
-                font-size: 1.3rem;
-            }
-            .card p {
-                font-size: 0.85rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bournemouth Dental Implants · A father–son practice in Dorset</title>
+  <meta name="description" content="Bournemouth Dental Implants — a father–son practice led by Dr William Bonab (prosthodontist) and Dr Sharry Bonab (restorative). Two clinicians on every case. Free consultation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,400&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+/* =========================================================
+   Bournemouth Dental Implants — site.css
+   Baseline: Direction C (Luxury Ink), Light mode, Airy density
+   Typography: Newsreader (display serif) + Geist (body) + Geist Mono (meta)
+   ========================================================= */
+
+:root {
+  /* C · Luxury Ink — Light mode tokens */
+  --bg:            oklch(96% 0.006 80);
+  --bg-elev:       oklch(99% 0.004 80);
+  --bg-contrast:   oklch(16% 0.01 60);
+  --surface:       oklch(92% 0.01 80);
+  --surface-2:     oklch(89% 0.012 80);
+  --ink:           oklch(18% 0.012 60);
+  --ink-soft:      oklch(34% 0.012 60);
+  --ink-muted:     oklch(52% 0.01 60);
+  --rule:          oklch(84% 0.012 80);
+  --accent:        oklch(52% 0.09 60);         /* warm champagne bronze */
+  --accent-soft:   oklch(88% 0.04 60);
+  --on-contrast:   oklch(95% 0.008 80);
+
+  /* Type */
+  --font-display:  "Newsreader", "Georgia", serif;
+  --font-body:     "Geist", system-ui, -apple-system, sans-serif;
+  --font-mono:     "Geist Mono", ui-monospace, monospace;
+  --display-tracking: -0.025em;
+  --display-weight: 300;
+  --body-tracking: -0.005em;
+
+  /* Space — airy */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+  --space-7: 9rem;
+  --section-y: 6rem;
+  --container-pad: 2.5rem;
+  --max-w: 1320px;
+
+  /* Radii / effects */
+  --r-xs: 2px;
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 14px;
+  --shadow-1: 0 1px 0 oklch(85% 0.01 80), 0 1px 2px oklch(50% 0.01 60 / 0.05);
+  --shadow-2: 0 2px 4px oklch(30% 0.01 60 / 0.06), 0 20px 40px -20px oklch(30% 0.01 60 / 0.14);
+}
+
+/* =========================================================
+   Reset + base
+   ========================================================= */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  letter-spacing: var(--body-tracking);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  line-height: 1.02;
+  margin: 0;
+  color: var(--ink);
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.6rem, 5.2vw, 4.6rem); }
+h2 { font-size: clamp(2rem, 3.6vw, 3.2rem); }
+h3 { font-size: clamp(1.3rem, 2vw, 1.65rem); line-height: 1.15; }
+h4 { font-size: 1rem; font-family: var(--font-body); font-weight: 500; letter-spacing: 0; }
+
+p { margin: 0; text-wrap: pretty; color: var(--ink-soft); }
+a { color: inherit; text-decoration: none; }
+
+em { font-style: italic; color: var(--accent); }
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  display: inline-block;
+}
+
+.rule { height: 1px; background: var(--rule); border: 0; margin: 0; }
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.6rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  border-radius: var(--r-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 180ms cubic-bezier(0.2, 0.7, 0.3, 1);
+  background: var(--ink);
+  color: var(--on-contrast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-2); }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--rule);
+}
+.btn.ghost:hover { border-color: var(--ink); background: var(--bg-elev); }
+.btn.accent { background: var(--accent); color: var(--on-contrast); }
+.btn .arr { transition: transform 180ms ease; }
+.btn:hover .arr { transform: translateX(3px); }
+
+/* =========================================================
+   Placeholder imagery (striped + mono label)
+   ========================================================= */
+.placeholder {
+  background: var(--surface);
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 14px,
+    oklch(from var(--ink) l c h / 0.04) 14px 15px
+  );
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-sm);
+  min-height: 160px;
+  color: var(--ink-muted);
+}
+.placeholder::before {
+  content: attr(data-label);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding: 0.45rem 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-xs);
+  white-space: nowrap;
+}
+
+/* =========================================================
+   Site navigation (shared across all pages)
+   ========================================================= */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: oklch(from var(--bg) l c h / 0.92);
+  backdrop-filter: saturate(1.1) blur(10px);
+  -webkit-backdrop-filter: saturate(1.1) blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+.site-nav .inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1rem var(--container-pad);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2rem;
+}
+.site-nav .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.site-nav .brand .mark {
+  width: 30px; height: 30px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--ink);
+  position: relative;
+}
+.site-nav .brand .mark::after {
+  content: ''; position: absolute;
+  inset: 3px; border-radius: 50%;
+  border: 1px solid var(--accent);
+}
+.site-nav .brand .wordmark {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.site-nav .brand .wordmark em { color: var(--accent); font-style: italic; }
+.site-nav .brand small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 0.2rem;
+}
+.site-nav .links {
+  display: flex;
+  gap: 1.75rem;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+.site-nav .links a {
+  color: var(--ink-soft);
+  transition: color 160ms ease;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+}
+.site-nav .links a:hover,
+.site-nav .links a[aria-current] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+.site-nav .cta {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.site-nav .cta .phone {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+}
+.site-nav .cta .phone:hover { color: var(--ink); }
+
+@media (max-width: 900px) {
+  .site-nav .links { display: none; }
+  .site-nav .inner { grid-template-columns: auto 1fr; }
+  .site-nav .brand small { display: none; }
+}
+
+/* =========================================================
+   Site footer
+   ========================================================= */
+.site-footer {
+  margin-top: var(--section-y);
+  border-top: 1px solid var(--rule);
+  background: var(--bg-elev);
+  padding: var(--space-5) 0 var(--space-4);
+}
+.site-footer .f-grid {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 3rem;
+}
+.site-footer .f-brand h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  line-height: 1.05;
+  max-width: 20ch;
+  margin-bottom: 0.75rem;
+}
+.site-footer .f-brand p { max-width: 36ch; font-size: 0.92rem; }
+.site-footer h5 {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55rem; }
+.site-footer ul a {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+.site-footer ul a:hover { color: var(--ink); }
+.site-footer .f-legal {
+  max-width: var(--max-w);
+  margin: 3rem auto 0;
+  padding: 1.5rem var(--container-pad) 0;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+@media (max-width: 900px) {
+  .site-footer .f-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .site-footer .f-brand { grid-column: 1 / -1; }
+}
+
+/* =========================================================
+   Section helpers
+   ========================================================= */
+.section {
+  padding: var(--section-y) 0;
+  border-bottom: 1px solid var(--rule);
+}
+.section-header {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3rem;
+  align-items: baseline;
+  margin-bottom: 3rem;
+}
+.section-header .eyebrow { align-self: start; }
+.section-header h2 { max-width: 24ch; }
+.section-body {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+@media (max-width: 800px) {
+  .section-header { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+/* =========================================================
+   Shared page hero chrome
+   ========================================================= */
+.page-hero {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--rule);
+}
+.page-hero .inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: end;
+}
+.page-hero .bread {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+}
+.page-hero h1 { line-height: 0.98; }
+.page-hero .lead {
+  margin-top: 1.75rem;
+  max-width: 48ch;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+}
+.page-hero .meta-box {
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+  padding: 1.5rem;
+  background: var(--bg-elev);
+  display: grid;
+  gap: 1rem;
+}
+.page-hero .meta-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--rule);
+}
+.page-hero .meta-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.page-hero .meta-row .k {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.page-hero .meta-row .v { color: var(--ink); font-size: 0.95rem; }
+@media (max-width: 900px) {
+  .page-hero .inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+/* =========================================================
+   Fields (for booking page)
+   ========================================================= */
+input, textarea, select {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+input:focus-visible, textarea:focus-visible {
+  outline: none; border-color: var(--ink);
+}
+
+</style>
+  <style>
+    /* ---------- Home-specific ---------- */
+    .hero {
+      padding: clamp(3rem, 8vh, 6rem) 0 clamp(3rem, 6vh, 5rem);
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--container-pad);
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .hero .copy .eyebrow { margin-bottom: 2rem; }
+    .hero h1 {
+      font-size: clamp(3rem, 7.5vw, 6.2rem);
+      line-height: 0.94;
+      margin-bottom: 2rem;
+    }
+    .hero h1 .line-2 { display: block; }
+    .hero .lead {
+      max-width: 44ch;
+      font-size: 1.15rem;
+      color: var(--ink-soft);
+      margin-bottom: 2.5rem;
+    }
+    .hero .actions {
+      display: flex; gap: 0.65rem; align-items: center; flex-wrap: wrap;
+    }
+    .hero .actions .meta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      padding-left: 1rem;
+      border-left: 1px solid var(--rule);
+      margin-left: 0.5rem;
+    }
+    .hero .portrait {
+      aspect-ratio: 3 / 4;
+      min-height: 460px;
+    }
+    .hero .portrait-caption {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .trust-bar {
+      border-bottom: 1px solid var(--rule);
+      background: var(--bg-elev);
+    }
+    .trust-bar .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 1.5rem var(--container-pad);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .trust-bar .label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .trust-bar .items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      font-size: 0.88rem;
+    }
+    .trust-bar .items > div { color: var(--ink-soft); border-left: 1px solid var(--rule); padding-left: 1.25rem; }
+    .trust-bar .items strong { color: var(--ink); font-weight: 500; display: block; font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.15rem; }
+
+    /* Treatments */
+    .tx-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--rule);
+      border-left: 1px solid var(--rule);
+    }
+    .tx-card {
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 3rem 2.5rem 2.5rem;
+      background: var(--bg);
+      display: grid;
+      gap: 1.5rem;
+      position: relative;
+      transition: background 220ms ease;
+      min-height: 460px;
+      grid-template-rows: auto auto 1fr auto;
+    }
+    .tx-card:hover { background: var(--bg-elev); }
+    .tx-card .num {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      color: var(--ink-muted);
+    }
+    .tx-card h3 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      line-height: 1.02;
+      letter-spacing: var(--display-tracking);
+    }
+    .tx-card p { font-size: 0.98rem; max-width: 36ch; }
+    .tx-card .from {
+      display: flex; gap: 0.5rem; align-items: baseline;
+      padding-top: 1.25rem; border-top: 1px solid var(--rule);
+      margin-top: 1rem;
+    }
+    .tx-card .from .k {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .tx-card .from .v {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+    }
+    .tx-card .more {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      padding-top: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .tx-card .more .arr { transition: transform 180ms ease; }
+    .tx-card:hover .more .arr { transform: translateX(4px); }
+
+    /* Clinician block — two-clinician, three-generation layout */
+    .clinician {
+      background: var(--bg-elev);
+    }
+    .clinician .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: var(--section-y) var(--container-pad);
+    }
+    .cli-head {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+      align-items: baseline;
+      margin-bottom: 4rem;
+    }
+    .cli-head h2 { max-width: 18ch; margin-bottom: 1.75rem; }
+    .cli-head .lede {
+      max-width: 56ch;
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+    }
+    .cli-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+    }
+    .cli-card { display: grid; gap: 1.75rem; }
+    .cli-card .portrait {
+      aspect-ratio: 4 / 5;
+      min-height: 420px;
+      overflow: hidden;
+      border-radius: var(--r-sm);
+      background: var(--surface);
+    }
+    .cli-card .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: saturate(0.92);
+    }
+    .cli-card .role {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    .cli-card h3 {
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      line-height: 1.04;
+      margin-bottom: 1rem;
+      letter-spacing: var(--display-tracking);
+    }
+    .cli-card .bio p { font-size: 0.98rem; max-width: 44ch; }
+    .cli-card .creds {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      padding-top: 1.5rem;
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+    }
+    .cli-card .creds .k {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.3rem;
+    }
+    .cli-card .creds .v { font-family: var(--font-display); font-size: 0.98rem; line-height: 1.2; }
+
+    .clinician .quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.4vw, 2.05rem);
+      line-height: 1.25;
+      max-width: 44ch;
+      color: var(--ink);
+      margin: 4rem auto 0;
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--accent);
+      text-align: left;
+    }
+    .clinician .quote cite {
+      display: block;
+      margin-top: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      font-style: normal;
+    }
+
+    .generations {
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .generations .g-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .generations .g-line {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      counter-reset: gen;
+    }
+    .generations .g-line li {
+      padding: 0 1.5rem;
+      border-left: 1px solid var(--rule);
+      display: grid;
+      gap: 0.4rem;
+      position: relative;
+    }
+    .generations .g-line li:first-child { padding-left: 0; border-left: 0; }
+    .generations .g-line .gen {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+    }
+    .generations .g-line .who {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+    .generations .g-line .what {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      line-height: 1.4;
+    }
+
+    @media (max-width: 800px) {
+      .cli-head,
+      .generations { grid-template-columns: 1fr; gap: 1.25rem; }
+      .cli-grid { grid-template-columns: 1fr; gap: 4rem; }
+      .generations .g-line { grid-template-columns: 1fr; gap: 1.25rem; }
+      .generations .g-line li { padding: 1rem 0 0; border-left: 0; border-top: 1px solid var(--rule); }
+      .generations .g-line li:first-child { padding-top: 0; border-top: 0; }
+    }
+
+    /* Process steps */
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      border-top: 1px solid var(--rule);
+    }
+    .process-row {
+      display: contents;
+    }
+    .step {
+      padding: 2.5rem 2rem;
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      background: var(--bg);
+    }
+    .step:nth-child(3n) { border-right: 0; }
+    .step .n {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      line-height: 0.9;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .step h4 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: var(--display-weight);
+      margin-bottom: 0.75rem;
+    }
+    .step p { font-size: 0.95rem; max-width: 30ch; }
+    .step .when {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    /* Pricing teaser */
+    .price-teaser {
+      background: var(--bg-contrast);
+      color: var(--on-contrast);
+    }
+    .price-teaser .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: var(--section-y) var(--container-pad);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .price-teaser .eyebrow { color: oklch(from var(--on-contrast) l c h / 0.7); }
+    .price-teaser h2 { color: var(--on-contrast); margin-bottom: 1.5rem; max-width: 20ch; }
+    .price-teaser .price-display {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2.5rem;
+      align-items: end;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid oklch(from var(--on-contrast) l c h / 0.15);
+    }
+    .price-teaser .num {
+      font-family: var(--font-display);
+      font-size: clamp(5rem, 11vw, 9rem);
+      line-height: 0.8;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .price-teaser .num-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: oklch(from var(--on-contrast) l c h / 0.7);
+      padding-bottom: 1rem;
+    }
+    .price-teaser ul { list-style: none; padding: 0; margin: 2rem 0; display: grid; gap: 0.7rem; }
+    .price-teaser ul li {
+      padding-left: 1.5rem;
+      position: relative;
+      font-size: 0.96rem;
+      color: oklch(from var(--on-contrast) l c h / 0.85);
+    }
+    .price-teaser ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-family: var(--font-mono);
+    }
+    .price-teaser .btn.ghost { color: var(--on-contrast); border-color: oklch(from var(--on-contrast) l c h / 0.3); }
+    .price-teaser .btn.ghost:hover { border-color: var(--on-contrast); background: oklch(from var(--on-contrast) l c h / 0.08); }
+
+    /* Testimonial */
+    .testimonial {
+      padding: var(--section-y) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .testimonial .inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 var(--container-pad);
+      text-align: center;
+    }
+    .testimonial blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.6rem);
+      line-height: 1.25;
+      margin: 2rem 0;
+      text-wrap: balance;
+      color: var(--ink);
+    }
+    .testimonial .attr {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .testimonial .attr .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-muted); }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 var(--container-pad);
+      border-top: 1px solid var(--rule);
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--rule);
+      padding: 1.75rem 0;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: baseline;
+    }
+    .faq-item .q {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: var(--display-weight);
+      letter-spacing: var(--display-tracking);
+    }
+    .faq-item .ind {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: var(--ink-muted);
+      transition: transform 200ms ease;
+    }
+    .faq-item[open] .ind { transform: rotate(45deg); }
+    .faq-item .a {
+      grid-column: 1 / -1;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 260ms ease, margin 260ms ease;
+      color: var(--ink-soft);
+      max-width: 62ch;
+    }
+    .faq-item[open] .a { max-height: 400px; margin-top: 1rem; }
+
+    /* CTA block */
+    .cta-final {
+      padding: var(--section-y) 0;
+    }
+    .cta-final .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--container-pad);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+    }
+    .cta-final h2 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      max-width: 16ch;
+    }
+    .cta-final .side {
+      display: grid;
+      gap: 1.5rem;
+      align-self: end;
+    }
+    .cta-final .side .actions { display: flex; gap: 0.65rem; flex-wrap: wrap; }
+    .cta-final .side .addr {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+    }
+    .cta-final .side .addr strong { color: var(--ink); display: block; font-weight: 500; margin-bottom: 0.3rem; font-family: var(--font-display); font-size: 1.05rem; }
+
+    @media (max-width: 960px) {
+      .hero .inner, .clinician .inner, .price-teaser .inner, .cta-final .inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .tx-grid, .process-grid { grid-template-columns: 1fr; }
+      .tx-card { min-height: 0; }
+      .step { border-right: 0 !important; }
+      .trust-bar .inner { grid-template-columns: 1fr; gap: 1rem; }
+      .trust-bar .items { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-content">
-            <div class="logo">Bournemouth Dental Implants</div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="full-arch.html">Full Arch</a></li>
-                <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                <li><a href="patient-journey.html">Journey</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#contact" class="nav-cta">Book Assessment</a></li>
-            </ul>
-        </div>
+
+<!-- ====================== NAV ====================== -->
+<header class="site-nav">
+  <div class="inner">
+    <a href="index.html" class="brand">
+      <span class="mark">B</span>
+      <div>
+        <div class="wordmark">Bournemouth <em>Dental</em> Implants</div>
+        <small>est. 2019 · Bournemouth</small>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="full-arch.html">Full arch</a>
+      <a href="dentures-to-fixed.html">Dentures → fixed</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="patient-journey.html">Journey</a>
     </nav>
+    <div class="cta">
+      <a href="tel:01202528949" class="phone">01202 528 949</a>
+      <a href="book.html" class="btn">Book free consultation</a>
+    </div>
+  </div>
+</header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="photo-credit">Planning-Led Dentistry</div>
-            <h1>Modern Dental<br>Rehabilitation</h1>
-            <p class="hero-tagline">Advanced dental implant solutions in Bournemouth. Our commitment to personalised medicine means every treatment—from single teeth to full arch—is tailored to your individual needs.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Request Assessment</a>
-                <a href="#treatments" class="btn btn-secondary">Explore Treatments</a>
-            </div>
+<!-- ====================== HERO ====================== -->
+<section class="hero">
+  <div class="inner">
+    <div class="copy">
+      <span class="eyebrow">Private dental implants · Bournemouth</span>
+      <h1>Fixed teeth.<br><span class="line-2">Fitted with <em>care</em>.</span></h1>
+      <p class="lead">A father–son practice in Bournemouth, bringing together three generations of the Bonab family in dentistry and over half a century of family expertise in prosthetic and restorative care. Surgical treatment is led by Dr William Bonab, while restorative care is overseen by his father, Dr Sharry Bonab — with two clinicians involved in every case from consultation to final fit.</p>
+      <div class="actions">
+        <a href="book.html" class="btn">Book free consultation <span class="arr">→</span></a>
+        <a href="full-arch.html" class="btn ghost">See how it works</a>
+        <span class="meta">45 min · CBCT scan included</span>
+      </div>
+    </div>
+    <div>
+      <div class="portrait" style="aspect-ratio: 3 / 4; min-height: 460px; overflow: hidden; border-radius: var(--r-sm); background: var(--surface);">
+        <img src="images/sherwin-bonab.jpg" alt="Dr William Bonab, prosthodontist" style="width: 100%; height: 100%; object-fit: cover; object-position: center 18%; display: block; filter: saturate(0.92);" />
+      </div>
+      <div class="portrait-caption">
+        <span>Dr William Bonab · Prosthodontist · Harvard postgraduate (current)</span>
+        <span>GDC 318594</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== TRUST BAR ====================== -->
+<section class="trust-bar">
+  <div class="inner">
+    <span class="label">By the numbers</span>
+    <div class="items">
+      <div><strong>3 generations</strong>Of Bonab family dentistry</div>
+      <div><strong>98%</strong>Five-year success rate</div>
+      <div><strong>1 day</strong>From surgery to provisional teeth</div>
+      <div><strong>0%</strong>Finance over 12 months available</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== TREATMENTS ====================== -->
+<section class="section" id="treatments">
+  <div class="section-header">
+    <span class="eyebrow">§ Treatments</span>
+    <h2>Three routes to fixed teeth.<br>Recommended after your CBCT scan, never before.</h2>
+  </div>
+  <div class="section-body">
+    <div class="tx-grid">
+      <a href="full-arch.html" class="tx-card">
+        <span class="num">01 / Full mouth</span>
+        <h3>Full arch<br>rehabilitation</h3>
+        <p>An entire upper or lower arch replaced with a fixed, implant-supported zirconia prosthesis. The flagship procedure.</p>
+        <div>
+          <div class="from"><span class="k">From</span><span class="v">£25,000</span><span class="k" style="margin-left:auto;">per arch</span></div>
+          <span class="more">Read more <span class="arr">→</span></span>
         </div>
-        <div class="scroll-indicator">Scroll to Explore</div>
-    </section>
-
-    <section class="credentials-section">
-        <div class="container">
-            <div class="credentials-wrapper">
-                <!-- Specialties Statement -->
-                <div class="specialties-statement">
-                    <p class="specialty-text">Specialised in full arch implant rehabilitation, denture conversion, single and multiple implant placement, prosthodontic restoration, and digital treatment planning.</p>
-                    <p class="specialty-tagline">Specialised in restoring your confidence.</p>
-                </div>
-                
-                <!-- Clinician Profile Split -->
-                <div class="clinician-profile">
-                    <div class="profile-text">
-                        <h2>Dr. Will Bonab</h2>
-                        <p class="profile-bio">Bournemouth Dental Implants is led by a postgraduate-trained clinician dedicated to advancing dental implant care. Dr. Will Bonab brings expertise from King's College London and Harvard University, focusing on evidence-based treatment planning and precision prosthodontic outcomes.</p>
-                        <p class="profile-mission">Restoring function and confidence through dental implants? That is always the priority.</p>
-                        <div class="credentials-list">
-                            <span class="credential-badge">GDC Registered</span>
-                            <span class="credential-badge">Postgraduate Trained</span>
-                            <span class="credential-badge">Digital Planning</span>
-                            <span class="credential-badge">3D CBCT Imaging</span>
-                        </div>
-                    </div>
-                    <div class="profile-image">
-                        <img src="images/dr-will-bonab.jpg" alt="Dr. Will Bonab - Prosthodontist">
-                        <div class="expertise-overlay">
-                            <div class="expertise-tags">
-                                <span>Implant Dentistry</span>
-                                <span>Prosthodontics</span>
-                                <span>Full Arch Rehabilitation</span>
-                                <span>Digital Planning</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </a>
+      <a href="dentures-to-fixed.html" class="tx-card">
+        <span class="num">02 / Transition</span>
+        <h3>Dentures to<br>fixed teeth</h3>
+        <p>A definitive alternative to removable dentures. Fixed teeth that stay where they are — when you eat, when you laugh.</p>
+        <div>
+          <div class="from"><span class="k">From</span><span class="v">£25,000</span><span class="k" style="margin-left:auto;">per arch</span></div>
+          <span class="more">Read more <span class="arr">→</span></span>
         </div>
-    </section>
-
-    <section id="treatments" style="background: #0a0a0a;">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Treatment Options</div>
-                <h2>Implant Services</h2>
-                <p>We provide comprehensive dental implant treatment from single tooth replacement to complete arch rehabilitation. All cases are planned using 3D CBCT imaging to ensure optimal outcomes.</p>
-            </div>
-            <div class="visual-grid">
-                <div class="visual-card">
-                    <div class="card-overlay">
-                        <div class="card-num">Treatment 01</div>
-                        <h3>Full Arch Rehabilitation</h3>
-                        <p>Complete upper or lower arch replacement using fixed implant-supported prosthetics. Suitable for patients with multiple failing teeth or complete edentulism.</p>
-                    </div>
-                </div>
-                <div class="visual-card">
-                    <div class="card-overlay">
-                        <div class="card-num">Treatment 02</div>
-                        <h3>Dentures to Fixed</h3>
-                        <p>Transition from removable dentures to permanently fixed implant-retained teeth. Restore confidence and natural function.</p>
-                    </div>
-                </div>
-                <div class="visual-card">
-                    <div class="card-overlay">
-                        <div class="card-num">Treatment 03</div>
-                        <h3>Single & Multiple Implants</h3>
-                        <p>Replace missing teeth without affecting adjacent healthy teeth. Natural-looking ceramic crowns on titanium implants.</p>
-                    </div>
-                </div>
-            </div>
+      </a>
+      <a href="#" class="tx-card">
+        <span class="num">03 / Single & multiple</span>
+        <h3>Single or<br>multiple implants</h3>
+        <p>For one missing tooth or a few. Bone is preserved by loading. Indistinguishable from a natural tooth at the gum line.</p>
+        <div>
+          <div class="from"><span class="k">From</span><span class="v">£3,500</span><span class="k" style="margin-left:auto;">per unit</span></div>
+          <span class="more">Read more <span class="arr">→</span></span>
         </div>
-    </section>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>Bournemouth Dental Implants</h3>
-                    <p>Expert dental implant treatment in Bournemouth. From single tooth replacement to full arch rehabilitation, we provide personalised care using advanced 3D planning technology.</p>
-                    <p style="margin-top: 1.5rem;">
-                        <strong>Bright Blue Dental Practice</strong><br>
-                        233 Charminster Road<br>
-                        Bournemouth BH8 9QJ
-                    </p>
-                    <p style="margin-top: 1rem;">
-                        Tel: 01202 528 949<br>
-                        Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="34575b5a40555740414774565b41465a51595b41405c5d594458555a40471a575b59">[email&#160;protected]</a>
-                    </p>
-                </div>
-                <div class="footer-links">
-                    <h4>Treatments</h4>
-                    <ul>
-                        <li><a href="full-arch.html">Full Arch Implants</a></li>
-                        <li><a href="dentures-to-fixed.html">Dentures to Fixed</a></li>
-                        <li><a href="single-implants.html">Single Implants</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Information</h4>
-                    <ul>
-                        <li><a href="patient-journey.html">Patient Journey</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Bournemouth Dental Implants. All rights reserved. | GDC Registration: 318594 | CQC Registered Practice</p>
-            </div>
+<!-- ====================== CLINICIAN ====================== -->
+<section class="clinician" id="clinicians">
+  <div class="inner">
+    <header class="cli-head">
+      <span class="eyebrow">§ The clinicians</span>
+      <div>
+        <h2>Three generations.<br>Two clinicians on every case.</h2>
+        <p class="lede">A father–son practice. The final restoration is led by Dr Sharry Bonab; diagnostics, surgical placement and case planning by Dr William Bonab. Every patient is seen by both. No associate hand-off, no rotating practitioners.</p>
+      </div>
+    </header>
+
+    <div class="cli-grid">
+      <article class="cli-card">
+        <div class="portrait"><img src="images/sherwin-bonab.jpg" alt="Dr William Bonab, prosthodontist" /></div>
+        <div class="bio">
+          <span class="role">Diagnostics · Case planning · Surgical placement</span>
+          <h3>Dr William Bonab</h3>
+          <p>Third-generation prosthetic dentist. Dr William Bonab qualified with Honours from King's College London and is currently completing advanced postgraduate prosthodontic training at Harvard School of Dental Medicine. A member of the American College of Prosthodontists, his clinical focus is complex implant rehabilitation and full-arch treatment. Dr Bonab personally oversees every stage of care, from diagnosis and treatment planning to surgical implant placement, immediate loading, and final prosthetic design.</p>
+          <div class="creds">
+            <div><div class="k">Training</div><div class="v">KCL · Harvard<br>(current)</div></div>
+            <div><div class="k">Member</div><div class="v">ACP</div></div>
+            <div><div class="k">GDC</div><div class="v">318594</div></div>
+          </div>
         </div>
-    </footer>
+      </article>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
+      <article class="cli-card">
+        <div class="portrait"><img src="images/sharry-bonab.jpg" alt="Dr Sharry Bonab, restorative dentist" /></div>
+        <div class="bio">
+          <span class="role">Restoration</span>
+          <h3>Dr Sharry Bonab</h3>
+          <p>Second-generation restorative and prosthetic dentist. Dr Sharry Bonab graduated from Aarhus University and later completed advanced training in implantology under pioneers of the modern dental implant system. With decades of clinical experience in restorative and implant dentistry, his focus is comprehensive rehabilitation and long-term patient care. Dr Bonab now leads Bright Blue Dental, a practice that has served the Bournemouth community since 1937.</p>
+          <div class="creds">
+            <div><div class="k">Qualified</div><div class="v">Aarhus<br>University</div></div>
+            <div><div class="k">Diploma</div><div class="v">Implantology<br>(early 2000s)</div></div>
+            <div><div class="k">Owner</div><div class="v">Bright Blue<br>Dental</div></div>
+          </div>
+        </div>
+      </article>
+    </div>
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+    <blockquote class="quote">"Implant dentistry is, first and last, about the result in the mouth. The surgery exists to enable the restoration — not the other way around."<cite>— Dr William Bonab</cite></blockquote>
 
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-    </script>
+    <div class="generations">
+      <span class="g-label">§ The family practice</span>
+      <ol class="g-line">
+        <li>
+          <span class="gen">Generation I</span>
+          <span class="who">Dr Alexander Bonab</span>
+          <span class="what">Dentist · prosthetic work<br>across five decades</span>
+        </li>
+        <li>
+          <span class="gen">Generation II</span>
+          <span class="who">Dr Sharry Bonab</span>
+          <span class="what">Restorative &amp; prosthetic<br>Aarhus · Implantology diploma</span>
+        </li>
+        <li>
+          <span class="gen">Generation III</span>
+          <span class="who">Dr William Bonab</span>
+          <span class="what">Prosthodontist<br>KCL · Harvard postgraduate</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== PROCESS ====================== -->
+<section class="section">
+  <div class="section-header">
+    <span class="eyebrow">§ Patient journey</span>
+    <h2>From first enquiry to final fit — what happens and roughly when.</h2>
+  </div>
+  <div class="section-body">
+    <div class="process-grid">
+      <article class="step">
+        <div class="n">01</div>
+        <h4>Enquiry call</h4>
+        <p>A ten-minute conversation to understand your situation and confirm implants are a plausible direction.</p>
+        <div class="when">Day 0 · Free</div>
+      </article>
+      <article class="step">
+        <div class="n">02</div>
+        <h4>Clinical consultation</h4>
+        <p>Full examination, CBCT scan, and a considered clinical opinion — honestly given, in plain English.</p>
+        <div class="when">Week 1 · £150</div>
+      </article>
+      <article class="step">
+        <div class="n">03</div>
+        <h4>Written treatment plan</h4>
+        <p>Fixed-price plan, sequenced and costed. You decide whether to proceed after reading it, not during it.</p>
+        <div class="when">Week 2 · included</div>
+      </article>
+      <article class="step">
+        <div class="n">04</div>
+        <h4>Surgical placement</h4>
+        <p>Implants placed in a single session. Provisional teeth fitted the same day where clinically appropriate.</p>
+        <div class="when">Week 3 · 1 day in clinic</div>
+      </article>
+      <article class="step">
+        <div class="n">05</div>
+        <h4>Healing</h4>
+        <p>Reviews at one week, six weeks, and twelve. The bone integrates; the provisional is adjusted as needed.</p>
+        <div class="when">Months 1–3</div>
+      </article>
+      <article class="step">
+        <div class="n">06</div>
+        <h4>Final prosthesis</h4>
+        <p>Custom zirconia final prosthesis fitted. Two or three appointments to refine fit, shade, and bite.</p>
+        <div class="when">Months 3–6</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== PRICING TEASER ====================== -->
+<section class="price-teaser">
+  <div class="inner">
+    <div>
+      <span class="eyebrow">§ Pricing</span>
+      <h2>One number.<br>Everything included.</h2>
+      <p style="color: oklch(from var(--on-contrast) l c h / 0.72); max-width: 42ch;">We publish our prices. A full arch is £25,000 and that figure does not change once we have met you and read your scan.</p>
+      <div style="margin-top: 2rem; display: flex; gap: 0.65rem;">
+        <a href="pricing.html" class="btn accent">See full pricing <span class="arr">→</span></a>
+        <a href="book.html" class="btn ghost">Request a quote</a>
+      </div>
+    </div>
+    <div>
+      <div class="price-display">
+        <div class="num">£25,000</div>
+        <div class="num-label">per arch<br>full arch rehabilitation</div>
+      </div>
+      <ul>
+        <li>Consultation, examination & CBCT imaging</li>
+        <li>Complete digital treatment plan</li>
+        <li>Surgical placement of 4–6 titanium implants</li>
+        <li>Temporary prosthesis during healing</li>
+        <li>Final custom zirconia ceramic prosthesis</li>
+        <li>All review appointments for 12 months</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== TESTIMONIAL ====================== -->
+<section class="testimonial">
+  <div class="inner">
+    <span class="eyebrow">From a patient</span>
+    <blockquote>"I thought I'd lost the ability to eat properly. Eight months on, my partner says I laugh more."</blockquote>
+    <div class="attr">
+      <span>J. Atkinson</span>
+      <span class="dot"></span>
+      <span>Christchurch</span>
+      <span class="dot"></span>
+      <span>Full arch · 2024</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FAQ ====================== -->
+<section class="section">
+  <div class="section-header">
+    <span class="eyebrow">§ Questions</span>
+    <h2>The ones we hear most often.</h2>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary style="list-style: none; display: contents;">
+        <span class="q">How long does treatment take from start to finish?</span>
+        <span class="ind">+</span>
+      </summary>
+      <div class="a">Typically three to six months for a full arch. Single implants can be quicker. A provisional set of teeth is usually fitted on the day of surgery; the final zirconia prosthesis is fitted once the implants have fully integrated with the bone.</div>
+    </details>
+    <details class="faq-item">
+      <summary style="list-style: none; display: contents;">
+        <span class="q">Will I be without teeth at any point?</span>
+        <span class="ind">+</span>
+      </summary>
+      <div class="a">No. We fit a provisional fixed prosthesis on the day of implant placement in most cases. You leave the clinic with teeth the same day. The final prosthesis replaces the provisional once healing is complete.</div>
+    </details>
+    <details class="faq-item">
+      <summary style="list-style: none; display: contents;">
+        <span class="q">Is it painful?</span>
+        <span class="ind">+</span>
+      </summary>
+      <div class="a">The surgery itself is carried out under local anaesthetic, with sedation available. Most patients describe the recovery as less uncomfortable than a typical tooth extraction, and are back at work within 48 hours.</div>
+    </details>
+    <details class="faq-item">
+      <summary style="list-style: none; display: contents;">
+        <span class="q">What if I don't have enough bone?</span>
+        <span class="ind">+</span>
+      </summary>
+      <div class="a">We identify this at the CBCT scan stage. Where bone grafting is required it is included in the written treatment plan and fixed-price quote. In most cases it is carried out alongside the main surgery.</div>
+    </details>
+    <details class="faq-item">
+      <summary style="list-style: none; display: contents;">
+        <span class="q">How long do implants last?</span>
+        <span class="ind">+</span>
+      </summary>
+      <div class="a">Properly placed and maintained, dental implants routinely last decades. Our own five-year success rate is 98%. The zirconia prosthesis itself is extremely stable and resists staining indefinitely, though periodic maintenance is expected.</div>
+    </details>
+    <details class="faq-item">
+      <summary style="list-style: none; display: contents;">
+        <span class="q">Do you offer finance?</span>
+        <span class="ind">+</span>
+      </summary>
+      <div class="a">Yes. We offer 0% interest over 12 months, and low-rate finance (9.9% APR representative) over up to 60 months. Both are subject to credit approval. Full details on the pricing page.</div>
+    </details>
+  </div>
+</section>
+
+<!-- ====================== FINAL CTA ====================== -->
+<section class="cta-final">
+  <div class="inner">
+    <div>
+      <span class="eyebrow">§ Next step</span>
+      <h2 style="margin-top: 1rem;">A free call.<br>No pressure, real information.</h2>
+    </div>
+    <div class="side">
+      <p>The enquiry call is ten minutes and costs nothing. We'll tell you whether an implant consultation is worth your time, and if so, what it will involve.</p>
+      <div class="actions">
+        <a href="book.html" class="btn">Book free consultation <span class="arr">→</span></a>
+        <a href="tel:01202528949" class="btn ghost">01202 528 949</a>
+      </div>
+      <div class="addr">
+        <strong>Bright Blue Dental Practice</strong>
+        233 Charminster Road<br>
+        Bournemouth BH8 9QJ<br>
+        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.4rem; display: block;">Mon–Fri 08:30–17:30 · Sat by appointment</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="site-footer">
+  <div class="f-grid">
+    <div class="f-brand">
+      <h3>Bournemouth<br>Dental <em>Implants</em></h3>
+      <p>A dedicated dental implant service serving Dorset, Bournemouth, Poole and Christchurch. CBCT-planned, transparently priced, led by an experienced implant dentist.</p>
+    </div>
+    <div>
+      <h5>Treatments</h5>
+      <ul>
+        <li><a href="full-arch.html">Full arch rehabilitation</a></li>
+        <li><a href="dentures-to-fixed.html">Dentures to fixed</a></li>
+        <li><a href="#">Single & multiple implants</a></li>
+        <li><a href="patient-journey.html">Patient journey</a></li>
+        <li><a href="pricing.html">Pricing & finance</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Practice</h5>
+      <ul>
+        <li><a href="#clinicians">The clinicians</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="book.html">Book consultation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Terms of service</a></li>
+        <li><a href="#">Cookie policy</a></li>
+        <li><a href="#">Complaints procedure</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-legal">
+    <span>© 2026 Bournemouth Dental Implants · Bright Blue Dental Practice, 233 Charminster Road, Bournemouth BH8 9QJ</span>
+    <span>GDC 318594 · Regulated by the General Dental Council</span>
+  </div>
+</footer>
+
 </body>
 </html>
