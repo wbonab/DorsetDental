@@ -1,0 +1,55 @@
+/* Injects a hamburger button into .site-nav on mobile and wires up a
+   slide-down menu panel. Pure progressive enhancement — desktop is untouched. */
+(function () {
+  function init() {
+    const nav = document.querySelector('.site-nav');
+    if (!nav || nav.dataset.mobileMenuReady) return;
+    nav.dataset.mobileMenuReady = '1';
+
+    const inner = nav.querySelector('.inner');
+    const cta = nav.querySelector('.cta');
+    const links = nav.querySelector('.links');
+    if (!inner || !cta || !links) return;
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'nav-burger';
+    btn.setAttribute('aria-label', 'Toggle menu');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span></span>';
+    // Insert immediately before the cta block so column order is: brand | burger | cta
+    cta.parentNode.insertBefore(btn, cta);
+
+    function setOpen(open) {
+      nav.classList.toggle('menu-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.documentElement.style.overflow = open ? 'hidden' : '';
+    }
+
+    btn.addEventListener('click', function () {
+      setOpen(!nav.classList.contains('menu-open'));
+    });
+
+    // Close when a nav link is tapped
+    links.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') setOpen(false);
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setOpen(false);
+    });
+
+    // Close if window resizes back to desktop
+    const mq = window.matchMedia('(min-width: 769px)');
+    (mq.addEventListener ? mq.addEventListener.bind(mq, 'change') : mq.addListener.bind(mq))(
+      function () { if (mq.matches) setOpen(false); }
+    );
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
