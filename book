@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book consultation · Bournemouth Dental Implants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,400&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+/* =========================================================
+   Bournemouth Dental Implants — site.css
+   Baseline: Direction C (Luxury Ink), Light mode, Airy density
+   Typography: Newsreader (display serif) + Geist (body) + Geist Mono (meta)
+   ========================================================= */
+
+:root {
+  /* C · Luxury Ink — Light mode tokens */
+  --bg:            oklch(96% 0.006 80);
+  --bg-elev:       oklch(99% 0.004 80);
+  --bg-contrast:   oklch(16% 0.01 60);
+  --surface:       oklch(92% 0.01 80);
+  --surface-2:     oklch(89% 0.012 80);
+  --ink:           oklch(18% 0.012 60);
+  --ink-soft:      oklch(34% 0.012 60);
+  --ink-muted:     oklch(52% 0.01 60);
+  --rule:          oklch(84% 0.012 80);
+  --accent:        oklch(52% 0.09 60);         /* warm champagne bronze */
+  --accent-soft:   oklch(88% 0.04 60);
+  --on-contrast:   oklch(95% 0.008 80);
+
+  /* Type */
+  --font-display:  "Newsreader", "Georgia", serif;
+  --font-body:     "Geist", system-ui, -apple-system, sans-serif;
+  --font-mono:     "Geist Mono", ui-monospace, monospace;
+  --display-tracking: -0.025em;
+  --display-weight: 300;
+  --body-tracking: -0.005em;
+
+  /* Space — airy */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+  --space-7: 9rem;
+  --section-y: 6rem;
+  --container-pad: 2.5rem;
+  --max-w: 1320px;
+
+  /* Radii / effects */
+  --r-xs: 2px;
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 14px;
+  --shadow-1: 0 1px 0 oklch(85% 0.01 80), 0 1px 2px oklch(50% 0.01 60 / 0.05);
+  --shadow-2: 0 2px 4px oklch(30% 0.01 60 / 0.06), 0 20px 40px -20px oklch(30% 0.01 60 / 0.14);
+}
+
+/* =========================================================
+   Reset + base
+   ========================================================= */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  letter-spacing: var(--body-tracking);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  line-height: 1.02;
+  margin: 0;
+  color: var(--ink);
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.6rem, 5.2vw, 4.6rem); }
+h2 { font-size: clamp(2rem, 3.6vw, 3.2rem); }
+h3 { font-size: clamp(1.3rem, 2vw, 1.65rem); line-height: 1.15; }
+h4 { font-size: 1rem; font-family: var(--font-body); font-weight: 500; letter-spacing: 0; }
+
+p { margin: 0; text-wrap: pretty; color: var(--ink-soft); }
+a { color: inherit; text-decoration: none; }
+
+em { font-style: italic; color: var(--accent); }
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  display: inline-block;
+}
+
+.rule { height: 1px; background: var(--rule); border: 0; margin: 0; }
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.6rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  border-radius: var(--r-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 180ms cubic-bezier(0.2, 0.7, 0.3, 1);
+  background: var(--ink);
+  color: var(--on-contrast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-2); }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--rule);
+}
+.btn.ghost:hover { border-color: var(--ink); background: var(--bg-elev); }
+.btn.accent { background: var(--accent); color: var(--on-contrast); }
+.btn .arr { transition: transform 180ms ease; }
+.btn:hover .arr { transform: translateX(3px); }
+
+/* =========================================================
+   Placeholder imagery (striped + mono label)
+   ========================================================= */
+.placeholder {
+  background: var(--surface);
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 14px,
+    oklch(from var(--ink) l c h / 0.04) 14px 15px
+  );
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-sm);
+  min-height: 160px;
+  color: var(--ink-muted);
+}
+.placeholder::before {
+  content: attr(data-label);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding: 0.45rem 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-xs);
+  white-space: nowrap;
+}
+
+/* =========================================================
+   Site navigation (shared across all pages)
+   ========================================================= */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: oklch(from var(--bg) l c h / 0.92);
+  backdrop-filter: saturate(1.1) blur(10px);
+  -webkit-backdrop-filter: saturate(1.1) blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+.site-nav .inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1rem var(--container-pad);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2rem;
+}
+.site-nav .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.site-nav .brand .mark {
+  width: 30px; height: 30px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--ink);
+  position: relative;
+}
+.site-nav .brand .mark::after {
+  content: ''; position: absolute;
+  inset: 3px; border-radius: 50%;
+  border: 1px solid var(--accent);
+}
+.site-nav .brand .wordmark {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.site-nav .brand .wordmark em { color: var(--accent); font-style: italic; }
+.site-nav .brand small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 0.2rem;
+}
+.site-nav .links {
+  display: flex;
+  gap: 1.75rem;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+.site-nav .links a {
+  color: var(--ink-soft);
+  transition: color 160ms ease;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+}
+.site-nav .links a:hover,
+.site-nav .links a[aria-current] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+.site-nav .cta {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.site-nav .cta .phone {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+}
+.site-nav .cta .phone:hover { color: var(--ink); }
+
+@media (max-width: 900px) {
+  .site-nav .links { display: none; }
+  .site-nav .inner { grid-template-columns: auto 1fr; }
+  .site-nav .brand small { display: none; }
+}
+
+/* =========================================================
+   Site footer
+   ========================================================= */
+.site-footer {
+  margin-top: var(--section-y);
+  border-top: 1px solid var(--rule);
+  background: var(--bg-elev);
+  padding: var(--space-5) 0 var(--space-4);
+}
+.site-footer .f-grid {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 3rem;
+}
+.site-footer .f-brand h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  line-height: 1.05;
+  max-width: 20ch;
+  margin-bottom: 0.75rem;
+}
+.site-footer .f-brand p { max-width: 36ch; font-size: 0.92rem; }
+.site-footer h5 {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55rem; }
+.site-footer ul a {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+.site-footer ul a:hover { color: var(--ink); }
+.site-footer .f-legal {
+  max-width: var(--max-w);
+  margin: 3rem auto 0;
+  padding: 1.5rem var(--container-pad) 0;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+@media (max-width: 900px) {
+  .site-footer .f-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .site-footer .f-brand { grid-column: 1 / -1; }
+}
+
+/* =========================================================
+   Section helpers
+   ========================================================= */
+.section {
+  padding: var(--section-y) 0;
+  border-bottom: 1px solid var(--rule);
+}
+.section-header {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3rem;
+  align-items: baseline;
+  margin-bottom: 3rem;
+}
+.section-header .eyebrow { align-self: start; }
+.section-header h2 { max-width: 24ch; }
+.section-body {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+@media (max-width: 800px) {
+  .section-header { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+/* =========================================================
+   Shared page hero chrome
+   ========================================================= */
+.page-hero {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--rule);
+}
+.page-hero .inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: end;
+}
+.page-hero .bread {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+}
+.page-hero h1 { line-height: 0.98; }
+.page-hero .lead {
+  margin-top: 1.75rem;
+  max-width: 48ch;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+}
+.page-hero .meta-box {
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+  padding: 1.5rem;
+  background: var(--bg-elev);
+  display: grid;
+  gap: 1rem;
+}
+.page-hero .meta-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--rule);
+}
+.page-hero .meta-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.page-hero .meta-row .k {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.page-hero .meta-row .v { color: var(--ink); font-size: 0.95rem; }
+@media (max-width: 900px) {
+  .page-hero .inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+/* =========================================================
+   Fields (for booking page)
+   ========================================================= */
+input, textarea, select {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+input:focus-visible, textarea:focus-visible {
+  outline: none; border-color: var(--ink);
+}
+
+</style>
+  <style>
+    .book-wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 4rem var(--container-pad);
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 4rem;
+      align-items: start;
+    }
+    .book-main { min-height: 600px; }
+    .book-head {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .book-head .bread {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 1.5rem;
+    }
+    .book-head h1 { font-size: clamp(2.4rem, 4.5vw, 3.6rem); max-width: 16ch; margin-bottom: 1rem; line-height: 1; }
+    .book-head p { max-width: 48ch; font-size: 1rem; }
+
+    /* Stepper */
+    .stepper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 3rem;
+    }
+    .stepper .st {
+      padding: 1.25rem 1.5rem;
+      border-right: 1px solid var(--rule);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      display: flex; gap: 0.75rem; align-items: baseline;
+      transition: all 180ms ease;
+    }
+    .stepper .st:last-child { border-right: 0; }
+    .stepper .st.active { background: var(--ink); color: var(--on-contrast); }
+    .stepper .st.done { color: var(--accent); }
+    .stepper .st .n { font-family: var(--font-display); font-size: 1.1rem; }
+
+    /* Form */
+    .form-step { display: none; }
+    .form-step.active { display: block; }
+    .form-step h2 { margin-bottom: 0.5rem; max-width: 20ch; }
+    .form-step .sub {
+      color: var(--ink-soft);
+      max-width: 52ch;
+      margin-bottom: 2.5rem;
+    }
+
+    .field-grid { display: grid; gap: 1.5rem; }
+    .field { display: grid; gap: 0.5rem; }
+    .field label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .field label .req { color: var(--accent); }
+    .field input, .field textarea, .field select {
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--r-sm);
+      background: var(--bg-elev);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 160ms ease;
+    }
+    .field input:focus, .field textarea:focus { border-color: var(--ink); outline: none; }
+    .field textarea { resize: vertical; min-height: 110px; }
+    .field .hint {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+    }
+    .field .err { color: oklch(55% 0.15 25); font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.04em; }
+    .field-2col { grid-template-columns: 1fr 1fr; }
+
+    /* Radio cards */
+    .radio-cards {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .radio-cards label {
+      padding: 1.25rem 1.5rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--r-sm);
+      background: var(--bg-elev);
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 24px 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      transition: all 180ms ease;
+      font-family: var(--font-body);
+      letter-spacing: normal;
+      text-transform: none;
+      color: var(--ink);
+    }
+    .radio-cards label:hover { border-color: var(--ink-soft); }
+    .radio-cards input { appearance: none; width: 16px; height: 16px; border: 1px solid var(--rule); border-radius: 50%; position: relative; margin: 0; padding: 0; }
+    .radio-cards input:checked { border-color: var(--accent); }
+    .radio-cards input:checked::after {
+      content: ''; position: absolute; inset: 3px; background: var(--accent); border-radius: 50%;
+    }
+    .radio-cards label:has(input:checked) { border-color: var(--ink); background: var(--bg); }
+    .radio-cards .t { font-family: var(--font-display); font-size: 1.15rem; font-weight: var(--display-weight); margin-bottom: 0.2rem; }
+    .radio-cards .d { font-size: 0.88rem; color: var(--ink-soft); font-family: var(--font-body); }
+    .radio-cards .meta {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    /* Date/time */
+    .dt-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .cal {
+      border: 1px solid var(--rule);
+      border-radius: var(--r-sm);
+      background: var(--bg-elev);
+      overflow: hidden;
+    }
+    .cal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .cal-head .month {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+    }
+    .cal-head button {
+      background: transparent;
+      border: 1px solid var(--rule);
+      border-radius: var(--r-xs);
+      width: 28px; height: 28px;
+      cursor: pointer;
+      color: var(--ink-soft);
+      font-family: var(--font-mono);
+    }
+    .cal-head button:hover { border-color: var(--ink); color: var(--ink); }
+    .cal-dows {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      padding: 0.5rem 0.5rem 0;
+      font-family: var(--font-mono);
+      font-size: 0.64rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-align: center;
+    }
+    .cal-dows span { padding: 0.5rem 0; }
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 2px;
+      padding: 0.5rem;
+    }
+    .cal-grid button {
+      aspect-ratio: 1 / 1;
+      background: transparent;
+      border: 0;
+      border-radius: var(--r-xs);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 120ms ease;
+    }
+    .cal-grid button:hover:not(:disabled) { background: var(--surface); }
+    .cal-grid button:disabled { color: var(--ink-muted); opacity: 0.4; cursor: not-allowed; }
+    .cal-grid button.sel { background: var(--ink); color: var(--on-contrast); }
+    .cal-grid button.empty { visibility: hidden; }
+
+    .slots {
+      border: 1px solid var(--rule);
+      border-radius: var(--r-sm);
+      background: var(--bg-elev);
+      padding: 1.25rem;
+    }
+    .slots h4 {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+    .slot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .slot-grid button {
+      padding: 0.7rem 0.5rem;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-xs);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 120ms ease;
+    }
+    .slot-grid button:hover:not(:disabled) { border-color: var(--ink); }
+    .slot-grid button.sel { background: var(--ink); color: var(--on-contrast); border-color: var(--ink); }
+    .slot-grid button:disabled { opacity: 0.35; cursor: not-allowed; text-decoration: line-through; }
+
+    /* Review */
+    .rv-summary {
+      border: 1px solid var(--rule);
+      border-radius: var(--r-sm);
+      background: var(--bg-elev);
+    }
+    .rv-summary .rv-row {
+      padding: 1rem 1.5rem;
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1.5rem;
+      border-bottom: 1px solid var(--rule);
+      align-items: baseline;
+    }
+    .rv-summary .rv-row:last-child { border-bottom: 0; }
+    .rv-summary .k {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .rv-summary .v { font-family: var(--font-body); font-size: 0.98rem; }
+
+    /* Actions */
+    .step-actions {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+    .step-actions .left { display: flex; gap: 0.75rem; }
+
+    /* Summary sidebar */
+    .summary-aside {
+      position: sticky; top: 7rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--r-sm);
+      background: var(--bg-elev);
+      padding: 2rem 1.75rem;
+    }
+    .summary-aside h4 {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      font-weight: 400;
+      margin-bottom: 1.25rem;
+    }
+    .summary-aside .sa-row {
+      padding: 0.85rem 0;
+      border-top: 1px solid var(--rule);
+      display: grid;
+      gap: 0.25rem;
+    }
+    .summary-aside .sa-row .k {
+      font-family: var(--font-mono);
+      font-size: 0.64rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .summary-aside .sa-row .v { font-family: var(--font-body); font-size: 0.95rem; color: var(--ink); }
+    .summary-aside .sa-row .v.empty { color: var(--ink-muted); font-style: italic; }
+    .summary-aside .foot {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    /* Success */
+    .success {
+      text-align: center;
+      padding: 3rem 1rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--r-sm);
+      background: var(--bg-elev);
+    }
+    .success .mark-big {
+      width: 56px; height: 56px;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+    .success h2 { margin-bottom: 1rem; max-width: 16ch; margin-left: auto; margin-right: auto; }
+    .success p { max-width: 42ch; margin: 0.5rem auto; }
+    .success .confirm {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-sm);
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+    }
+    .success .confirm .ref { display: block; color: var(--accent); font-size: 1.2rem; margin-top: 0.35rem; letter-spacing: 0.1em; }
+
+    @media (max-width: 900px) {
+      .book-wrap { grid-template-columns: 1fr; }
+      .summary-aside { position: static; }
+      .dt-grid, .field-2col { grid-template-columns: 1fr; }
+      .stepper { grid-template-columns: 1fr 1fr; }
+      .stepper .st:nth-child(2) { border-right: 0; }
+    }
+  </style>
+  <link rel="stylesheet" href="mobile.css" />
+  <script src="mobile-menu.js" defer></script>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="inner">
+    <a href="index.html" class="brand">
+      <span class="mark">B</span>
+      <div><div class="wordmark">Bournemouth <em>Dental</em> Implants</div><small>est. 2019 · Bournemouth</small></div>
+    </a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="full-arch.html">Full arch</a>
+      <a href="dentures-to-fixed.html">Dentures → fixed</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="patient-journey.html">Journey</a>
+    </nav>
+    <div class="cta">
+      <a href="tel:01202528949" class="phone">01202 528 949</a>
+      <a href="book.html" class="btn" aria-current="page">Book free consultation</a>
+    </div>
+  </div>
+</header>
+
+<div class="book-wrap">
+  <div class="book-main">
+    <div class="book-head">
+      <div class="bread">Home / Book consultation</div>
+      <h1>Book a <em>consultation.</em></h1>
+      <p>Four quick steps. Two minutes. A member of our team will confirm within one working day.</p>
+    </div>
+
+    <div class="stepper" id="stepper">
+      <div class="st active" data-step="1"><span class="n">01</span><span>You</span></div>
+      <div class="st" data-step="2"><span class="n">02</span><span>Treatment</span></div>
+      <div class="st" data-step="3"><span class="n">03</span><span>Date & time</span></div>
+      <div class="st" data-step="4"><span class="n">04</span><span>Review</span></div>
+    </div>
+
+    <form id="bookForm" novalidate>
+      <!-- STEP 1 -->
+      <section class="form-step active" data-step="1">
+        <h2>A little about you.</h2>
+        <p class="sub">We use this to confirm your appointment. Nothing is shared outside the clinic.</p>
+        <div class="field-grid">
+          <div class="field field-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div class="field"><label>First name <span class="req">*</span></label><input name="firstName" required></div>
+            <div class="field"><label>Last name <span class="req">*</span></label><input name="lastName" required></div>
+          </div>
+          <div class="field"><label>Email <span class="req">*</span></label><input type="email" name="email" required><span class="hint">For appointment confirmation and digital treatment plan</span></div>
+          <div class="field"><label>Phone <span class="req">*</span></label><input type="tel" name="phone" required placeholder="07___ ___ ___"><span class="hint">Only used by the practice — never shared</span></div>
+          <div class="field"><label>Postcode</label><input name="postcode" placeholder="BH8 9QJ"><span class="hint">Helps us suggest parking and travel times</span></div>
+        </div>
+      </section>
+
+      <!-- STEP 2 -->
+      <section class="form-step" data-step="2">
+        <h2>What brings you in?</h2>
+        <p class="sub">Pick whichever sounds closest. We'll confirm the right treatment after your CBCT scan.</p>
+        <div class="radio-cards">
+          <label><input type="radio" name="treatment" value="Full arch rehabilitation"><div><div class="t">Full arch rehabilitation</div><div class="d">An entire upper or lower arch replaced with fixed implant-supported teeth.</div></div><span class="meta">from £25,000</span></label>
+          <label><input type="radio" name="treatment" value="Dentures to fixed"><div><div class="t">Dentures → fixed teeth</div><div class="d">Move from removable dentures to a fixed, permanent prosthesis.</div></div><span class="meta">from £25,000</span></label>
+          <label><input type="radio" name="treatment" value="Single / multiple implants"><div><div class="t">Single or multiple implants</div><div class="d">Replace one or a few missing teeth with individual implants.</div></div><span class="meta">from £3,500</span></label>
+          <label><input type="radio" name="treatment" value="Not sure"><div><div class="t">I'm not sure yet</div><div class="d">That's fine — we'll recommend the right option after consultation.</div></div><span class="meta">explore</span></label>
+        </div>
+        <div class="field" style="margin-top: 2rem;">
+          <label>Anything we should know?</label>
+          <textarea name="notes" placeholder="Existing dental work, nervousness about the dentist, timelines, anything at all."></textarea>
+        </div>
+      </section>
+
+      <!-- STEP 3 -->
+      <section class="form-step" data-step="3">
+        <h2>Pick a time that works.</h2>
+        <p class="sub">Consultations are 45 minutes. We run Monday to Friday, 9am–5pm, and Saturday mornings by appointment.</p>
+
+        <div class="dt-grid">
+          <div class="cal">
+            <div class="cal-head">
+              <button type="button" id="prevMonth" aria-label="Previous month">‹</button>
+              <span class="month" id="monthLabel">—</span>
+              <button type="button" id="nextMonth" aria-label="Next month">›</button>
+            </div>
+            <div class="cal-dows"><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span></div>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+          <div class="slots">
+            <h4 id="slotLabel">Select a date</h4>
+            <div class="slot-grid" id="slotGrid">
+              <button type="button" disabled>—</button>
+              <button type="button" disabled>—</button>
+              <button type="button" disabled>—</button>
+              <button type="button" disabled>—</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 4 -->
+      <section class="form-step" data-step="4">
+        <h2>Final check.</h2>
+        <p class="sub">Confirm everything looks right, then submit. You'll receive an email within one working day.</p>
+        <div class="rv-summary" id="rvSummary">
+          <div class="rv-row"><span class="k">Name</span><span class="v" data-field="name">—</span></div>
+          <div class="rv-row"><span class="k">Email</span><span class="v" data-field="email">—</span></div>
+          <div class="rv-row"><span class="k">Phone</span><span class="v" data-field="phone">—</span></div>
+          <div class="rv-row"><span class="k">Treatment</span><span class="v" data-field="treatment">—</span></div>
+          <div class="rv-row"><span class="k">Date & time</span><span class="v" data-field="datetime">—</span></div>
+          <div class="rv-row"><span class="k">Notes</span><span class="v" data-field="notes">—</span></div>
+        </div>
+      </section>
+
+      <!-- SUCCESS -->
+      <section class="form-step" data-step="5">
+        <div class="success">
+          <div class="mark-big">✓</div>
+          <h2>Booking received.</h2>
+          <p>A member of our team will call you within one working day to confirm. An email with your appointment details and directions to the clinic is on its way.</p>
+          <div class="confirm">
+            Reference<span class="ref" id="refCode">BDI-0000</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="step-actions" id="stepActions">
+        <div class="left">
+          <button type="button" class="btn ghost" id="backBtn" style="display:none;">← Back</button>
+        </div>
+        <div>
+          <button type="button" class="btn" id="nextBtn">Continue <span class="arr">→</span></button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Sidebar -->
+  <aside>
+    <div class="summary-aside">
+      <h4>Your booking</h4>
+      <div class="sa-row"><span class="k">Name</span><span class="v empty" data-sa="name">Not yet provided</span></div>
+      <div class="sa-row"><span class="k">Treatment</span><span class="v empty" data-sa="treatment">Not yet selected</span></div>
+      <div class="sa-row"><span class="k">Date & time</span><span class="v empty" data-sa="datetime">Not yet selected</span></div>
+      <div class="foot">
+        Consultations are 45 minutes and include a CBCT 3D scan. Fee £150, offset against treatment if you proceed.
+        <br><br>
+        Need to speak to someone now? Call <span style="color: var(--ink);">01202 528 949</span>.
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="f-grid">
+    <div class="f-brand">
+      <h3>Bournemouth<br>Dental <em>Implants</em></h3>
+      <p>A dedicated dental implant service serving Dorset, Bournemouth, Poole and Christchurch.</p>
+    </div>
+    <div><h5>Treatments</h5><ul><li><a href="full-arch.html">Full arch rehabilitation</a></li><li><a href="dentures-to-fixed.html">Dentures to fixed</a></li><li><a href="#">Single & multiple implants</a></li><li><a href="patient-journey.html">Patient journey</a></li><li><a href="pricing.html">Pricing & finance</a></li></ul></div>
+    <div><h5>Practice</h5><ul><li><a href="index.html#clinicians">The clinicians</a></li><li><a href="#">Testimonials</a></li><li><a href="#">Contact</a></li><li><a href="book.html">Book consultation</a></li></ul></div>
+    <div><h5>Legal</h5><ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li><li><a href="cookies.html">Cookie policy</a></li><li><a href="complaints.html">Complaints procedure</a></li></ul></div>
+  </div>
+  <div class="f-legal">
+    <span>© 2026 Bournemouth Dental Implants · 233 Charminster Road, Bournemouth BH8 9QJ</span>
+    <span>GDC 318594 · Regulated by the General Dental Council</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---- Where booking enquiries are sent ----------------------------------
+  // Replace BOOKING_ENDPOINT with a Formspree/Web3Forms URL when ready.
+  // While it's null the form opens the patient's mail client (mailto:) as a fallback.
+  const BOOKING_INBOX    = 'brightbluedental@gmail.com';
+  const BOOKING_ENDPOINT = null; // e.g. 'https://formspree.io/f/xxxxxxx'
+  // ------------------------------------------------------------------------
+
+  const form = document.getElementById('bookForm');
+  const steps = form.querySelectorAll('.form-step');
+  const stepperItems = document.querySelectorAll('#stepper .st');
+  const nextBtn = document.getElementById('nextBtn');
+  const backBtn = document.getElementById('backBtn');
+  const stepActions = document.getElementById('stepActions');
+  let cur = 1;
+
+  const data = { treatment: '', date: '', time: '' };
+
+  function showStep(n) {
+    cur = n;
+    steps.forEach(s => s.classList.toggle('active', Number(s.dataset.step) === n));
+    stepperItems.forEach(s => {
+      const sn = Number(s.dataset.step);
+      s.classList.toggle('active', sn === n);
+      s.classList.toggle('done', sn < n && n < 5);
+    });
+    backBtn.style.display = (n === 1 || n === 5) ? 'none' : 'inline-flex';
+    if (n === 5) {
+      stepActions.style.display = 'none';
+    } else {
+      stepActions.style.display = 'flex';
+      nextBtn.innerHTML = n === 4 ? 'Confirm booking <span class="arr">→</span>' : 'Continue <span class="arr">→</span>';
+    }
+    if (n === 4) populateReview();
+  }
+
+  function validateStep(n) {
+    if (n === 1) {
+      const required = ['firstName','lastName','email','phone'];
+      for (const name of required) {
+        const el = form.elements[name];
+        if (!el.value.trim()) { el.focus(); el.style.borderColor = 'oklch(55% 0.15 25)'; return false; }
+        el.style.borderColor = '';
+      }
+      return true;
+    }
+    if (n === 2) {
+      if (!form.elements['treatment'].value) { alert('Please select a treatment option.'); return false; }
+      return true;
+    }
+    if (n === 3) {
+      if (!data.date || !data.time) { alert('Please select a date and time.'); return false; }
+      return true;
+    }
+    return true;
+  }
+
+  function updateSidebar() {
+    const fn = form.elements['firstName']?.value || '';
+    const ln = form.elements['lastName']?.value || '';
+    const nameEl = document.querySelector('[data-sa="name"]');
+    const txEl = document.querySelector('[data-sa="treatment"]');
+    const dtEl = document.querySelector('[data-sa="datetime"]');
+    if (fn || ln) { nameEl.textContent = (fn + ' ' + ln).trim(); nameEl.classList.remove('empty'); }
+    if (data.treatment) { txEl.textContent = data.treatment; txEl.classList.remove('empty'); }
+    if (data.date && data.time) {
+      dtEl.textContent = formatDate(data.date) + ' · ' + data.time;
+      dtEl.classList.remove('empty');
+    }
+  }
+
+  function populateReview() {
+    updateSidebar();
+    const fn = form.elements['firstName']?.value || '';
+    const ln = form.elements['lastName']?.value || '';
+    document.querySelector('[data-field="name"]').textContent = (fn + ' ' + ln).trim() || '—';
+    document.querySelector('[data-field="email"]').textContent = form.elements['email']?.value || '—';
+    document.querySelector('[data-field="phone"]').textContent = form.elements['phone']?.value || '—';
+    document.querySelector('[data-field="treatment"]').textContent = data.treatment || '—';
+    document.querySelector('[data-field="datetime"]').textContent =
+      (data.date && data.time) ? (formatDate(data.date) + ' at ' + data.time) : '—';
+    document.querySelector('[data-field="notes"]').textContent = form.elements['notes']?.value || '—';
+  }
+
+  function collectBookingPayload(ref) {
+    const fn = form.elements['firstName']?.value || '';
+    const ln = form.elements['lastName']?.value || '';
+    return {
+      ref,
+      name: (fn + ' ' + ln).trim(),
+      email: form.elements['email']?.value || '',
+      phone: form.elements['phone']?.value || '',
+      treatment: data.treatment || '',
+      datetime: (data.date && data.time) ? (formatDate(data.date) + ' at ' + data.time) : '',
+      notes: form.elements['notes']?.value || ''
+    };
+  }
+
+  function submitBooking(ref) {
+    const p = collectBookingPayload(ref);
+    // 1) Backend / form service path (preferred when configured)
+    if (BOOKING_ENDPOINT) {
+      try {
+        fetch(BOOKING_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ _to: BOOKING_INBOX, _subject: 'New booking enquiry · ' + ref, ...p })
+        });
+      } catch(e) { /* swallow — confirmation already shown */ }
+      return;
+    }
+    // 2) mailto fallback — opens the patient's email client pre-filled to William
+    const subject = 'New booking enquiry · ' + ref;
+    const body =
+      'Booking reference: ' + ref + '\n' +
+      'Name:      ' + p.name + '\n' +
+      'Email:     ' + p.email + '\n' +
+      'Phone:     ' + p.phone + '\n' +
+      'Treatment: ' + p.treatment + '\n' +
+      'Requested: ' + p.datetime + '\n\n' +
+      'Notes:\n' + (p.notes || '(none)') + '\n';
+    const href = 'mailto:' + BOOKING_INBOX +
+                 '?subject=' + encodeURIComponent(subject) +
+                 '&body=' + encodeURIComponent(body);
+    // Open in a new tab so we don't navigate away from the confirmation screen
+    window.open(href, '_blank');
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (!validateStep(cur)) return;
+    if (cur === 2) data.treatment = form.elements['treatment'].value;
+    updateSidebar();
+    if (cur === 4) {
+      const ref = 'BDI-' + (Math.floor(Math.random() * 9000) + 1000);
+      document.getElementById('refCode').textContent = ref;
+      submitBooking(ref);
+      showStep(5);
+      return;
+    }
+    showStep(cur + 1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  backBtn.addEventListener('click', () => {
+    if (cur > 1) { showStep(cur - 1); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  });
+
+  // Calendar
+  const monthLabel = document.getElementById('monthLabel');
+  const calGrid = document.getElementById('calGrid');
+  const slotLabel = document.getElementById('slotLabel');
+  const slotGrid = document.getElementById('slotGrid');
+  let viewDate = new Date();
+  viewDate.setDate(1);
+
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  function renderCal() {
+    const y = viewDate.getFullYear();
+    const m = viewDate.getMonth();
+    monthLabel.textContent = months[m] + ' ' + y;
+    calGrid.innerHTML = '';
+    const first = new Date(y, m, 1);
+    const offset = (first.getDay() + 6) % 7; // Mon=0
+    const daysInMonth = new Date(y, m + 1, 0).getDate();
+    const today = new Date(); today.setHours(0,0,0,0);
+    for (let i = 0; i < offset; i++) {
+      const b = document.createElement('button');
+      b.className = 'empty'; b.disabled = true; b.type = 'button';
+      calGrid.appendChild(b);
+    }
+    for (let d = 1; d <= daysInMonth; d++) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = d;
+      const date = new Date(y, m, d);
+      const iso = date.toISOString().slice(0,10);
+      const dow = date.getDay();
+      const isPast = date < today;
+      const isSunday = dow === 0;
+      if (isPast || isSunday) b.disabled = true;
+      if (data.date === iso) b.classList.add('sel');
+      b.addEventListener('click', () => {
+        data.date = iso; data.time = '';
+        renderCal(); renderSlots();
+      });
+      calGrid.appendChild(b);
+    }
+  }
+
+  function renderSlots() {
+    if (!data.date) {
+      slotLabel.textContent = 'Select a date';
+      slotGrid.innerHTML = '<button type="button" disabled>—</button>'.repeat(4);
+      return;
+    }
+    const d = new Date(data.date);
+    slotLabel.textContent = formatDate(data.date);
+    const dow = d.getDay();
+    const times = dow === 6
+      ? ['09:00','09:45','10:30','11:15']
+      : ['09:00','10:00','11:00','13:00','14:00','15:00','16:00'];
+    slotGrid.innerHTML = '';
+    const unavail = Math.floor(Math.random() * 2) + 1;
+    const unavailIdx = [Math.floor(Math.random() * times.length)];
+    if (unavail > 1) unavailIdx.push((unavailIdx[0] + 2) % times.length);
+    times.forEach((t, i) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.textContent = t;
+      if (unavailIdx.includes(i)) b.disabled = true;
+      if (data.time === t) b.classList.add('sel');
+      b.addEventListener('click', () => {
+        if (b.disabled) return;
+        data.time = t;
+        document.querySelectorAll('#slotGrid button').forEach(x => x.classList.remove('sel'));
+        b.classList.add('sel');
+        updateSidebar();
+      });
+      slotGrid.appendChild(b);
+    });
+  }
+
+  function formatDate(iso) {
+    const d = new Date(iso);
+    const dows = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    return dows[d.getDay()] + ' ' + d.getDate() + ' ' + months[d.getMonth()].slice(0,3) + ' ' + d.getFullYear();
+  }
+
+  document.getElementById('prevMonth').addEventListener('click', () => {
+    viewDate.setMonth(viewDate.getMonth() - 1);
+    renderCal();
+  });
+  document.getElementById('nextMonth').addEventListener('click', () => {
+    viewDate.setMonth(viewDate.getMonth() + 1);
+    renderCal();
+  });
+
+  // Live treatment selection
+  form.querySelectorAll('input[name="treatment"]').forEach(r => {
+    r.addEventListener('change', () => { data.treatment = r.value; updateSidebar(); });
+  });
+
+  renderCal();
+  renderSlots();
+  showStep(1);
+})();
+</script>
+
+</body>
+</html>
