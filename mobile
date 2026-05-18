@@ -1,0 +1,287 @@
+/* =========================================================
+   Bournemouth Dental Implants — mobile.css
+   Mobile / small-tablet overrides only. Loads AFTER each page's
+   inline desktop styles so the cascade wins on small screens.
+
+   Strategy: keep the desktop design untouched; only fix what's
+   awkward at narrow widths.
+   ========================================================= */
+
+/* ---------- Phones & narrow tablets (≤768px) ---------- */
+@media (max-width: 768px) {
+
+  :root {
+    --container-pad: 1.25rem;
+    --section-y: 3.5rem;
+  }
+
+  body { font-size: 16px; }
+
+  /* ---- Site nav: hamburger + slide-down panel ---- */
+  .site-nav .inner {
+    grid-template-columns: 1fr auto auto !important;
+    gap: 0.75rem !important;
+    padding: 0.85rem var(--container-pad) !important;
+    align-items: center;
+  }
+  .site-nav .brand .wordmark { font-size: 0.95rem; }
+  .site-nav .brand .mark { width: 26px; height: 26px; }
+  .site-nav .cta { gap: 0.4rem !important; }
+  .site-nav .cta .phone { display: none; }
+  .site-nav .cta .btn {
+    padding: 0.6rem 0.85rem;
+    font-size: 0.78rem;
+  }
+
+  /* Hamburger button (injected by mobile-menu.js) */
+  .nav-burger {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: var(--r-sm, 6px);
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    color: var(--ink);
+  }
+  .nav-burger span,
+  .nav-burger span::before,
+  .nav-burger span::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: currentColor;
+    transition: transform 200ms ease, opacity 200ms ease;
+  }
+  .nav-burger span { position: relative; }
+  .nav-burger span::before { position: absolute; top: -6px; left: 0; }
+  .nav-burger span::after  { position: absolute; top:  6px; left: 0; }
+  .site-nav.menu-open .nav-burger span { background: transparent; }
+  .site-nav.menu-open .nav-burger span::before { transform: translateY(6px) rotate(45deg); }
+  .site-nav.menu-open .nav-burger span::after  { transform: translateY(-6px) rotate(-45deg); }
+
+  /* Mobile nav panel: links become a dropdown */
+  .site-nav .links {
+    display: flex !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg, #fff);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.5rem var(--container-pad) 1rem;
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 220ms ease, opacity 220ms ease;
+    z-index: 60;
+  }
+  .site-nav.menu-open .links {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .site-nav .links a {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--rule) !important;
+    font-size: 1rem;
+  }
+  .site-nav .links a:last-child { border-bottom: 0 !important; }
+  .site-nav .links a[aria-current] {
+    color: var(--ink);
+  }
+
+  /* ---- Hero (home) ---- */
+  .hero { padding: 2rem 0 2.5rem !important; }
+  .hero .inner {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 11vw, 3.4rem) !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .hero .copy .eyebrow { margin-bottom: 1.25rem !important; }
+  .hero .lead {
+    font-size: 1rem !important;
+    margin-bottom: 1.75rem !important;
+    max-width: none !important;
+  }
+  .hero .actions { gap: 0.75rem; }
+  .hero .actions .meta { margin-left: 0 !important; flex-basis: 100%; }
+  .hero .portrait {
+    aspect-ratio: 4 / 5 !important;
+    min-height: 0 !important;
+    max-height: 480px;
+  }
+  .hero .portrait img { object-position: center 20% !important; }
+  .hero .portrait-caption {
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+
+  /* ---- Page hero (interior pages) ---- */
+  .page-hero { padding: 2.5rem 0 2rem !important; }
+  .page-hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .page-hero .lead { font-size: 1rem; }
+
+  /* ---- Section headers + bodies ---- */
+  .section { padding: var(--section-y) 0; }
+  .section-header,
+  .section-body { padding: 0 var(--container-pad); }
+  .section-header { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
+  .section-header h2 { font-size: clamp(1.7rem, 6.5vw, 2.2rem); }
+
+  /* ---- Trust bar (logos / mini-stats row) ---- */
+  .trust-bar .inner {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 1.25rem var(--container-pad) !important;
+    text-align: left;
+  }
+  .trust-bar .label { font-size: 0.7rem; }
+  .trust-bar .items {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.25rem;
+    text-align: left;
+  }
+  .trust-bar .items > div { display: block; }
+  .trust-bar .items strong { display: block; font-size: 1.4rem; }
+
+  /* ---- Clinician section ---- */
+  .clinician .inner { padding: var(--section-y) var(--container-pad) !important; }
+  .cli-head { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .cli-head h2 { font-size: clamp(1.7rem, 6.5vw, 2.3rem); }
+  .cli-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .cli-card .portrait { min-height: 0 !important; aspect-ratio: 4 / 5; }
+  .cli-card .creds { grid-template-columns: 1fr 1fr 1fr !important; gap: 0.5rem !important; }
+  .cli-card .creds .v { font-size: 0.8rem; }
+  .quote { font-size: 1.15rem !important; padding: 1.5rem 0 !important; }
+  .generations { grid-template-columns: 1fr !important; gap: 1.25rem !important; }
+  .g-line {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* ---- Treatment / process / pillar grids ---- */
+  .tx-grid,
+  .process-grid,
+  .pillar-grid,
+  .price-grid,
+  .finance-grid,
+  .finance .head,
+  .included,
+  .imagery {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  /* ---- Pricing teaser / final CTA two-col layouts ---- */
+  .price-teaser .inner,
+  .cta-final .inner {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: var(--section-y) var(--container-pad) !important;
+  }
+
+  /* ---- Quote / testimonial blocks ---- */
+  blockquote.quote,
+  .quote-block { font-size: 1.15rem; line-height: 1.45; }
+
+  /* ---- Footer ---- */
+  .site-footer { padding: 3rem 0 1.5rem; }
+  .site-footer .f-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 0 var(--container-pad) !important;
+  }
+  .site-footer .f-brand { grid-column: 1 !important; }
+  .site-footer .f-legal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.25rem var(--container-pad) 0 !important;
+    margin-top: 2rem !important;
+  }
+
+  /* ---- Booking flow ---- */
+  .book-wrap { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .summary-aside { position: static !important; }
+  #stepper { gap: 0.5rem; flex-wrap: wrap; }
+  #stepper .st { font-size: 0.7rem; }
+  .form-step h2 { font-size: clamp(1.6rem, 6.5vw, 2.1rem); }
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  input, select, textarea, .btn {
+    font-size: 16px; /* prevents iOS auto-zoom on focus */
+  }
+  .step-actions {
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+    align-items: stretch !important;
+    margin-top: 2rem !important;
+  }
+  .step-actions .left,
+  .step-actions .right { width: 100%; display: flex; }
+  .step-actions .btn { width: 100%; justify-content: center; }
+  #calGrid,
+  #slotGrid {
+    gap: 0.4rem !important;
+  }
+
+  /* ---- Patient journey timeline ---- */
+  .timeline {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .timeline .sticky { position: static !important; }
+  .tl-step .imagery { grid-template-columns: 1fr 1fr !important; gap: 0.5rem !important; }
+  .tl-step .facts { grid-template-columns: 1fr 1fr !important; gap: 0.5rem !important; }
+
+  /* ---- Full arch / dentures-to-fixed page-specific ---- */
+  .svp-sect .wrap,
+  .compare,
+  .compare .row,
+  .signs-wrap,
+  .story .inner,
+  .cta-strip .wrap {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* ---- Generic safeguards ---- */
+  h1 { line-height: 1.02; }
+  h2 { line-height: 1.08; }
+  h3 { font-size: 1.25rem; }
+  table { font-size: 0.9rem; }
+  img, video { max-width: 100%; height: auto; }
+}
+
+/* ---------- Very small phones (≤420px) ---------- */
+@media (max-width: 420px) {
+  :root { --container-pad: 1rem; }
+
+  .site-nav .brand small { display: none !important; }
+  .site-nav .cta .btn { padding: 0.55rem 0.7rem; font-size: 0.72rem; }
+
+  .hero h1 { font-size: clamp(2.1rem, 12vw, 2.8rem) !important; }
+
+  .trust-bar .items { grid-template-columns: 1fr !important; }
+  .cli-card .creds { grid-template-columns: 1fr 1fr !important; }
+  .tl-step .imagery,
+  .tl-step .facts { grid-template-columns: 1fr !important; }
+
+  blockquote.quote, .quote-block { font-size: 1.05rem !important; }
+}
