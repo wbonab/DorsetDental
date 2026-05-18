@@ -437,7 +437,7 @@ input:focus-visible, textarea:focus-visible {
     /* ---- Compare table ---- */
     .compare {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 0.9fr 1.2fr 1.2fr 1.2fr;
       border-top: 1px solid var(--rule);
       margin-top: 2rem;
     }
@@ -470,6 +470,25 @@ input:focus-visible, textarea:focus-visible {
       font-weight: var(--display-weight);
       letter-spacing: var(--display-tracking);
       margin-bottom: 0.5rem;
+    }
+    .compare .col.head.spacer {
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .compare .col.head.spacer .label { color: var(--ink-muted); }
+    .compare .col.head.spacer h4 {
+      font-size: 1.15rem;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
+    .compare .col.head.spacer .sub {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
     }
     .compare .col.head .price {
       font-family: var(--font-display);
@@ -612,6 +631,8 @@ input:focus-visible, textarea:focus-visible {
       .compare .col, .compare .cell { border-right: 0 !important; }
     }
   </style>
+  <link rel="stylesheet" href="mobile.css" />
+  <script src="mobile-menu.js" defer></script>
 </head>
 <body>
 
@@ -680,6 +701,11 @@ input:focus-visible, textarea:focus-visible {
   </div>
   <div class="section-body">
     <div class="compare">
+      <div class="col head spacer">
+        <span class="label">Compare</span>
+        <h4>Three routes</h4>
+        <span class="sub">at a glance</span>
+      </div>
       <div class="col head">
         <span class="label">Option A</span>
         <h4>Traditional denture</h4>
@@ -782,7 +808,7 @@ input:focus-visible, textarea:focus-visible {
     </div>
     <div><h5>Treatments</h5><ul><li><a href="full-arch.html">Full arch rehabilitation</a></li><li><a href="dentures-to-fixed.html">Dentures to fixed</a></li><li><a href="#">Single & multiple implants</a></li><li><a href="patient-journey.html">Patient journey</a></li><li><a href="pricing.html">Pricing & finance</a></li></ul></div>
     <div><h5>Practice</h5><ul><li><a href="index.html#clinicians">The clinicians</a></li><li><a href="#">Testimonials</a></li><li><a href="#">Contact</a></li><li><a href="book.html">Book consultation</a></li></ul></div>
-    <div><h5>Legal</h5><ul><li><a href="#">Privacy policy</a></li><li><a href="#">Terms of service</a></li><li><a href="#">Cookie policy</a></li><li><a href="#">Complaints procedure</a></li></ul></div>
+    <div><h5>Legal</h5><ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li><li><a href="cookies.html">Cookie policy</a></li><li><a href="complaints.html">Complaints procedure</a></li></ul></div>
   </div>
   <div class="f-legal">
     <span>© 2026 Bournemouth Dental Implants · 233 Charminster Road, Bournemouth BH8 9QJ</span>
