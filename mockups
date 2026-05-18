@@ -525,6 +525,8 @@ input:focus-visible, textarea:focus-visible {
       .page-grid { grid-template-columns: 1fr; }
     }
   </style>
+  <link rel="stylesheet" href="mobile.css" />
+  <script src="mobile-menu.js" defer></script>
 </head>
 <body>
 
